@@ -1,25 +1,40 @@
-// Each line imports all SCSS files of a group
+@charset 'UTF-8';
 
-// 3rd party frameworks
-@import 'vendors/import-vendors';
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
 
-// User modifications of above frameworks
-@import 'vendors-extensions/import-vendors-extensions';
+// 2. Vendors
+@import
+  'vendor/normalize',
+  '~bootstrap/scss/bootstrap';
 
-// Sass-related functions, mixins, variables, etc.
-@import 'abstracts/import-abstracts';
+// 8. Vendors Extensions
+@import
+  'vendor-extensions/bootstrap/import';
 
-// Small changes that apply across all pages
-@import 'base/import-base';
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
 
-// Sections of a page
-@import 'layout/import-layout';
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
 
-// Smaller components
-@import 'components/import-components';
+// 5. Components
+@import
+  'components/button';
 
-// Page-specific styles
-@import 'pages/import-pages';
+// 6. Page-specific styles
+@import
+  'pages/home';
 
-// Changing site templates
-@import 'themes/import-themes';
+// 7. Themes
+@import
+  'themes/default';

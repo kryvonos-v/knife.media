@@ -1,30 +1,36 @@
-// Generates css classes for defined colors.
-@mixin init-colors($colors: $knife-colors, $color-base-key: $color-base-key) {
-  @each $color-name, $color in $colors {
-    @if type-of($color) == 'map' {
-      $color-types: $color;
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
 
-      @each $color-type, $color in $color-types {
-        $color-type-infix: color-type-infix($color-type, $color-base-key);
-
-        .color-#{$color-name}#{$color-type-infix} {
-          color: $color;
-        }
-      }
-    } @else {
-      .color-#{$color-name} {
-        color: $color;
-      }
+/// Event wrapper
+///
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
     }
   }
 }
 
-// Generates css classes for defined gradients.
-@mixin init-gradients($gradients: $knife-gradients) {
-  @each $name, $gradient in $gradients {
-    .g-#{$name} {
-      @include linear-gradient($gradient)
-    }
+/// Make a context based selector a little more friendly
+///
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
   }
 }
 
@@ -38,6 +44,36 @@
   background: nth(nth($color-stops, 1), 1);
   background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
   background: linear-gradient($direction, $color-stops);
+}
+
+// Generates css classes for defined colors.
+@mixin generate-colors($colors: $knife-colors, $color-base-key: $color-base-key) {
+  @each $color-name, $color in $colors {
+    @if type-of($color) == 'map' {
+      $color-types: $color;
+
+      @each $color-type, $color in $color-types {
+        $color-type-infix: color-type-infix($color-type, $color-base-key);
+
+        .c-#{$color-name}#{$color-type-infix} {
+          color: $color;
+        }
+      }
+    } @else {
+      .c-#{$color-name} {
+        color: $color;
+      }
+    }
+  }
+}
+
+/// Generates css classes for defined gradients.
+@mixin generate-gradients($gradients: $knife-gradients) {
+  @each $name, $gradient in $gradients {
+    .g-#{$name} {
+      @include linear-gradient($gradient)
+    }
+  }
 }
 
 @mixin gradient-text-color($gradient-name, $gradients: $knife-gradients) {
