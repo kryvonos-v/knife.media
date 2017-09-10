@@ -1,0 +1,200 @@
+// Colors
+// 1e488f (темносиній):
+//   - Menu items background
+//   - Button background
+//   - Колір плиток
+//   - Колір лейбів для статтей
+// 8bb847 (Світло салатовий):
+//   - Колір плиточки
+// 6aa535 (Салатовий):
+//   - Колір плиточки
+// fff (white): Menu items color
+// a7397d (рожей з бордовим): Колір першої лінії
+
+/// The names of color were taken from site http://chir.ag/projects/name-that-color/#1E488F.
+$color-base-key: 'base' !default;
+$color-sunglow: #fbcb34 !default;
+$color-mandy: #ed4f71 !default;
+$color-light-orchid: #dfa5c2 !default;
+$color-conifer: #80d851 !default;
+$color-pastel-green: #7ce568 !default;
+$color-aquamarine-blue: #67e3d6 !default;
+$color-light-blue: #00cbe3 !default;
+$color-spring-green: #00fe62 !default;
+
+/// The storage of all colors that are used on site.
+/// If there are similar colors we create map.
+/// We namespace this variable because some frameworks like bootstrap can have variable 'color'.
+$knife-colors: (
+  'secondary': (
+    'base': #6aa535,
+    'light': #8bb847
+  ),
+  'text': (
+    'base': #000
+  ),
+  'primary': #1e488f,
+  'accent': #a7397d,
+  'sunglow': $color-sunglow,
+  'mandy': $color-mandy,
+  'light-orchid': $color-light-orchid,
+  'conifer': $color-conifer,
+  'pastel-green': $color-pastel-green,
+  'aquamarine-blue': $color-aquamarine-blue,
+  'light-blue': $color-light-blue,
+  'spring-green': $color-spring-green
+);
+
+$knife-gradients: (
+  'sunglow-to-mandy': 90deg $color-sunglow $color-mandy,
+  'light-orchid-to-conifer': 90deg $color-light-orchid $color-conifer,
+  'pastel-green-to-aquamarine-blue': 90deg $color-pastel-green $color-aquamarine-blue,
+  'light-blue-to-spring-green': 90deg $color-light-blue $color-spring-green
+);
+
+/// Return color.
+@function color($key, $type: $color-base-key, $colors: $knife-colors) {
+  $color: map-get($colors, $key);
+
+  @if type-of($color) == 'map' {
+    @if map-has-key($color, $type) != true {
+      @warn 'Uknown color type `#{$type}` for color `#{$key}`';
+      @error 'Uknown color type `#{$type}` for color `#{$key}`';
+    }
+
+    $color: map-get($color, $type);
+  }
+
+  @return $color;
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+  // Direction has been omitted and happens to be a color-stop
+  @if is-direction($direction) == false {
+    $color-stops: $direction, $color-stops;
+    $direction: 180deg;
+  }
+
+  background-image: nth(nth($color-stops, 1), 1);
+  background-image: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background-image: linear-gradient($direction, $color-stops);
+}
+
+// Test if `$value` is a valid direction
+// @param {*} $value - Value to test
+// @return {Bool}
+@function is-direction($value) {
+  $is-keyword: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), $value);
+  $is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value));
+
+  @return $is-keyword or $is-angle;
+}
+
+// Convert a direction to legacy syntax
+// @param {Keyword | Angle} $value - Value to convert
+// @require {function} is-direction
+// @require {function} convert-angle
+// @throw Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be a direction.;
+@function legacy-direction($value) {
+  @if is-direction($value) == false {
+    @error "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be a direction.";
+  }
+
+  $conversion-map: (
+    to top          : bottom,
+    to top right    : bottom left,
+    to right top    : left bottom,
+    to right        : left,
+    to bottom right : top left,
+    to right bottom : left top,
+    to bottom       : top,
+    to bottom left  : top right,
+    to left bottom  : right top,
+    to left         : right,
+    to left top     : right bottom,
+    to top left     : bottom right
+  );
+
+  @if map-has-key($conversion-map, $value) {
+    @return map-get($conversion-map, $value);
+  }
+
+  @return 90deg - $value;
+}
+
+html[data] {
+  content: #{color('primary')};
+  // @include gradient('sunglow-to-mandy')
+  // @include gradient-text-color('light-blue-to-spring-green')
+}
+
+// Градієнти:
+// 1
+//   Від fbcb34 до ed4f71 (від жовтого до малинового) "Видео"
+// 2
+//   Від dfa5c2 до 80d851 (від світломалинового до світлосалатового)
+// 3
+//   Від 7ce568 до 67e3d6 (від світлосалатового до світлоголубого)
+// 4
+//   Від 00cbe3 до 00fe62 (від світлогобулого до світлосалатового)
+
+// Розміри шрифтів
+// 16.6px
+//   - пункти меню
+// 43.6px
+//   - Неизвестная Россия
+// 40px
+//   - Заголовок статті
+// 43.6px
+//   - Заголовок для групи плиточок
+// 18px
+//   - Підзаголовок статті
+// 16px
+//   - Підзаговок цитати
+//   - Текст самої статті
+// 15px
+//   - Текст самої статті
+// 26px
+//   - Заголовок у статті
+// 21px
+//   - Заголовок у статті
+//   - підпис для даних
+//   - Поділитися у соц мережах
+//   - Теги під статтею
+//   - Читайте также
+//   - Чатайте также заголовки
+//   - Лучшее за неделю
+// 30px
+//   - Заголовки одиничної статті
+//   - Подпишись на нашу рассылку
+//   - Заговки якихось космічних шутк
+// 12px
+//   - Підпис під фоткою статті
+//   - Источник
+// 12.8px
+//   - Placeholder: Оставьте вашу электронную почту
+//   - Інформація про одиничну статтю (маленька)
+//   - Текст у футері
+//   - Підзаголовок логотипу у футері
+//   - Короткі новини у правому сайдбарі
+// 23.5px
+//   - Заголовок одиничної статті (маленька)
+//   - Заголовок плиточки
+//   - Пункти меню у футері
+//   - Короткі сводки праворуч "Тест: Откуда ваш английский язык"
+//   - Заголовок маленької плиточки під сайдбаром
+// 9px
+//   - Лейбел для статтей
+//   - Інформація про корокті новини у правому сайдбарі
+// 187px
+//   - Суперпиздатовеликий заголовок: Антон Кораблев
+
+
+// 36 => 23.48: заголовок звичайної плиточки
+// 18 => 12.8:  інформація звичайної плиточки (про автора, дату, категорію)
+// 18 => 9:     лейбел звичайної плиточки
+// 28.9 => 12.8: текст короткої новини у правому сайдбарі
+// 33.4 => 12.8: текст у футері сайту
+// 42 => 23.48: пункти меню у футері сайту
+// 33.4 => 43.6: підзаголовок НОЖ у футері
+// 36 =>

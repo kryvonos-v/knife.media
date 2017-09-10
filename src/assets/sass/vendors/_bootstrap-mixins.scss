@@ -1,0 +1,31 @@
+// Toggles
+//
+// Used in conjunction with global variables to enable certain theme features.
+
+@mixin box-shadow($shadow...) {
+  @if $enable-shadows {
+    box-shadow: $shadow;
+  }
+}
+
+@mixin transition($transition...) {
+  @if $enable-transitions {
+    @if length($transition) == 0 {
+      transition: $transition-base;
+    } @else {
+      transition: $transition;
+    }
+  }
+}
+
+@import "../../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "../../../node_modules/bootstrap/scss/mixins/grid-framework";
+@import "../../../node_modules/bootstrap/scss/mixins/grid";
+@import "../../../node_modules/bootstrap/scss/mixins/float";
+@import "../../../node_modules/bootstrap/scss/mixins/clearfix";
+@import "../../../node_modules/bootstrap/scss/mixins/hover";
+@import "../../../node_modules/bootstrap/scss/mixins/text-truncate";
+@import "../../../node_modules/bootstrap/scss/mixins/text-emphasis";
+@import "../../../node_modules/bootstrap/scss/mixins/text-hide";
+@import "../../../node_modules/bootstrap/scss/mixins/forms";
+@import "../../../node_modules/bootstrap/scss/mixins/border-radius";

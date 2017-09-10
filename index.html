@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+  <title>webpack/ES6 setup</title>
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <header class="header navbar navbar-expand-xs">
+    <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" class="navbar-toggler header__toggler" aria-controls="navbarSupportedContent"  aria-expanded="false" aria-label="Toggle navigation">
+      <span class="toggler__cross"><i class="fa fa-times"></i></span>
+      <span class="toggler__burger"><i class="fa fa-bars"></i></span>
+    </button>
+
+    <div class="logo">
+      <img src="./imgs/logo.svg" alt="Site logo">
+      <h1 class="out-of-page">Нож</h1>
+    </div>
+
+    <button type="text" class="header__search"><i class="fa fa-search"></i></button>
+
+    <nav class="navbar-collapse header__nav" id="navbarSupportedContent">
+      <ul class="menu">
+        <li class="menu__item">
+          <a class="menu__link" href="#">Россия</a>
+          </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Тесты</a>
+          </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Секс</a>
+          </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Мнения</a>
+          </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Stories</a>
+          </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Больше ></a>
+          <ul class="submenu" style="display: none">
+            <li class="submenu__item">Кино</li>
+            <li class="submenu__item">Музыка</li>
+            <li class="submenu__item submenu__item_active">Нищегоды</li>
+            <li class="submenu__item">Еда</li>
+            <li class="submenu__item">Персонажи</li>
+            <li class="submenu__item">Неизвестная Россия</li>
+            <li class="submenu__item">Фотографии</li>
+            <li class="submenu__item">Личный опыт</li>
+            <li class="submenu__item">Итервью</li>
+            <li class="submenu__item">Классика</li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav header__socials">
+        <li class="nav__item">f</li>
+        <li class="nav__item">vk</li>
+        <li class="nav__item">telegram</li>
+        <li class="nav__item">twitter</li>
+        <li class="nav__item">search</li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav> -->
+
+  <script src="https://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
+  <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
