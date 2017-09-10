@@ -71,7 +71,7 @@
 @mixin generate-gradients($gradients: $knife-gradients) {
   @each $name, $gradient in $gradients {
     .g-#{$name} {
-      @include linear-gradient($gradient)
+      @include linear-gradient($gradient...)
     }
   }
 }

@@ -2,6 +2,18 @@
 // This file contains CSS helper classes.
 // -----------------------------------------------------------------------------
 
+@include generate-colors();
+@include generate-gradients();
+
+/**
+ * Allows to make gradient text color.
+ */
+.gt {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 /**
  * Clear inner floats
  */

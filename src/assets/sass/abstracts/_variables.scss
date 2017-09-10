@@ -50,18 +50,11 @@ $knife-colors: (
 );
 
 $knife-gradients: (
-  'sunglow-to-mandy': (90deg, #{$color-sunglow}, #{$color-mandy}),
-  'light-orchid-to-conifer': (90deg $color-light-orchid $color-conifer),
-  'pastel-green-to-aquamarine-blue': (90deg $color-pastel-green $color-aquamarine-blue),
-  'light-blue-to-spring-green': (90deg $color-light-blue $color-spring-green)
+  'sunglow-to-mandy': (90deg, $color-sunglow, $color-mandy),
+  'light-orchid-to-conifer': (90deg, $color-light-orchid, $color-conifer),
+  'pastel-green-to-aquamarine-blue': (90deg, $color-pastel-green, $color-aquamarine-blue),
+  'light-blue-to-spring-green': (90deg, $color-light-blue, $color-spring-green)
 );
-
-// @include init-gradients()
-// @include init-colors()
-
-html[data] {
-  color: color('secondary', 'light');
-}
 
 // Градієнти:
 // 1
@@ -144,8 +137,6 @@ $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 
 
 
-
-
 /// Copy text color
 /// @type Color
 $text-color: rgb(34, 34, 34) !default;
@@ -168,13 +159,9 @@ $dark-grey: rgb(68, 68, 68) !default;
 
 
 
-
-
 /// Container's maximum width
 /// @type Length
 $max-width: 1180px !default;
-
-
 
 
 
@@ -186,9 +173,6 @@ $breakpoints: (
   'medium': 768px,
   'large': 1024px,
 ) !default;
-
-
-
 
 
 
