@@ -1,0 +1,57 @@
+// Generates css classes for defined colors.
+@mixin init-colors($colors: $knife-colors, $color-base-key: $color-base-key) {
+  @each $color-name, $color in $colors {
+    @if type-of($color) == 'map' {
+      $color-types: $color;
+
+      @each $color-type, $color in $color-types {
+        $color-type-infix: color-type-infix($color-type, $color-base-key);
+
+        .color-#{$color-name}#{$color-type-infix} {
+          color: $color;
+        }
+      }
+    } @else {
+      .color-#{$color-name} {
+        color: $color;
+      }
+    }
+  }
+}
+
+// Generates css classes for defined gradients.
+@mixin init-gradients($gradients: $knife-gradients) {
+  @each $name, $gradient in $gradients {
+    .g-#{$name} {
+      @include linear-gradient($gradient)
+    }
+  }
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+  // Direction has been omitted and happens to be a color-stop
+  @if is-direction($direction) == false {
+    $color-stops: $direction, $color-stops;
+    $direction: 180deg;
+  }
+
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+@mixin gradient-text-color($gradient-name, $gradients: $knife-gradients) {
+  @include gradient($gradient-name, $gradients)
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@mixin gradient($gradient-name, $gradients: $knife-gradients) {
+  @if not map-has-key($gradients, $gradient-name) {
+    @error 'There is no gradient with name `#{$gradient-name}`';
+  }
+
+  $gradient: map-get($gradients, $gradient-name);
+  @include linear-gradient($gradient...);
+}

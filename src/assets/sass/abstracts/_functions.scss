@@ -1,0 +1,107 @@
+// Test if `$value` is a valid direction.
+//
+// @param {*} $value - Value to test.
+// @return {Bool}
+@function is-direction($value) {
+  $is-keyword: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), $value);
+  $is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value));
+
+  @return $is-keyword or $is-angle;
+}
+
+// Convert a direction to legacy syntax.
+//
+// @param {Keyword | Angle} $value - Value to convert.
+// @require {function} is-direction
+// @require {function} convert-angle
+// @throw Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be a direction.
+@function legacy-direction($value) {
+  @if is-direction($value) == false {
+    @error "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be a direction.";
+  }
+
+  $conversion-map: (
+    to top          : bottom,
+    to top right    : bottom left,
+    to right top    : left bottom,
+    to right        : left,
+    to bottom right : top left,
+    to right bottom : left top,
+    to bottom       : top,
+    to bottom left  : top right,
+    to left bottom  : right top,
+    to left         : right,
+    to left top     : right bottom,
+    to top left     : bottom right
+  );
+
+  @if map-has-key($conversion-map, $value) {
+    @return map-get($conversion-map, $value);
+  }
+
+  @return 90deg - $value;
+}
+
+// Returns a blank string if the color type is a 'base', otherwise returns the type of the color with a dash infront.
+//
+// @param {string} $color-type [''] - The color type.
+// @param {string} $color-base-key [$color-base-key] - The base (default) color key.
+// @example
+// $color-base-key: 'base';
+// $knife-colors: (
+//   'secondary': (
+//     'base': #6aa535,
+//     'light': #8bb847
+//   ),
+//   'text': #000
+// );
+//
+// color-type-infix('', $color-base-key) => ''
+// color-type-infix('base', $color-base-key) => ''
+// color-type-infix('light', $color-base-key) => '-light'
+@function color-type-infix($color-type: '', $color-base-key: $color-base-key) {
+  $infix: '';
+
+  @if $color-type != $color-base-key and $color-type != '' {
+    $infix: '-#{$color-type}';
+  }
+
+  @return $infix;
+}
+
+// TODO: Throw error if specified color type for single color.
+// Returns the color by the given color name and color type.
+//
+// @param {string} $color-name                   - The name of the color in the map collection.
+// @param {string} $color-type [$color-base-key] - The type of the color in the map collection.
+// @param {map}    $colors [$knife-colors]       - The map of the colors.
+// @return {color} $color                        - The color that is taken from the map collection.
+// @throw Uknown color type `#{$color-type}` for color `#{$color-name}`
+// @example
+// $color-base-key: 'base';
+// $knife-colors: (
+//   'secondary': (
+//     'base': #6aa535,
+//     'light': #8bb847
+//   ),
+//   'text': #000
+// );
+//
+// color('secondary') => #6aa535
+// color('secondary', 'base') => #6aa535
+// color('secondary', 'light') => #8bb847
+// color('text') => #000
+@function color($color-name, $color-type: $color-base-key, $colors: $knife-colors) {
+  $color: map-get($colors, $color-name);
+
+  @if type-of($color) == 'map' {
+    @if map-has-key($color, $color-type) != true {
+      @warn 'Uknown color type `#{$color-type}` for color `#{$color-name}`';
+      @error 'Uknown color type `#{$color-type}` for color `#{$color-name}`';
+    }
+
+    $color: map-get($color, $color-type);
+  }
+
+  @return $color;
+}
