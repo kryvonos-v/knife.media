@@ -30,30 +30,30 @@ $color-spring-green: #00fe62 !default;
 /// If there are similar colors we create map.
 /// We namespace this variable because some frameworks like bootstrap can have variable 'color'.
 $knife-colors: (
-  'secondary': (
-    'base': #6aa535,
-    'light': #8bb847
+  secondary: (
+    base: #6aa535,
+    light: #8bb847
   ),
-  'text': (
-    'base': #000
+  text: (
+    base: #000
   ),
-  'primary': #1e488f,
-  'accent': #a7397d,
-  'sunglow': $color-sunglow,
-  'mandy': $color-mandy,
-  'light-orchid': $color-light-orchid,
-  'conifer': $color-conifer,
-  'pastel-green': $color-pastel-green,
-  'aquamarine-blue': $color-aquamarine-blue,
-  'light-blue': $color-light-blue,
-  'spring-green': $color-spring-green
+  primary: #1e488f,
+  accent: #a7397d,
+  sunglow: $color-sunglow,
+  mandy: $color-mandy,
+  light-orchid: $color-light-orchid,
+  conifer: $color-conifer,
+  pastel-green: $color-pastel-green,
+  aquamarine-blue: $color-aquamarine-blue,
+  light-blue: $color-light-blue,
+  spring-green: $color-spring-green
 );
 
 $knife-gradients: (
-  'sunglow-to-mandy': (90deg, $color-sunglow, $color-mandy),
-  'light-orchid-to-conifer': (90deg, $color-light-orchid, $color-conifer),
-  'pastel-green-to-aquamarine-blue': (90deg, $color-pastel-green, $color-aquamarine-blue),
-  'light-blue-to-spring-green': (90deg, $color-light-blue, $color-spring-green)
+  sunglow-to-mandy: (90deg, $color-sunglow, $color-mandy),
+  light-orchid-to-conifer: (90deg, $color-light-orchid, $color-conifer),
+  pastel-green-to-aquamarine-blue: (90deg, $color-pastel-green, $color-aquamarine-blue),
+  light-blue-to-spring-green: (90deg, $color-light-blue, $color-spring-green)
 );
 
 // Градієнти:
@@ -169,11 +169,24 @@ $max-width: 1180px !default;
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-  'small': 320px,
-  'medium': 768px,
-  'large': 1024px,
+  small: 320px,
+  medium: 768px,
+  large: 1024px,
 ) !default;
 
+
+$typi: (
+  base: (
+    null: (16px, 1.4),
+    small: (18px),
+    medium: (20px, 1.5),
+    large: (30px, 1.2)
+  ),
+  h1: (
+    null: (24px, 1.3),
+    small: (30px, 1.2)
+  )
+);
 
 
 /// Relative or absolute URL where all assets are served from

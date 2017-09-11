@@ -1,7 +1,13 @@
 /**
- * Basic typography style for copy text
+ * Basic typography style for copy text.
  */
 html, body {
   color: $text-color;
   font: normal 125% / 1.4 $text-font-stack;
 }
+
+/**
+ * Initializing of typi.
+ */
+@include typi-init;
+@include typi-create-classes;
