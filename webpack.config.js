@@ -9,11 +9,13 @@ var styleLintPlugin = require('stylelint-webpack-plugin');
 require('es6-promise').polyfill();
 
 module.exports = {
-  entry: './src/main.js',
+  context: __dirname + '/src',
+
+  entry: './app',
 
   output: {
     path: __dirname,
-    filename: 'js/app.js'
+    filename: './js/app.js'
   },
 
   plugins: [
@@ -43,6 +45,10 @@ module.exports = {
           'style-loader',
           'css-loader!postcss!sass-loader?outputStyle=expanded'
         )
+      },
+      {
+        test:   /\.(png|jpg|svg|ttf|eot|woff|woff2)$/,
+        loader: 'file?name=[path][name].[ext]'
       }
     ]
   },
