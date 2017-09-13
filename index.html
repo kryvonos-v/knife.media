@@ -4,7 +4,7 @@
   <title>Журнал «Нож» &#8212; Оружие интеллектуала</title>
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="./node_modules/smartmenus/dist/css/sm-core-css.css" />
-  <link rel="stylesheet" href="./node_modules/smartmenus/dist/css/sm-blue/sm-blue.css" />
+  <!-- <link rel="stylesheet" href="./node_modules/smartmenus/dist/css/sm-blue/sm-blue.css" /> -->
   <link rel="stylesheet" href="css/app.css" />
   <style>
   /*.main-menu-btn {
@@ -91,19 +91,21 @@
       <span class="toggler__cross"><i class="fa fa-times"></i></span>
       <span class="toggler__burger"><i class="fa fa-bars"></i></span>
     </button> -->
-    <div class="burger burger--active header__burger">
-      <div class="burger__stick"></div>
-      <div class="burger__stick"></div>
-      <div class="burger__stick"></div>
+    <div class="header__mobile-group">
+      <div class="burger burger--active header__burger">
+        <div class="burger__stick"></div>
+        <div class="burger__stick"></div>
+        <div class="burger__stick"></div>
+      </div>
+
+      <a href="/" class="logo mx-auto">
+        <img class="logo__img" width="100" src="src/assets/imgs/logo.svg" alt="Site logo">
+      </a>
+
+      <a href="#" class="header__search"><img class="d-block" src="src/assets/imgs/icons/search.svg" /></a>
     </div>
 
-    <a href="/" class="logo mx-auto">
-      <img class="logo__img" width="100" src="src/assets/imgs/logo.svg" alt="Site logo">
-    </a>
-
-    <a href="#" class="header__search"><img class="d-block" src="src/assets/imgs/icons/search.svg" /></a>
-
-    <nav class="header__nav" style="display: none">
+    <nav class="header__nav">
       <ul class="menu sm" id="mainMenu">
         <li class="menu__item">
           <a class="menu__link" href="#">Россия</a>
@@ -123,16 +125,36 @@
         <li class="menu__item">
           <a class="menu__link" href="#">Больше ></a>
           <ul class="submenu" style="display: none">
-            <li class="submenu__item">Кино</li>
-            <li class="submenu__item">Музыка</li>
-            <li class="submenu__item submenu__item_active">Нищегоды</li>
-            <li class="submenu__item">Еда</li>
-            <li class="submenu__item">Персонажи</li>
-            <li class="submenu__item">Неизвестная Россия</li>
-            <li class="submenu__item">Фотографии</li>
-            <li class="submenu__item">Личный опыт</li>
-            <li class="submenu__item">Итервью</li>
-            <li class="submenu__item">Классика</li>
+            <li class="submenu__item">
+              <a class="submenu__link">Кино</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Музыка</a>
+            </li>
+            <li class="submenu__item submenu__item_active">
+              <a class="submenu__link">Нищегоды</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Еда</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Персонажи</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Неизвестная Россия</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Фотографии</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Личный опыт</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Итервью</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Классика</a>
+            </li>
           </ul>
         </li>
       </ul>

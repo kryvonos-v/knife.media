@@ -3,16 +3,34 @@
 // -----------------------------------------------------------------------------
 
 .header {
-  padding-top: $header-padding-y;
-  padding-bottom: $header-padding-y;
-  padding-left: $header-padding-x;
-  padding-right: $header-padding-x;
+  padding: 0;
   background: #FFF;
+
+  @include media-breakpoint-up(md) {
+    padding: $header-padding-y $header-padding-x;
+  }
+
+  &__mobile-group {
+    padding-top: $header-padding-y;
+    padding-bottom: $header-padding-y;
+    padding-left: $header-padding-x;
+    padding-right: $header-padding-x;
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+      padding: 0;
+      width: auto;
+    }
+  }
 
   &__burger {
     position: absolute;
     top: $header-padding-y + ($logo-height - $burger-height) / 2;
     left: $header-padding-x;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
   }
 
   &__search {
@@ -22,10 +40,22 @@
     right: $header-padding-x;
     margin-top: auto;
     margin-bottom: auto;
+
+    img {
+      width: $search-width;
+      height: $search-height;
+    }
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
   }
 
-  &__search-img {
-    width: $search-width;
-    height: $search-height;
+  &__nav {
+    width: 100%;
+  }
+
+  .sub-arrow {
+    display: none;
   }
 }

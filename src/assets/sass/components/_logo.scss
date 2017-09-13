@@ -1,6 +1,8 @@
 .logo {
   display: block;
   border: 0;
+  width: $logo-width;
+  height: $logo-height;
 
   &:hover {
     text-decoration: none;

@@ -1,0 +1,61 @@
+@import '../abstracts/functions';
+
+@mixin menu-item-on-mobile () {
+  border-top: 1px solid #FFF;
+  padding-left: $header-padding-x;
+  color: #FFF;
+  background: color(primary);
+}
+
+@mixin menu-link-on-mobile () {
+  padding-top: $header-padding-y;
+  padding-bottom: $header-padding-y;
+  padding-right: $header-padding-x;
+  font-weight: bold;
+  text-decoration: none;
+  color: #FFF;
+
+  &:hover {
+    text-decoration: none;
+    color: #FFF;
+  }
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    @include menu-item-on-mobile;
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+
+  &__link {
+    @include menu-link-on-mobile;
+  }
+}
+
+.submenu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    @include menu-item-on-mobile;
+  }
+
+  &__link {
+    @include menu-link-on-mobile;
+  }
+}
+
+.header__socials {
+  @include menu-item-on-mobile;
+  @include menu-link-on-mobile;
+  list-style: none;
+  background: color(primary);
+}
