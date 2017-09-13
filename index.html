@@ -1,98 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <title>Журнал «Нож» &#8212; Оружие интеллектуала</title>
+
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="./node_modules/smartmenus/dist/css/sm-core-css.css" />
-  <!-- <link rel="stylesheet" href="./node_modules/smartmenus/dist/css/sm-blue/sm-blue.css" /> -->
   <link rel="stylesheet" href="css/app.css" />
+
   <style>
-  /*.main-menu-btn {
-    position: relative;
-    display: inline-block;
-    width: 28px;
-    height: 28px;
-    text-indent: 28px;
-    white-space: nowrap;
-    overflow: hidden;
-    cursor: pointer;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-  }
 
-
-  .main-menu-btn-icon, .main-menu-btn-icon:before, .main-menu-btn-icon:after {
-    position: absolute;
-    top: 50%;
-    left: 2px;
-    height: 2px;
-    width: 24px;
-    background: #bbb;
-    -webkit-transition: all 0.25s;
-    transition: all 0.25s;
-  }
-  .main-menu-btn-icon:before {
-    content: '';
-    top: -7px;
-    left: 0;
-  }
-  .main-menu-btn-icon:after {
-    content: '';
-    top: 7px;
-    left: 0;
-  }
-
-
-  #main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon {
-    height: 0;
-    background: transparent;
-  }
-  #main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:before {
-    top: 0;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
-  #main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:after {
-    top: 0;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-
-  #main-menu-state {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(1px,1px,1px,1px);
-  }
-
-  #main-menu-state:not(:checked) ~ #mainMenu {
-    display: none;
-  }
-  #main-menu-state:checked ~ #mainMenu {
-    display: block;
-  }
-  @media (min-width: 768px) {
-    .main-menu-btn {
-      position: absolute;
-      top: -99999px;
-    }
-    #main-menu-state:not(:checked) ~ #mainMenu {
-      display: block;
-    }
-  }*/
   </style>
 </head>
 <body>
   <header class="header container navbar navbar-expand-xs">
-    <!-- <button type="button" class="navbar-toggler header__toggler" aria-controls="mainMenu"  aria-expanded="false" aria-label="Toggle navigation">
-      <span class="toggler__cross"><i class="fa fa-times"></i></span>
-      <span class="toggler__burger"><i class="fa fa-bars"></i></span>
-    </button> -->
     <div class="header__mobile-group">
-      <div class="burger burger--active header__burger">
+      <div id="menuBurger" class="burger header__burger" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
         <div class="burger__stick"></div>
         <div class="burger__stick"></div>
         <div class="burger__stick"></div>
@@ -105,7 +31,7 @@
       <a href="#" class="header__search"><img class="d-block" src="src/assets/imgs/icons/search.svg" /></a>
     </div>
 
-    <nav class="header__nav">
+    <nav class="header__nav collapse navbar-collapse" id="mainNav">
       <ul class="menu sm" id="mainMenu">
         <li class="menu__item">
           <a class="menu__link" href="#">Россия</a>
@@ -169,89 +95,29 @@
     </nav>
   </header>
 
-  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav> -->
-
-<!-- <input id="main-menu-state" type="checkbox" />
-<label class="main-menu-btn" for="main-menu-state">
-  <span class="main-menu-btn-icon"></span> Toggle main menu visibility
-</label>
-
-<ul id="mainMenu" class="sm sm-blue">
-  <li><a href="#">Item 1</a></li>
-  <li><a href="#">Item 2</a>
-    <ul>
-      <li><a href="#">Item 2-1</a></li>
-      <li><a href="#">Item 2-2</a></li>
-      <li>
-        <a href="#">Item 2-3</a>
-        <ul>
-          <li>Item 3-1</li>
-          <li>Item 3-2</li>
-          <li>Item 3-3</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><a href="#">Item 3</a></li>
-</ul> -->
-
 <script src="https://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
 <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-<!-- <script src="./node_modules/jquery/dist/jquery.slim.min.js"></script> -->
 <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="./node_modules/smartmenus/dist/jquery.smartmenus.min.js"></script>
 <script src="js/app.js"></script>
 
 <script>
 $(function() {
-  $('#mainMenu').smartmenus({
+  const mainNav = $('#mainNav')
+  const mainMenu = $('#mainMenu')
+
+  mainMenu.smartmenus({
     // subMenusMinWidth: '400px',
     // subMenusMaxWidth: 'none'
   });
 
-  $(function() {
-    var $mainMenuState = $('#main-menu-state');
-    if ($mainMenuState.length) {
-      // animate mobile menu
-      $mainMenuState.change(function(e) {
-        var $menu = $('#mainMenu');
-        if (this.checked) {
-          $menu.hide().slideDown(250, function() { $menu.css('display', ''); });
-        } else {
-          $menu.show().slideUp(250, function() { $menu.css('display', ''); });
-        }
-      });
-      // hide mobile menu beforeunload
-      $(window).bind('beforeunload unload', function() {
-        if ($mainMenuState[0].checked) {
-          $mainMenuState[0].click();
-        }
-      });
-    }
-  });
+  mainNav.on('show.bs.collapse', function (e) {
+    $('#menuBurger').addClass('burger--active')
+  })
+
+  mainNav.on('hide.bs.collapse', function (e) {
+    $('#menuBurger').removeClass('burger--active')
+  })
 });
 </script>
 </body>

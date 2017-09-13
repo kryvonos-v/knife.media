@@ -22,10 +22,6 @@
 }
 
 .menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
   &__item {
     @include menu-item-on-mobile;
 
@@ -40,10 +36,6 @@
 }
 
 .submenu {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
   &__item {
     @include menu-item-on-mobile;
   }
