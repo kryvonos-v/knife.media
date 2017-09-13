@@ -1,3 +1,31 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+.header {
+  padding-top: $header-padding-y;
+  padding-bottom: $header-padding-y;
+  padding-left: $header-padding-x;
+  padding-right: $header-padding-x;
+  background: #FFF;
+
+  &__burger {
+    position: absolute;
+    top: $header-padding-y + ($logo-height - $burger-height) / 2;
+    left: $header-padding-x;
+  }
+
+  &__search {
+    display: block;
+    position: absolute;
+    top: $header-padding-y + ($logo-height - $search-height) / 2;
+    right: $header-padding-x;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  &__search-img {
+    width: $search-width;
+    height: $search-height;
+  }
+}

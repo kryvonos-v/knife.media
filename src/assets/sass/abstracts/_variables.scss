@@ -186,6 +186,20 @@ $typi: (
   )
 );
 
+/// Site header
+$header-padding-y: 15px;
+$header-padding-x: 20px;
+
+/// Logo
+$logo-width: 100px;
+$logo-height: 29px;
+
+/// Burger
+$burger-width: 22px;
+$burger-height: 18px;
+
+$search-height: 25px;
+$search-width: 25px;
 
 /// Relative or absolute URL where all assets are served from
 /// @type String

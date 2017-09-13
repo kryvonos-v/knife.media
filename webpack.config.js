@@ -18,6 +18,12 @@ module.exports = {
     filename: './js/app.js'
   },
 
+  resolve: {
+    alias: {
+      jquery: 'jquery/src/jquery'
+    }
+  },
+
   plugins: [
     // Specify the resulting CSS filename
     new ExtractTextPlugin('css/app.css'),

@@ -1,0 +1,48 @@
+.burger {
+  position: relative;
+  width: $burger-width;
+  height: $burger-height;
+  cursor: pointer;
+
+  &__stick {
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 100%;
+    height: 2px;
+    opacity: 1;
+    background: #000;
+    transition: all .3s ease-in-out;
+
+    &:first-child {
+      top: 0;
+      bottom: auto;
+      transform-origin: 0 100%;
+
+      @at-root .burger--active & {
+        transform: rotate(45deg);
+        top: 0px;
+      }
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      margin-top: -1px;
+
+      @at-root .burger--active & {
+        opacity: 0;
+      }
+    }
+
+    &:last-child {
+      top: auto;
+      bottom: 0;
+      transform-origin: 0;
+
+      @at-root .burger--active & {
+        transform: rotate(-45deg);
+        bottom: 0px;
+      }
+    }
+  }
+}

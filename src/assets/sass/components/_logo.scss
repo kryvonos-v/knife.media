@@ -1,0 +1,14 @@
+.logo {
+  display: block;
+  border: 0;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &__img {
+    display: block;
+    width: $logo-width;
+    height: $logo-height;
+  }
+}
