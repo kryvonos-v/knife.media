@@ -9,30 +9,31 @@
 // 2. Vendors
 @import
   'vendor/normalize',
+  'vendor/smartmenu',
   '~typi',
   '~bootstrap/scss/bootstrap';
 
-// 8. Vendors Extensions
+// 3. Vendors Extensions
 @import
   'vendor-extensions/bootstrap/import';
 
-// 3. Base stuff
+// 4. Base stuff
 @import
   'base/base',
   'base/fonts',
   'base/typography',
   'base/helpers';
 
-// 4. Components
+// 5. Components
 @import 'components/import';
 
-// 5. Layout-related sections
+// 6. Layout-related sections
 @import 'layout/import';
 
-// 6. Page-specific styles
+// 7. Page-specific styles
 @import
   'pages/home';
 
-// 7. Themes
+// 8. Themes
 @import
   'themes/default';
