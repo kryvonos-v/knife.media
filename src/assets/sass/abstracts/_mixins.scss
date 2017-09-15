@@ -56,12 +56,12 @@
         $color-type-infix: color-type-infix($color-type, $color-base-key);
 
         .c-#{$color-name}#{$color-type-infix} {
-          color: $color;
+          color: $color !important;
         }
       }
     } @else {
       .c-#{$color-name} {
-        color: $color;
+        color: $color !important;
       }
     }
   }
