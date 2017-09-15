@@ -217,10 +217,14 @@ $content-info-separator-margin-x-narrow: .25em;
 /// Module
 $module-padding-x: 22px;
 $module-padding-y: 22px;
+$module-padding-x-md: 22px;
+$module-padding-y-md: 22px;
 
 /// Label
 $label-padding-x: $module-padding-x;
 $label-padding-y: 1.1em;
+
+/// Defining bootstrap variables
 
 /// Relative or absolute URL where all assets are served from
 /// @type String
