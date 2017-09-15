@@ -8,98 +8,123 @@
   <title>Журнал «Нож» &#8212; Оружие интеллектуала</title>
 
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./node_modules/smartmenus/dist/css/sm-core-css.css" />
   <link rel="stylesheet" href="css/app.css" />
-
-  <style>
-
-  </style>
 </head>
 <body>
-  <header class="header container navbar navbar-expand-xs">
-    <div class="header__mobile-group">
-      <div id="menuBurger" class="burger header__burger" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <div class="burger__stick"></div>
-        <div class="burger__stick"></div>
-        <div class="burger__stick"></div>
-      </div>
-
-      <a href="/" class="logo mx-auto">
-        <img class="logo__img" width="100" src="src/assets/imgs/logo.svg" alt="Site logo">
-      </a>
-
-      <a href="#" class="header__search"><img class="d-block" src="src/assets/imgs/icons/search.svg" /></a>
+<header class="header container navbar navbar-expand-md">
+  <div class="header__mobile-group">
+    <div id="menuBurger" class="burger header__burger" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="burger__stick"></div>
+      <div class="burger__stick"></div>
+      <div class="burger__stick"></div>
     </div>
 
-    <nav class="header__nav collapse navbar-collapse" id="mainNav">
-      <ul class="menu sm" id="mainMenu">
-        <li class="menu__item">
-          <a class="menu__link" href="#">Россия</a>
-          </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Тесты</a>
-          </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Секс</a>
-          </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Мнения</a>
-          </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Stories</a>
-          </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Больше ></a>
-          <ul class="submenu" style="display: none">
-            <li class="submenu__item">
-              <a class="submenu__link">Кино</a>
-            </li>
-            <li class="submenu__item">
-              <a class="submenu__link">Музыка</a>
-            </li>
-            <li class="submenu__item submenu__item_active">
-              <a class="submenu__link">Нищегоды</a>
-            </li>
-            <li class="submenu__item">
-              <a class="submenu__link">Еда</a>
-            </li>
-            <li class="submenu__item">
-              <a class="submenu__link">Персонажи</a>
-            </li>
-            <li class="submenu__item">
-              <a class="submenu__link">Неизвестная Россия</a>
-            </li>
-            <li class="submenu__item">
-              <a class="submenu__link">Фотографии</a>
-            </li>
-            <li class="submenu__item">
-              <a class="submenu__link">Личный опыт</a>
-            </li>
-            <li class="submenu__item">
-              <a class="submenu__link">Итервью</a>
-            </li>
-            <li class="submenu__item">
-              <a class="submenu__link">Классика</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+    <a href="/" class="logo mx-auto">
+      <img class="logo__img" width="100" src="src/assets/imgs/logo.svg" alt="Site logo">
+    </a>
 
-      <ul class="nav header__socials">
-        <li class="nav__item">f</li>
-        <li class="nav__item">vk</li>
-        <li class="nav__item">telegram</li>
-        <li class="nav__item">twitter</li>
-        <li class="nav__item">search</li>
-      </ul>
-    </nav>
-  </header>
+    <a href="#" class="header__search"><img class="d-block" src="src/assets/imgs/icons/search.svg" /></a>
+  </div>
+
+  <nav class="header__nav collapse navbar-collapse" id="mainNav">
+    <ul class="menu sm header__menu" id="mainMenu">
+      <li class="menu__item">
+        <a class="menu__link" href="#">Россия</a>
+        </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#">Тесты</a>
+        </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#">Секс</a>
+        </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#">Мнения</a>
+        </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#">Stories</a>
+        </li>
+      <li class="menu__item">
+        <a class="menu__link" href="#">Больше ></a>
+        <ul class="submenu">
+          <li class="submenu__item">
+            <a class="submenu__link">Кино</a>
+          </li>
+          <li class="submenu__item">
+            <a class="submenu__link">Музыка</a>
+          </li>
+          <li class="submenu__item submenu__item_active">
+            <a class="submenu__link">Нищегоды</a>
+          </li>
+          <li class="submenu__item">
+            <a class="submenu__link">Еда</a>
+          </li>
+          <li class="submenu__item">
+            <a class="submenu__link">Персонажи</a>
+          </li>
+          <li class="submenu__item">
+            <a class="submenu__link">Неизвестная Россия</a>
+          </li>
+          <li class="submenu__item">
+            <a class="submenu__link">Фотографии</a>
+          </li>
+          <li class="submenu__item">
+            <a class="submenu__link">Личный опыт</a>
+          </li>
+          <li class="submenu__item">
+            <a class="submenu__link">Итервью</a>
+          </li>
+          <li class="submenu__item">
+            <a class="submenu__link">Классика</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="socials header__socials">
+      <li class="socials__item">
+        <a href="#" class="socials__link"><i class="fa fa-facebook socials__fb" aria-hidden="true"></i></a>
+      </li>
+      <li class="socials__item">
+        <a href="#" class="socials__link"><i class="fa fa-vk socials__vk" aria-hidden="true"></i></a>
+      </li>
+      <li class="socials__item">
+        <a href="#" class="socials__link"><i class="fa fa-telegram socials__tg" aria-hidden="true"></i></a>
+      </li>
+      <li class="socials__item">
+        <a href="#" class="socials__link"><i class="fa fa-twitter socials__tw" aria-hidden="true"></i></a>
+      </li>
+      <li class="socials__item">
+        <a href="#" class="socials__link"><i class="fa fa-search socials__search" aria-hidden="true"></i></a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <article class="module module--full-img module--wide">
+    <span class="label module__label">Личный опыт</span>
+
+    <div class="module__img" style="background-image: url('src/assets/imgs/photos/1.jpg');">
+      <img class="out-of-page" src="src/assets/imgs/photos/1.jpg" />
+    </div>
+
+    <div class="module__content">
+      <h2 class="module__heading">Кто и почему торгует на московских блошиных рынках</h2>
+
+      <footer class="content-info module__content-info">
+        <a class="content-info__item" href="#">Агата Коровина</a>
+        <span class="content-info__separator">•</span>
+        <time class="content-info__item" datetime="">20 июля</time>
+      </footer>
+    </div>
+  </article>
+</main>
 
 <script src="https://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
 <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="./node_modules/smartmenus/dist/jquery.smartmenus.min.js"></script>
-<script src="js/app.js"></script>
+<script src="static/app.js"></script>
 
 <script>
 $(function() {

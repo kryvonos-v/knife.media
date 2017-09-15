@@ -1,0 +1,42 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  list-style: none;
+
+  @include media-breakpoint-up(md) {
+    padding-left: 0;
+  }
+
+  &__link {
+      padding-left: $socials-items-padding-x;
+      padding-right: $socials-items-padding-x;
+      color: #FFF;
+      text-decoration: none;
+
+      &:hover {
+        color: #FFF;
+        text-decoration: none;
+
+        @include media-breakpoint-up(md) {
+          color: color(text);
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        padding-left: $socials-items-padding-x-md;
+        padding-right: $socials-items-padding-x-md;
+        color: color(text);
+      }
+  }
+
+  .fa {
+    @include media-breakpoint-down(md) {
+      font-size: 25px;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 15px;
+    }
+  }
+}

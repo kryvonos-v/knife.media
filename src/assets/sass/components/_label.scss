@@ -1,0 +1,14 @@
+@import '../abstracts/functions';
+
+.label {
+  display: inline-block;
+  padding: $label-padding-y $label-padding-x;
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 1;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: #FFF;
+  background: color(primary);
+}

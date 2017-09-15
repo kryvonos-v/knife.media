@@ -52,7 +52,26 @@
   }
 
   &__nav {
-    width: 100%;
+    @include media-breakpoint-up(md) {
+      margin-left: 5%;
+      width: 100%;
+    }
+  }
+
+  &__menu {
+    @include media-breakpoint-up(md) {
+      margin-left: auto;
+    }
+  }
+
+  &__socials {
+    @include media-breakpoint-down(md) {
+      margin-left: -$socials-items-padding-x;
+      margin-right: -$socials-items-padding-x;
+    }
+    @include media-breakpoint-up(md) {
+      margin-left: auto;
+    }
   }
 
   .sub-arrow {

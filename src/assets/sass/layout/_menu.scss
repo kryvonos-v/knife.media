@@ -22,32 +22,89 @@
 }
 
 .menu {
-  &__item {
-    @include menu-item-on-mobile;
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
 
-    &:first-child {
-      border-top: 0;
+  &__item {
+    @include media-breakpoint-down(sm) {
+      @include menu-item-on-mobile;
+
+      &:first-child {
+        border-top: 0;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      padding-left: $menu-padding-x-md;
+      padding-right: $menu-padding-x-md;
+      color: color(text)
     }
   }
 
   &__link {
-    @include menu-link-on-mobile;
+    @include media-breakpoint-down(sm) {
+      @include menu-link-on-mobile;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 17px;
+      font-weight: bold;
+      white-space: nowrap;
+      color: color('text');
+
+      &:hover {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
   }
 }
 
 .submenu {
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    padding-top: 20px;
+    width: 12em;
+  }
+
   &__item {
-    @include menu-item-on-mobile;
+    @include media-breakpoint-down(sm) {
+      @include menu-item-on-mobile;
+    }
+
+    @include media-breakpoint-up(md) {
+    }
   }
 
   &__link {
-    @include menu-link-on-mobile;
+    @include media-breakpoint-down(sm) {
+      @include menu-link-on-mobile;
+    }
+
+    @include media-breakpoint-up(md) {
+      display: block;
+      border-bottom: 1px solid #000;
+      padding-top: $menu-padding-x-md;
+      padding-bottom: $menu-padding-x-md;
+      padding-left: $menu-padding-x-md;
+      padding-right: $menu-padding-x-md;
+      font-size: 14px;
+      font-weight: bold;
+      background: #FFF;
+      cursor: pointer;
+
+      &:hover {
+        color: #FFF !important;
+        background: color(primary)
+      }
+    }
   }
 }
 
 .header__socials {
-  @include menu-item-on-mobile;
-  @include menu-link-on-mobile;
-  list-style: none;
-  background: color(primary);
+  @include media-breakpoint-down(sm) {
+    @include menu-item-on-mobile;
+    @include menu-link-on-mobile;
+  }
 }

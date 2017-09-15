@@ -1,0 +1,57 @@
+.module {
+  display: inline-flex;
+  position: relative;
+  padding: 0;
+  background: #FFF;
+
+  &--wide {
+    min-height: 300px;
+  }
+
+  &__label {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__img {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: $module-padding-y;
+    padding-bottom: $module-padding-y;
+    padding-left: $module-padding-x;
+    padding-right: $module-padding-x;
+    width: 100%;
+    min-height: 8.5em;
+
+    @at-root .module--wide & {
+      margin-right: auto;
+      max-width: 55%;
+
+      @include media-breakpoint-up(md) {
+        margin-top: auto;
+      }
+    }
+  }
+
+  &__heading {
+    margin-bottom: 1.5rem;
+  }
+
+  &__content-info {
+    margin-top: auto;
+  }
+}

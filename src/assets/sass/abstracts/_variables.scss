@@ -118,6 +118,7 @@ $knife-gradients: (
 //   - Суперпиздатовеликий заголовок: Антон Кораблев
 
 
+// => 30: заголовок широкої плиточки
 // 36 => 23.48: заголовок звичайної плиточки
 // 18 => 12.8:  інформація звичайної плиточки (про автора, дату, категорію)
 // 18 => 9:     лейбел звичайної плиточки
@@ -198,8 +199,28 @@ $logo-height: 29px;
 $burger-width: 22px;
 $burger-height: 18px;
 
+// Search
 $search-height: 25px;
 $search-width: 25px;
+
+/// Menu
+$menu-padding-x-md: 10px;
+
+/// Socials
+$socials-items-padding-x: 16px;
+$socials-items-padding-x-md: 7px;
+
+/// Content info
+$content-info-separator-margin-x: .5em;
+$content-info-separator-margin-x-narrow: .25em;
+
+/// Module
+$module-padding-x: 22px;
+$module-padding-y: 22px;
+
+/// Label
+$label-padding-x: $module-padding-x;
+$label-padding-y: 1.1em;
 
 /// Relative or absolute URL where all assets are served from
 /// @type String
