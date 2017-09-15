@@ -226,6 +226,17 @@ $label-padding-y: 1.1em;
 
 /// Defining bootstrap variables
 
+/// Grid columns
+///
+/// Set the number of columns and specify the width of the gutters.
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 15px !default;
+
 /// Relative or absolute URL where all assets are served from
 /// @type String
 /// @example scss - When using a CDN

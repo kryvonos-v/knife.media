@@ -2,12 +2,14 @@
   display: inline-block;
   position: relative;
   padding: 0;
+  width: 100%;
   background: #FFF;
 
   @include media-breakpoint-up(md) {
     display: inline-flex;
     flex-direction: column;
-    max-width: 350px;
+    max-width: 400px;
+    width: auto;
     min-height: 350px;
   }
 
@@ -15,8 +17,9 @@
     @include media-breakpoint-up(md) {
       display: inline-flex;
       flex-direction: row;
-      min-height: 300px;
+      width: 100%;
       max-width: none;
+      min-height: 300px;
     }
   }
 
