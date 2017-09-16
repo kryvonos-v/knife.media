@@ -1,9 +1,13 @@
 @import '../abstracts/functions';
 
 .content-info {
-  font-size: 11px;
+  font-size: 9px;
   font-weight: bold;
   color: color(primary, light);
+
+  @include media-breakpoint-down(md) {
+    text-transform: uppercase;
+  }
 
   &__item {
     outline: none;

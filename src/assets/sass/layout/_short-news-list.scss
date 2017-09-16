@@ -1,0 +1,16 @@
+.short-news-list {
+  $short-news-list-item-margin-y: 2px;
+
+  margin-top: -$short-news-list-item-margin-y/2;
+  margin-top: -$short-news-list-item-margin-y/2;
+
+  @include media-breakpoint-down(md) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__item {
+    margin-top: $short-news-list-item-margin-y/2;
+    margin-bottom: $short-news-list-item-margin-y/2;
+  }
+}
