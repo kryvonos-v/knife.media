@@ -5,7 +5,7 @@
   line-height: 1.2;
   font-size: 19px;
   font-weight: bold;
-  background: color(secondary);
+  background: color(secondary, light);
   color: #FFF;
 
   &:before {
@@ -14,7 +14,12 @@
     margin-right: 0.3em;
   }
 
+  @include media-breakpoint-up(md) {
+    font-size: 23px;
+  }
+
   &--large {
+    background: color(secondary);
     @include media-breakpoint-up(md) {
       font-size: 30px;
     }
