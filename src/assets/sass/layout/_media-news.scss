@@ -1,6 +1,13 @@
 .media-news {
   position: relative;
 
+  &__inner {
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
   &__heading {
     position: absolute;
     z-index: 1;
