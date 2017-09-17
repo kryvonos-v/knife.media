@@ -13,6 +13,11 @@
     min-height: 350px;
   }
 
+  &--story {
+    background: color(primary);
+    color: color(white);
+  }
+
   &--wide {
     @include media-breakpoint-up(md) {
       display: inline-flex;
@@ -69,6 +74,10 @@
       padding-top: 74%;
     }
 
+    @at-root .module--story & {
+      padding-top: 150%;
+    }
+
     @at-root .moduel--large & {
       @include media-breakpoint-up(md) {
         padding-top: 70%;
@@ -102,7 +111,13 @@
     position: relative;
     z-index: 1;
     padding-bottom: $module-padding-y;
+    padding-left: 15px;
+    padding-right: 15px;
     width: 100%;
+
+    @at-root .module--story & {
+      justify-content: flex-end;
+    }
 
     @include media-breakpoint-up(md) {
       padding-left: $module-padding-x-md;
@@ -128,6 +143,11 @@
     line-height: 1.3;
     font-size: 19px;
     word-break: break-word;
+
+    @at-root .module--story & {
+      margin-top: 1em;
+      margin-bottom: 0;
+    }
 
     @include media-breakpoint-up(md) {
       margin-bottom: 1.3rem;
