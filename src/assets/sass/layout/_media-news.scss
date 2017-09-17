@@ -1,0 +1,122 @@
+.media-news {
+  position: relative;
+
+  &__heading {
+    position: absolute;
+    z-index: 1;
+    top: 70%;
+    left: 58%;
+    transform: translateX(-50%);
+    display: block;
+    font-size: 70px;
+    font-weight: 900;
+    white-space: nowrap;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: 68%;
+      font-size: 120px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      left: 64%;
+      font-size: 150px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      left: 68%;
+      font-size: 186px;
+    }
+
+    @at-root .media-news--in-action & {
+      z-index: 0;
+    }
+  }
+
+  &__media {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__media-control {
+    border: 0;
+    background: none;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    outline: none !important;
+
+    @at-root .media-news--in-action & {
+      display: none;
+    }
+  }
+
+  &__video {
+    position: relative;
+    z-index: 0;
+  }
+
+  &__cover {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+
+    @at-root .media-news--in-action & {
+      display: none;
+    }
+  }
+}
+
+.youtube-btn {
+  $youtube-btn-width: 50px;
+  $youtube-btn-height: 36px;
+  $youtube-btn-width-lg: 100px;
+  $youtube-btn-height-lg: 75px;
+
+  width: $youtube-btn-width;
+  height: $youtube-btn-height;
+  cursor: pointer;
+  outline: none;
+
+  @include media-breakpoint-up(lg) {
+    width: $youtube-btn-width-lg;
+    height: $youtube-btn-height-lg;
+  }
+
+  &__svg {
+    width: $youtube-btn-width;
+    height: $youtube-btn-height;
+
+    @include media-breakpoint-up(lg) {
+      width: $youtube-btn-width-lg;
+      height: $youtube-btn-height-lg;
+    }
+
+    &:hover {
+      @at-root & .youtube-btn__shape {
+        fill: #ff191e;
+      }
+    }
+  }
+
+  &__shape {
+    transition: all 200ms ease-in-out;
+    fill: #fff;
+  }
+}

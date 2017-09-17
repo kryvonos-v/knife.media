@@ -82,13 +82,6 @@
   }
 }
 
-@mixin gradient-text-color($gradient-name, $gradients: $knife-gradients) {
-  @include gradient($gradient-name, $gradients)
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
 @mixin gradient($gradient-name, $gradients: $knife-gradients) {
   @if not map-has-key($gradients, $gradient-name) {
     @error 'There is no gradient with name `#{$gradient-name}`';

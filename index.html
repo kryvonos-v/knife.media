@@ -103,7 +103,7 @@
   </div>
 </header>
 
-<main>
+<main style="overflow: hidden;">
   <div class="container mt-1 mt-md-5">
     <div class="row">
       <div class="row grid mx-0 pr-lg-2 grid--modules align-content-md-start col-12 col-lg-9">
@@ -873,6 +873,30 @@
     </div>
     </div>
   </div>
+
+  <div class="container mt-3">
+    <div class="media-news">
+      <div class="media-news__media embed-responsive embed-responsive-4by3">
+        <div class="media-news__video embed-responsive-item" id="mediaNewsVideoPlayer"></div>
+        <div class="media-news__cover" style="background-image: url('src/assets/imgs/photos/cover-1.png')"></div>
+
+        <button id="mediaNewsMediaControl" class="media-news__media-control youtube-btn" type="button">
+          <svg class="youtube-btn__svg" width="100px" height="75px" x="0px" y="0px" viewBox="-143 -22 512 384" xml:space="preserve">
+            <g>
+            	<path class="youtube-btn__shape" d="M365.6,62.8c0-45-33.1-81.2-74-81.2C236.2-21,179.7-22,122-22c-3,0-6,0-9,0s-6,0-9,0c-57.6,0-114.2,1-169.6,3.6
+            		c-40.8,0-73.9,36.4-73.9,81.4c-2.5,35.6-3.6,71.2-3.5,106.8c-0.1,35.6,1,71.2,3.4,106.9c0,45,33.1,81.5,73.9,81.5
+            		c58.2,2.7,117.9,3.9,178.6,3.8c60.8,0.2,120.3-1,178.6-3.8c40.9,0,74-36.5,74-81.5c2.4-35.7,3.5-71.3,3.4-107
+            		C369.1,134.1,368,98.5,365.6,62.8z M64,267.9V71.4l145,98.2L64,267.9z"/>
+            </g>
+          </svg>
+        </button>
+      </div>
+
+      <footer>
+        <a class="media-news__heading gt g-light-blue-to-spring-green" href="#">Антон Кораблев</a>
+      </footer>
+    </div>
+  </div>
 </main>
 
 <script src="./node_modules/jquery/dist/jquery.min.js"></script>
@@ -881,6 +905,60 @@
 <script src="./node_modules/smartmenus/dist/jquery.smartmenus.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"></script>
 <script src="static/app.js"></script>
+
+<!-- Script for embedding YouTube video -->
+<script>
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script')
+var $mediaNewsMediaControl = $('#mediaNewsMediaControl')
+
+tag.src = "https://www.youtube.com/iframe_api"
+var firstScriptTag = document.getElementsByTagName('script')[0]
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player = null
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('mediaNewsVideoPlayer', {
+    height: '390',
+    width: '640',
+    videoId: '0JhtnSYOJYI',
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  })
+}
+
+// 4. The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+  $mediaNewsMediaControl.click(onMediaControlClick)
+}
+
+// 5. The API calls this function when the player's state changes.
+//    The function indicates that when playing a video (state=1),
+//    the player should play for six seconds and then stop.
+var done = false
+function onPlayerStateChange(event) {
+  // if (event.data == YT.PlayerState.PLAYING && !done) {
+  //   setTimeout(stopVideo, 6000)
+  //   done = true
+  // }
+}
+
+function stopVideo() {
+  player.stopVideo()
+}
+
+function onMediaControlClick (event) {
+  if (!player) return
+
+  $mediaNewsMediaControl.closest('.media-news').addClass('media-news--in-action')
+  player.playVideo()
+}
+</script>
 
 <script>
 var breakpoints = {
