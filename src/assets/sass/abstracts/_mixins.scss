@@ -48,20 +48,26 @@
 
 // Generates css classes for defined colors.
 @mixin generate-colors($colors: $knife-colors, $color-base-key: $color-base-key) {
-  @each $color-name, $color in $colors {
-    @if type-of($color) == 'map' {
-      $color-types: $color;
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-      @each $color-type, $color in $color-types {
-        $color-type-infix: color-type-infix($color-type, $color-base-key);
+      @each $color-name, $color in $colors {
+        @if type-of($color) == 'map' {
+          $color-types: $color;
 
-        .c-#{$color-name}#{$color-type-infix} {
-          color: $color !important;
+          @each $color-type, $color in $color-types {
+            $color-type-infix: color-type-infix($color-type, $color-base-key);
+
+            .c#{$infix}-#{$color-name}#{$color-type-infix} {
+              color: $color !important;
+            }
+          }
+        } @else {
+          .c#{$infix}-#{$color-name} {
+            color: $color !important;
+          }
         }
-      }
-    } @else {
-      .c-#{$color-name} {
-        color: $color !important;
       }
     }
   }

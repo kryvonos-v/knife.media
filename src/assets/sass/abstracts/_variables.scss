@@ -25,6 +25,7 @@ $color-pastel-green: #7ce568 !default;
 $color-aquamarine-blue: #67e3d6 !default;
 $color-light-blue: #00cbe3 !default;
 $color-spring-green: #00fe62 !default;
+$color-white: #fff !default;
 
 /// The storage of all colors that are used on site.
 /// If there are similar colors we create map.
@@ -46,7 +47,8 @@ $knife-colors: (
   pastel-green: $color-pastel-green,
   aquamarine-blue: $color-aquamarine-blue,
   light-blue: $color-light-blue,
-  spring-green: $color-spring-green
+  spring-green: $color-spring-green,
+  white: $color-white
 );
 
 $knife-gradients: (
@@ -204,11 +206,11 @@ $search-height: 25px;
 $search-width: 25px;
 
 /// Menu
-$menu-padding-x-md: 10px;
+$menu-padding-x-lg: 10px;
 
 /// Socials
 $socials-items-padding-x: 16px;
-$socials-items-padding-x-md: 7px;
+$socials-items-padding-x-lg: 7px;
 
 /// Content info
 $content-info-separator-margin-x: .25em;
@@ -224,6 +226,14 @@ $module-padding-y-md: 22px;
 $label-padding-x: $module-padding-x;
 $label-padding-y: 1.1em;
 
+/// Short news
+$short-news-padding-x: 15px;
+$short-news-padding-y: 15px;
+$short-news-padding-x-md: 25px;
+$short-news-padding-top-md: 16px;
+$short-news-padding-bottom-md: 17px;
+$short-news-padding-y-md: 25px;
+
 /// Defining bootstrap variables
 
 /// Grid columns
@@ -235,7 +245,7 @@ $label-padding-y: 1.1em;
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns: 12 !default;
-$grid-gutter-width: 15px !default;
+$grid-gutter-width: 14px !default;
 
 /// Relative or absolute URL where all assets are served from
 /// @type String

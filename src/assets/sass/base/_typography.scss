@@ -11,3 +11,19 @@ html, body {
  */
 @include typi-init;
 @include typi-create-classes;
+
+.h1 {
+  font-size: 20px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 43px;
+  }
+}
+
+.h2 {
+  font-size: 18px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 30px;
+  }
+}

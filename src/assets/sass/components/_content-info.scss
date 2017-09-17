@@ -9,6 +9,12 @@
     text-transform: uppercase;
   }
 
+  &--large {
+    @include media-breakpoint-up(md) {
+      font-size: 13px;
+    }
+  }
+
   &__item {
     outline: none;
     color: inherit;
@@ -25,7 +31,6 @@
     @at-root .content-info--large & {
       margin-left: $content-info-separator-margin-x-large;
       margin-right: $content-info-separator-margin-x-large;
-      font-size: 13px;
     }
   }
 }

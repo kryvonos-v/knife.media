@@ -1,0 +1,22 @@
+@import '../abstracts/functions';
+
+.accent {
+  padding: 0.4em 0.6em;
+  line-height: 1.2;
+  font-size: 19px;
+  font-weight: bold;
+  background: color(secondary);
+  color: #FFF;
+
+  &:before {
+    content: '•';
+    display: inline-block;
+    margin-right: 0.3em;
+  }
+
+  &--large {
+    @include media-breakpoint-up(md) {
+      font-size: 30px;
+    }
+  }
+}

@@ -6,8 +6,17 @@
   padding: 0;
   background: #FFF;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     padding: $header-padding-y $header-padding-x;
+  }
+
+  &__inner {
+    @include media-breakpoint-down(lg) {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+      max-width: none;
+    }
   }
 
   &__mobile-group {
@@ -17,7 +26,7 @@
     padding-right: $header-padding-x;
     width: 100%;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       padding: 0;
       width: auto;
     }
@@ -28,7 +37,7 @@
     top: $header-padding-y + ($logo-height - $burger-height) / 2;
     left: $header-padding-x;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       display: none;
     }
   }
@@ -46,30 +55,30 @@
       height: $search-height;
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       display: none;
     }
   }
 
   &__nav {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       margin-left: 5%;
       width: 100%;
     }
   }
 
   &__menu {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       margin-left: auto;
     }
   }
 
   &__socials {
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       margin-left: -$socials-items-padding-x;
       margin-right: -$socials-items-padding-x;
     }
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       margin-left: auto;
     }
   }

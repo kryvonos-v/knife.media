@@ -1,0 +1,18 @@
+@import '../abstracts/functions';
+
+.show-more {
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: $short-news-padding-x-md;
+    padding-right: $short-news-padding-x-md;
+    background: color(primary);
+  }
+
+  &__icon {
+
+  }
+}

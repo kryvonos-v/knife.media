@@ -23,9 +23,9 @@
     }
   }
 
-  &--big {
+  &--large {
     @include media-breakpoint-up(md) {
-      min-width: 450px;
+      max-width: none;
       min-height: 450px;
     }
   }
@@ -58,24 +58,31 @@
     }
   }
 
-  &__img-container {
-    position: relative;
+  &__img-height-fix {
+    opacity: 0;
+    visibility: hidden;
     padding-top: 50%;
     width: 100%;
+    height: 0;
 
     @include media-breakpoint-up(md) {
       padding-top: 74%;
     }
 
+    @at-root .moduel--large & {
+      @include media-breakpoint-up(md) {
+        padding-top: 70%;
+      }
+    }
+  }
+
+  &__img-container {
+    position: relative;
+    width: 100%;
+
     @at-root .module--full-img & {
       @include media-breakpoint-up(md) {
         position: static;
-      }
-    }
-
-    @at-root .moduel--big & {
-      @include media-breakpoint-up(md) {
-        padding-top: 70%;
       }
     }
 
@@ -93,6 +100,7 @@
     flex-direction: column;
     flex: auto;
     position: relative;
+    z-index: 1;
     padding-top: 13px;
     padding-bottom: $module-padding-y;
     width: 100%;
@@ -119,13 +127,18 @@
     margin-bottom: .7em;
     line-height: 1.3;
     font-size: 19px;
+    word-break: break-word;
 
     @include media-breakpoint-up(md) {
-      margin-bottom: 1.5em;
+      margin-bottom: 1.3rem;
+      font-size: 19px;
+    }
+
+    @media (min-width: 1350px) {
       font-size: 24px;
     }
 
-    @at-root .module--big & {
+    @at-root .module--large & {
       @include media-breakpoint-up(md) {
         font-size: 30px;
         line-height: 1.1;
@@ -142,5 +155,9 @@
 
   &__content-info {
     margin-top: auto;
+
+    @include media-breakpoint-up(md) {
+      font-size: 13px;
+    }
   }
 }

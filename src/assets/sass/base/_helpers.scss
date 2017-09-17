@@ -23,6 +23,15 @@
   display: table;
 }
 
+.height-fix {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-auto {
+  flex: auto;
+}
+
 /**
  * Main content containers
  * 1. Make the container full-width with a maximum width
