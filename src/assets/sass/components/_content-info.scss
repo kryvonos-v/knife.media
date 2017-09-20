@@ -28,6 +28,11 @@
     margin-left: $content-info-separator-margin-x;
     margin-right: $content-info-separator-margin-x;
 
+    @at-root .content-info--wide & {
+      margin-left: $content-info-separator-margin-x-large;
+      margin-right: $content-info-separator-margin-x-large;
+    }
+
     @at-root .content-info--large & {
       margin-left: $content-info-separator-margin-x-large;
       margin-right: $content-info-separator-margin-x-large;

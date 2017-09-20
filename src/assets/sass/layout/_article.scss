@@ -1,0 +1,70 @@
+@import '../abstracts/functions';
+@import '../vendor/bootstrap/mixins/grid';
+
+$article-content-padding-x: 33px;
+
+.article {
+  @include make-container;
+  @include make-container-max-widths;
+  background: color(white);
+  padding-top: 15px;
+  padding-bottom: 25px;
+  padding-left: 0;
+  padding-right: 0;
+
+  @include media-breakpoint-up(md) {
+    padding-top: 32px;
+    padding-bottom: 45px;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+
+  &-content-px {
+    padding-left: $article-content-padding-x;
+    padding-right: $article-content-padding-x;
+  }
+
+  &__content {
+    line-height: 1.65;
+
+    > * {
+      padding-left: $article-content-padding-x;
+      padding-right: $article-content-padding-x;
+    }
+
+    p {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      line-height: 1.65;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: .2px;
+
+      @include media-breakpoint-up(md) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__block {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: $article-content-padding-x;
+    padding-right: $article-content-padding-x;
+    line-height: 1.25;
+    background: color(ecru-white);
+  }
+
+  &__more-articles {
+    font-size: 21px;
+  }
+}
+
+.block {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: $article-content-padding-x;
+  padding-right: $article-content-padding-x;
+  line-height: 1.25;
+  background: color(ecru-white);
+}

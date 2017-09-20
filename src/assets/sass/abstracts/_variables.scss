@@ -26,6 +26,7 @@ $color-aquamarine-blue: #67e3d6 !default;
 $color-light-blue: #00cbe3 !default;
 $color-spring-green: #00fe62 !default;
 $color-white: #fff !default;
+$color-ecru-white: #faf9f3 !default;
 
 /// The storage of all colors that are used on site.
 /// If there are similar colors we create map.
@@ -48,7 +49,8 @@ $knife-colors: (
   aquamarine-blue: $color-aquamarine-blue,
   light-blue: $color-light-blue,
   spring-green: $color-spring-green,
-  white: $color-white
+  white: $color-white,
+  ecru-white: $color-ecru-white
 );
 
 $knife-gradients: (
@@ -213,8 +215,8 @@ $socials-items-padding-x: 16px;
 $socials-items-padding-x-lg: 7px;
 
 /// Content info
-$content-info-separator-margin-x: .25em;
-$content-info-separator-margin-x-large: .5em;
+$content-info-separator-margin-x: .25rem;
+$content-info-separator-margin-x-large: .5rem;
 
 /// Module
 $module-padding-x: 22px;
@@ -246,6 +248,9 @@ $short-news-padding-y-md: 25px;
 
 $grid-columns: 12 !default;
 $grid-gutter-width: 14px !default;
+
+$headings-margin-bottom: 0 !default;
+$headings-font-weight: 600 !default;
 
 /// Relative or absolute URL where all assets are served from
 /// @type String

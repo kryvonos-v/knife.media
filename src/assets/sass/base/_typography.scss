@@ -27,3 +27,19 @@ html, body {
     font-size: 30px;
   }
 }
+
+.h3 {
+  font-size: 18px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 21px;
+  }
+}
+
+.text-lg {
+  font-size: 18px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 21px;
+  }
+}

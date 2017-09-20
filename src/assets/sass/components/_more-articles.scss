@@ -1,0 +1,19 @@
+.more-articles {
+
+  &__title {
+
+  }
+
+  &__heading {
+    line-height: 1.25;
+  }
+
+  &__item {
+    margin-bottom: 1px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+}
