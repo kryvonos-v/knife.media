@@ -1,3 +1,5 @@
+@import '../abstracts/functions';
+
 // -----------------------------------------------------------------------------
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
@@ -28,8 +30,12 @@ html {
  * Basic styles for links
  */
 a {
-  color: $brand-color;
+  color: color(text);
   text-decoration: none;
+
+  &:hover {
+    color: color(text);
+  }
 }
 
 ul {

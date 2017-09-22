@@ -1,0 +1,10 @@
+.best-articles {
+  &__title {
+    font-size: 16px;
+    font-weight: normal;
+
+    @include media-breakpoint-up(md) {
+      font-size: 21px;
+    }
+  }
+}

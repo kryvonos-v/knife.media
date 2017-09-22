@@ -9,10 +9,24 @@
     padding-bottom: 10px;
     padding-left: $short-news-padding-x-md;
     padding-right: $short-news-padding-x-md;
-    background: color(primary);
+    background: color(white);
+
+    &--reversed-colors {
+      background: color(primary);
+    }
   }
 
   &__icon {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 
+  &__path {
+    fill: color(primary);
+
+    @at-root .show-more--reversed-colors & {
+      fill: color(white)
+    }
   }
 }
