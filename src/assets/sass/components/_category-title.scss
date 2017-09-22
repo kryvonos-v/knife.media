@@ -1,0 +1,30 @@
+@import '../abstracts/functions';
+@import '../abstracts/mixins';
+
+.category-title {
+  @include container;
+  margin-bottom: 1px;
+  font-size: 30px;
+  font-weight: 900;
+  background: color(white);
+  color: color(text);
+
+  @include media-breakpoint-up(sm) {
+    margin-top: .75rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 100px;
+    text-align: center;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 140px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 187px;
+  }
+}

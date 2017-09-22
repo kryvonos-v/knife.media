@@ -1,10 +1,19 @@
 @import '../abstracts/functions';
 @import '../vendor/bootstrap/mixins/grid';
 
+$article-padding-x: 15px;
+$article-padding-x-sm: 20px;
+$article-padding-x-md: 25px;
+$article-inner-max-width: 650px;
 $article-content-padding-x: 15px;
 $article-content-padding-x-md: 30px;
 $article-content-padding-x-lg: 50px;
 $article-content-padding-x-xl: 75px;
+$article-block-padding-x: $article-padding-x;
+$article-block-padding-x-sm: $article-padding-x-sm;
+$article-block-padding-x-md: $article-padding-x-md;
+$article-block-padding-x-lg: 30px;
+$container-padding-x: 15px;
 
 .article {
   @include make-container;
@@ -12,8 +21,13 @@ $article-content-padding-x-xl: 75px;
   background: color(white);
   padding-top: 15px;
   padding-bottom: 25px;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: $article-padding-x;
+  padding-right: $article-padding-x;
+
+  @include media-breakpoint-up(sm) {
+    padding-left: $article-padding-x-sm;
+    padding-right: $article-padding-x-sm;
+  }
 
   @include media-breakpoint-up(md) {
     padding-top: 32px;
@@ -22,32 +36,77 @@ $article-content-padding-x-xl: 75px;
     padding-right: $article-content-padding-x-md;
   }
 
-  &-content-px {
-    padding-left: $article-content-padding-x;
-    padding-right: $article-content-padding-x;
+  &__inner {
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-breakpoint-up(md) {
+      max-width: $article-inner-max-width;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 28px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 40px;
+    }
+  }
+
+  // .article__block {
+  //   margin-left: -$article-block-padding-x;
+  //   margin-right: -$article-block-padding-x;
+  //   padding-left: $article-block-padding-x;
+  //   padding-right: $article-block-padding-x;
+  // }
+
+  // &-content-px {
+  //   padding-left: $article-content-padding-x;
+  //   padding-right: $article-content-padding-x;
+  // }
+
+  &__block {
+    margin-left: -$article-block-padding-x;
+    margin-right: -$article-block-padding-x;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: $article-block-padding-x;
+    padding-right: $article-block-padding-x;
+    line-height: 1.25;
+    background: color(ecru-white);
+
+    @include media-breakpoint-up(sm) {
+      margin-left: -$article-block-padding-x-sm;
+      margin-right: -$article-block-padding-x-sm;
+      padding-left: $article-block-padding-x-sm;
+      padding-right: $article-block-padding-x-sm;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-left: -$article-block-padding-x-md;
+      margin-right: -$article-block-padding-x-md;
+      padding-left: $article-block-padding-x-md;
+      padding-right: $article-block-padding-x-md;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-left: -$article-block-padding-x-lg;
+      margin-right: -$article-block-padding-x-lg;
+      padding-left: $article-block-padding-x-lg;
+      padding-right: $article-block-padding-x-lg;
+    }
   }
 
   &__content {
     line-height: 1.65;
 
-    > * {
-      padding-left: $article-content-padding-x;
-      padding-right: $article-content-padding-x;
-
-      // @include media-breakpoint-up(md) {
-      //   padding-left: $article-content-padding-x-md;
-      //   padding-right: $article-content-padding-x-md;
-      // }
-      //
-      // @include media-breakpoint-up(lg) {
-      //   padding-left: $article-content-padding-x-lg;
-      //   padding-right: $article-content-padding-x-lg;
-      // }
-      //
-      // @include media-breakpoint-up(xl) {
-      //   padding-left: $article-content-padding-x-xl;
-      //   padding-right: $article-content-padding-x-xl;
-      // }
+    > .article__block {
+      padding-top: 1px;
+      padding-bottom: 1px;
     }
 
     p {
@@ -82,15 +141,6 @@ $article-content-padding-x-xl: 75px;
     //   margin-left: -$article-content-padding-x-xl;
     //   margin-right: -$article-content-padding-x-xl;
     // }
-  }
-
-  &__block {
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: $article-content-padding-x;
-    padding-right: $article-content-padding-x;
-    line-height: 1.25;
-    background: color(ecru-white);
   }
 
   &__more-articles {

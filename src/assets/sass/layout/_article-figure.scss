@@ -1,0 +1,25 @@
+.article-figure {
+  margin: 0;
+  padding: 0;
+
+  &__content {
+  }
+
+  &__figcaption {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__description {
+    padding-right: 15px;
+  }
+
+  &__author {
+    padding-left: 15px;
+    font-style: italic;
+    color: #666666;
+  }
+}

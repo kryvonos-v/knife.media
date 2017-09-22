@@ -46,6 +46,18 @@
   background: linear-gradient($direction, $color-stops);
 }
 
+@mixin linear-gradient-important($direction, $color-stops...) {
+  // Direction has been omitted and happens to be a color-stop
+  @if is-direction($direction) == false {
+    $color-stops: $direction, $color-stops;
+    $direction: 180deg;
+  }
+
+  background: nth(nth($color-stops, 1), 1) !important;
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops) !important;
+  background: linear-gradient($direction, $color-stops) !important;
+}
+
 // Generates css classes for defined colors.
 @mixin generate-colors($colors: $knife-colors, $color-base-key: $color-base-key) {
   @each $breakpoint in map-keys($grid-breakpoints) {
@@ -75,9 +87,15 @@
 
 /// Generates css classes for defined gradients.
 @mixin generate-gradients($gradients: $knife-gradients) {
-  @each $name, $gradient in $gradients {
-    .g-#{$name} {
-      @include linear-gradient($gradient...)
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      @each $name, $gradient in $gradients {
+        .g#{$infix}-#{$name} {
+          @include linear-gradient-important($gradient...)
+        }
+      }
     }
   }
 }
@@ -89,6 +107,14 @@
 
   $gradient: map-get($gradients, $gradient-name);
   @include linear-gradient($gradient...);
+}
+
+
+@mixin container {
+  padding-top: $container-padding-y;
+  padding-bottom: $container-padding-y;
+  padding-left: $container-padding-x;
+  padding-right: $container-padding-x;
 }
 
 @mixin placeholder {

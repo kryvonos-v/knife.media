@@ -191,6 +191,10 @@ $typi: (
   )
 );
 
+/// Container
+$container-padding-x: 15px;
+$container-padding-y: 15px;
+
 /// Site header
 $header-padding-y: 15px;
 $header-padding-x: 20px;
@@ -225,8 +229,9 @@ $module-padding-x-md: 22px;
 $module-padding-y-md: 22px;
 
 /// Label
-$label-padding-x: $module-padding-x;
+$label-padding-x: $container-padding-x;
 $label-padding-y: 1.1em;
+$label-padding-x-md: $module-padding-x;
 
 /// Short news
 $short-news-padding-x: 15px;

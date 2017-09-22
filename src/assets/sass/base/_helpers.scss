@@ -1,3 +1,5 @@
+@import '../vendor/bootstrap/mixins/breakpoints';
+
 // -----------------------------------------------------------------------------
 // This file contains CSS helper classes.
 // -----------------------------------------------------------------------------
@@ -8,11 +10,19 @@
 /**
  * Allows to make gradient text color.
  */
-.gt {
-  color: transparent !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-}
+ .gt {
+   color: transparent !important;
+   -webkit-background-clip: text !important;
+   background-clip: text !important;
+
+   &-md {
+     @include media-breakpoint-up(md) {
+       color: transparent !important;
+       -webkit-background-clip: text !important;
+       background-clip: text !important;
+     }
+   }
+ }
 
 /**
  * Clear inner floats
@@ -30,6 +40,14 @@
 
 .flex-auto {
   flex: auto;
+}
+
+.mb-1px {
+  margin-bottom: 1px;
+}
+
+.mt-1px {
+  margin-top: 1px;
 }
 
 /**

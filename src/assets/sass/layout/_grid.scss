@@ -152,6 +152,8 @@
   $grid-accent-item-h-gap-size: 2px;
   $grid-modules-item-v-gap-size: 15px;
   $grid-modules-item-h-gap-size: $grid-modules-item-v-gap-size;
+  $grid-words-item-v-gap-size: 10px;
+  $grid-words-item-h-gap-size: 30px;
 
   display: flex;
   flex-wrap: wrap;
@@ -168,6 +170,13 @@
     margin-bottom: -$grid-small-gaps-item-v-gap-size / 2;
     margin-left: -$grid-small-gaps-item-h-gap-size / 2;
     margin-right: -$grid-small-gaps-item-h-gap-size / 2;
+  }
+
+  &--words {
+    margin-top: -$grid-words-item-v-gap-size / 2;
+    margin-bottom: -$grid-words-item-v-gap-size / 2;
+    margin-left: -$grid-words-item-h-gap-size / 2;
+    margin-right: -$grid-words-item-h-gap-size / 2;
   }
 
   &--lg-accent {
@@ -208,6 +217,13 @@
       padding-bottom: $grid-small-gaps-item-v-gap-size / 2;
       padding-left: $grid-small-gaps-item-h-gap-size / 2;
       padding-right: $grid-small-gaps-item-h-gap-size / 2;
+    }
+
+    @at-root .grid--words > & {
+      padding-top: $grid-words-item-v-gap-size / 2;
+      padding-bottom: $grid-words-item-v-gap-size / 2;
+      padding-left: $grid-words-item-h-gap-size / 2;
+      padding-right: $grid-words-item-h-gap-size / 2;
     }
 
     @at-root .grid--lg-modules > & {

@@ -11,4 +11,9 @@
   letter-spacing: 0.7px;
   color: #FFF;
   background: color(primary);
+
+  @include media-breakpoint-up(md) {
+    padding-left: $label-padding-x-md;
+    padding-right: $label-padding-x-md;
+  }
 }
