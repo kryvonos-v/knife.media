@@ -36,6 +36,20 @@ html, body {
   }
 }
 
+.h1 {
+  &-md {
+    @include media-breakpoint-up(md) {
+      font-size: 43px;
+    }
+  }
+
+  &-lg {
+    @include media-breakpoint-up(lg) {
+      font-size: 43px;
+    }
+  }
+}
+
 .text-lg {
   font-size: 18px;
 
