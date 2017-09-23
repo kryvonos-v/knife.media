@@ -1,0 +1,36 @@
+@import '../abstracts/functions';
+
+.not-found {
+  &__header {
+    @include container;
+    margin-bottom: 1px;
+    padding-bottom: 30px;
+    text-align: center;
+
+    @include media-breakpoint-down(md) {
+      background: color(white);
+      color: color(text);
+    }
+
+    @include media-breakpoint-up(sm) {
+      margin-top: 15px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 3.2rem;
+      margin-bottom: 5.1rem;
+      padding: 0;
+      color: color(white);
+    }
+
+    p {
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 2.1rem;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

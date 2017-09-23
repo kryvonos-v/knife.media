@@ -1,7 +1,7 @@
 .news-archive {
   background: color(white);
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     display: flex;
   }
 
@@ -18,7 +18,7 @@
     width: 100%;
 
     @at-root .news-archive--primary & {
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         flex: 0 0 auto;
         width: 300px;
       }
