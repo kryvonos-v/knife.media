@@ -1,0 +1,25 @@
+@import '../abstracts/functions';
+
+.search-page {
+  &__search-container {
+    @include container;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 1px;
+      padding-bottom: 1.1rem;
+      color: color(text);
+      background: color(white);
+    }
+
+    @include media-breakpoint-up(sm) {
+      margin-top: 0.75rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 0;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      color: color(white);
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import '../abstracts/mixins';
+
+.search-input {
+  border: 0;
+  border-bottom: 1px solid;
+  padding-bottom: 0.85em;
+  outline: none;
+  width: 100%;
+  color: inherit;
+  background: transparent;
+
+  @include placeholder {
+    color: inherit;
+  }
+}
