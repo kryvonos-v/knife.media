@@ -80,9 +80,23 @@
 
   &__socials {
     @include media-breakpoint-down(lg) {
-      margin-left: -$socials-items-padding-x;
-      margin-right: -$socials-items-padding-x;
+
+      .socials__list {
+        margin-left: -$header-socials-items-padding-x;
+        margin-right: -$header-socials-items-padding-x;
+      }
+
+      .socials__link {
+        padding-left: $header-socials-items-padding-x;
+        padding-right: $header-socials-items-padding-x;
+      }
+
+      .fa {
+        font-size: 25px;
+        color: color(white);
+      }
     }
+
     @include media-breakpoint-up(lg) {
       margin-left: auto;
     }

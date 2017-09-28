@@ -1,0 +1,40 @@
+@import '../abstracts/functions';
+
+.stories-archive {
+
+  // TODO: Remove it later. Hot fix.
+  @include media-breakpoint-down(sm) {
+    .module--story .module__img-height-fix {
+      padding-top: 80%;
+    }
+  }
+
+  &__featured {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include media-breakpoint-down(lg) {
+      padding-top: 22px;
+      padding-bottom: 22px;
+      padding-left: 15px;
+      padding-right: 15px;
+      background: color(primary);
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-top: 1rem;
+    }
+  }
+
+  &__featured-heading {
+    @include media-breakpoint-down(lg) {
+      font-size: 19px;
+      line-height: 1.3;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 2.7rem;
+    }
+  }
+}

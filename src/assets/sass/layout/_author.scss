@@ -1,0 +1,33 @@
+.author {
+  &__title {
+    margin-bottom: 0.7rem;
+    font-weight: 900;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+  }
+
+  &__description {
+    font-size: $author-description-font-size;
+    line-height: $author-description-line-height;
+
+    @include media-breakpoint-up(md) {
+      font-size: $author-description-font-size-md;
+      line-height: $author-description-line-height-md;
+    }
+
+    > p {
+      font-weight: bold;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__socials {
+    margin-top: 1rem;
+  }
+}
