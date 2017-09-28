@@ -3,6 +3,7 @@
 
 .title {
   @include container;
+  line-height: 1.1;
   font-size: 30px;
   font-weight: 900;
   background: color(white);

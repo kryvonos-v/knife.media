@@ -11,12 +11,14 @@
  * Allows to make gradient text color.
  */
  .gt {
+   display: inline-block !important;
    color: transparent !important;
    -webkit-background-clip: text !important;
    background-clip: text !important;
 
    &-md {
      @include media-breakpoint-up(md) {
+       display: inline-block !important;
        color: transparent !important;
        -webkit-background-clip: text !important;
        background-clip: text !important;
