@@ -8,6 +8,11 @@
   color: color(white);
 
   &__inner {
+    @include media-breakpoint-down(xs) {
+      padding-left: $footer-padding-x;
+      padding-right: $footer-padding-x;
+    }
+
     @include media-breakpoint-up(lg) {
       padding-top: 30px;
       padding-bottom: 30px;

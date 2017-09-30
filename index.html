@@ -113,8 +113,8 @@
     <div class="grid grid--small-gaps grid--lg-modules">
       <div class="grid__item align-content-md-start col-12 col-lg-9">
           <div class="grid grid--small-gaps grid--lg-modules">
-            <div class="grid__item col-12 col-md-6 col-xl-12">
-              <article id="firstBigModule" class="module module--full-img module--wide">
+            <div class="grid__item col-12 col-md-6 col-xl-12 height-fix">
+              <article id="firstBigModule" class="module module--full-img module--wide flex-auto">
                 <a href="#" class="label module__label">Личный опыт</a>
 
                 <a href="#" class="module__img-container">
@@ -321,7 +321,7 @@
       <a href="#" class="label position-absolute align-bottom">день рождения стивена хокинга</a>
     </div>
 
-    <div class="content-container row">
+    <div class="content-container px-sm-0 row">
       <div class="col-12 col-xl-6 align-self-md-end mt-5 c-white">
         <footer class="content-info content-info--large c-white mb-3">
           <time class="content-info__item" datetime="">Роман Навескин </time>
@@ -635,7 +635,7 @@
       <span class="label position-absolute align-bottom">отношения и секс</span>
     </div>
 
-    <div class="content-container row">
+    <div class="content-container px-sm-0 row">
       <div class="col-12 col-xl-6 align-self-md-end mt-5 c-white pr-lg-5">
         <footer class="content-info content-info--large c-white mb-3">
           <time class="content-info__item">Наталья Белоусова</time>
@@ -809,7 +809,8 @@
       <span class="label position-absolute align-bottom">Сториз</span>
     </div>
 
-    <div class="grid grid--force-modules m-lg-0" id="stories">
+    <!-- d-block is hack for ie 10 -->
+    <div class="grid grid--force-modules m-lg-0 d-block" id="stories">
       <div class="grid__item">
         <article class="module module--story h-100">
           <a href="#" class="module__img-container">
@@ -910,7 +911,7 @@
 </main>
 
 <footer class="footer mt-3">
-  <div class="footer__inner container content-container">
+  <div class="footer__inner container">
     <div class="row">
       <div class="col-12 col-lg footer__brand">
         <a href="/" class="footer__logo">НОЖ</a>
@@ -1103,8 +1104,8 @@ $(function() {
   }
 
   function firstBigModuleAdjustCssClasses () {
-    const windowWidth = $window.outerWidth()
-    const classes = 'module--full-img module--wide'
+    var windowWidth = $window.outerWidth()
+    var classes = 'module--full-img module--wide'
 
     if (windowWidth >= breakpoints.xl) {
       $firstBigModule.addClass(classes)
