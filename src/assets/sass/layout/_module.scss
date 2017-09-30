@@ -50,6 +50,23 @@
     left: 0;
   }
 
+  &__link {
+    color: inherit;
+
+    @at-root .module--story & {
+      color: inherit;
+    }
+
+    &:hover {
+      color: color(primary);
+      text-decoration: none;
+
+      @at-root .module--story & {
+        color: inherit;
+      }
+    }
+  }
+
   &__img {
     z-index: 0;
     position: absolute;
@@ -60,10 +77,20 @@
     height: 100%;
     background-size: cover;
     background-position: center;
+    filter: opacity(100%);
+    transition: filter 300ms ease-in-out;
 
     @at-root .module--wide & {
       padding: 0;
       height: 100%;
+    }
+
+    @at-root .module--full-img:hover & {
+      filter: opacity(80%);
+    }
+
+    &:hover {
+      filter: opacity(80%);
     }
   }
 
@@ -94,8 +121,13 @@
   }
 
   &__img-container {
+    display: block;
     position: relative;
     width: 100%;
+
+    &:hover {
+      text-decoration: none;
+    }
 
     @at-root .module--full-img & {
       @include media-breakpoint-up(md) {

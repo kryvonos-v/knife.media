@@ -11,8 +11,12 @@
     padding-left: 15px;
     padding-right: 15px;
 
+    @include media-breakpoint-up(sm) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     @include media-breakpoint-up(md) {
-      display: flex;
       padding-top: 30px;
       padding-bottom: 30px;
     }
@@ -23,9 +27,15 @@
   }
 
   &__logo {
-    color: color(white);
+    margin-left: -0.05em;
+    line-height: 0.9;
     font-size: 26px;
     font-weight: 900;
+    color: color(white);
+
+    &:hover {
+      color: inherit;
+    }
 
     @include media-breakpoint-up(md) {
       font-size: 43px;
@@ -33,12 +43,15 @@
   }
 
   &__subheading {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
     line-height: 1.6;
-    font-size: 17px;
+    font-size: 16px;
 
     @include media-breakpoint-up(md) {
       line-height: 1.3;
       font-size: 13px;
+      font-weight: bold;
     }
   }
 

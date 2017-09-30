@@ -179,34 +179,53 @@ $breakpoints: (
   xl: 1200px
 ) !default;
 
-$h1-null: (26px, 1.06) !default;
-$h1-md: (43px, 1.06) !default;
-$h1-lg: (50px, 1.1) !default;
+$heading-line-height: 1.06;
 
-$typi: (
+$base-font-size: 14.5px !default;
+$base-font-size-md: 16px !default;
+
+$h1-font-size: 26px !default;
+$h1-font-size-md: 43px !default;
+$h1-font-size-lg: 50px !default;
+$h2-font-size: 18px !default;
+$h2-font-size-md: 30px !default;
+$h3-font-size: 15px !default;
+$h3-font-size-md: 23.5px !default;
+
+$h1-font-map: (#{$h1-font-size / $base-font-size}rem) !default;
+$h1-font-map-md: (#{$h1-font-size-md / $base-font-size-md}rem) !default;
+$h1-font-map-lg: (#{$h1-font-size-lg / $base-font-size-md}rem) !default;
+
+$h2-font-map: (#{$h2-font-size / $base-font-size}rem) !default;
+$h2-font-map-md: (#{$h2-font-size-md / $base-font-size-md}rem) !default;
+
+$h3-font-map: (#{$h3-font-size / $base-font-size}rem) !default;
+$h3-font-map-md: (#{$h3-font-size-md / $base-font-size-md}rem) !default;
+
+$typography: (
   base: (
     null: (14.5px, 1.36),
     md: (16px)
   ),
   h1: (
-    null: $h1-null,
-    md: $h1-md,
-    lg: $h1-lg
+    null: $h1-font-map,
+    md:   $h1-font-map-md,
+    lg:   $h1-font-map-lg
   ),
   h1-md: (
-    md: $h1-md,
-    lg: $h1-lg
+    md:   $h1-font-map-md,
+    lg:   $h1-font-map-lg
   ),
   h1-lg: (
-    lg: $h1-lg
+    lg:   $h1-font-map-lg
+  ),
+  h2: (
+    null: $h2-font-map,
+    md:   $h2-font-map-md
   ),
   h3: (
-    null: (15px),
-    md: (23.5px)
-  ),
-  h3-md: (
-    null: (10px),
-    md: (12px)
+    null: $h3-font-map,
+    md:   $h3-font-map-md
   )
 );
 

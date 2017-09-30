@@ -1,0 +1,42 @@
+@mixin make-typography($typography: $typography) {
+  @each $target, $breakpoints in $typography {
+    @each $breakpoint, $font-list in $breakpoints {
+      $selector: '.#{$target}';
+
+      @if $target == 'base' {
+        $selector: 'html';
+      }
+
+      #{$selector} {
+        @include media-breakpoint-up($breakpoint) {
+          font-size: typography-get-font-size($font-list);
+          line-height: typography-get-line-height($font-list);
+        }
+      }
+    }
+  }
+}
+
+// _ty-get-font-size
+// ----------
+// Gets font-size from font-map
+// ==========
+@function typography-get-font-size($font-map) {
+  @if type-of($font-map) == 'number' {
+    @return $font-map;
+  } @else {
+    @return nth($font-map, 1);
+  }
+}
+
+// _ty-get-line-height
+// ----------
+// Gets line-height from font-map
+// ==========
+@function typography-get-line-height($font-map) {
+  @if type-of($font-map) == 'list' {
+    @return nth($font-map, 2);
+  } @else {
+    @return null;
+  }
+}

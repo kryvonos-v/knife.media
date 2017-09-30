@@ -5,146 +5,6 @@
   }
 }
 
-// .grid {
-//   $grid-item-margin-y: 1px;
-//   $grid-item-accents-gap-size: 2px;
-//   $grid-stories-item-gap-size: 15px;
-//   $grid-words-item-h-gap-size: 30px;
-//   $grid-words-item-v-gap-size: 10px;
-//
-//   display: flex;
-//   flex-wrap: wrap;
-//   padding: 0;
-//
-//   &--words {
-//     margin-top: -$grid-words-item-v-gap-size / 2;
-//     margin-bottom: -$grid-words-item-v-gap-size / 2;
-//     margin-left: -$grid-words-item-h-gap-size / 2;
-//     margin-right: -$grid-words-item-h-gap-size / 2;
-//   }
-//
-//   &--stories {
-//     margin-left: -$grid-stories-item-gap-size / 2;
-//     margin-right: -$grid-stories-item-gap-size / 2;
-//   }
-//
-//   &--accents {
-//     margin-top: -$grid-item-accents-gap-size / 2;
-//     margin-bottom: -$grid-item-accents-gap-size / 2;
-//     margin-left: -$grid-item-accents-gap-size / 2;
-//     margin-right: -$grid-item-accents-gap-size / 2;
-//   }
-//
-//   &--small-gaps {
-//     margin-top: -$grid-item-margin-y / 2;
-//     margin-bottom: -$grid-item-margin-y / 2;
-//     margin-left: -$grid-item-margin-y / 2;
-//     margin-right: -$grid-item-margin-y / 2;
-//   }
-//
-//   &--modules {
-//     @include media-breakpoint-between(sm, md) {
-//       margin-left: -$grid-item-margin-y / 2;
-//       margin-right: -$grid-item-margin-y / 2;
-//     }
-//
-//     @include media-breakpoint-up(lg) {
-//       margin-top: -$grid-gutter-width / 2;
-//       margin-bottom: -$grid-gutter-width / 2;
-//     }
-//   }
-//
-//   &__row {
-//     display: flex;
-//     flex-wrap: wrap;
-//
-//     @at-root .grid--modules & {
-//       @include media-breakpoint-between(sm, md) {
-//         margin-top: -$grid-item-margin-y / 2;
-//         margin-bottom: -$grid-item-margin-y / 2;
-//         margin-left: -$grid-item-margin-y / 2;
-//         margin-right: -$grid-item-margin-y / 2;
-//       }
-//
-//       @include media-breakpoint-up(lg) {
-//         margin-top: -$grid-gutter-width / 2;
-//         margin-bottom: -$grid-gutter-width / 2;
-//         margin-left: -$grid-gutter-width / 2;
-//         margin-right: -$grid-gutter-width / 2;
-//       }
-//     }
-//
-//     @at-root .grid.grid--force-small-gaps > & {
-//       margin-left: -$grid-item-margin-y / 2;
-//       margin-right: -$grid-item-margin-y / 2;
-//     }
-//   }
-//
-//   // TODO: Change grid structure
-//   &-stories-container {
-//     @include media-breakpoint-up(lg) {
-//       padding-left: $grid-gutter-width / 2;
-//       padding-right: $grid-gutter-width / 2;
-//     }
-//   }
-//
-//   &__item {
-//     @at-root .grid--words & {
-//       margin-top: $grid-words-item-v-gap-size / 2;
-//       margin-bottom: $grid-words-item-v-gap-size / 2;
-//       padding-left: $grid-words-item-h-gap-size / 2;
-//       padding-right: $grid-words-item-h-gap-size / 2;
-//     }
-//
-//     @at-root .grid--stories & {
-//       padding-left: $grid-stories-item-gap-size / 2;
-//       padding-right: $grid-stories-item-gap-size / 2;
-//     }
-//
-//     @at-root .grid--small-gaps & {
-//       margin-top: $grid-item-margin-y / 2;
-//       margin-bottom: $grid-item-margin-y / 2;
-//       padding-left: $grid-item-margin-y / 2;
-//       padding-right: $grid-item-margin-y / 2;
-//     }
-//
-//     @at-root .grid--force-small-gaps .grid__row > & {
-//       margin-top: $grid-item-margin-y / 2;
-//       margin-bottom: $grid-item-margin-y / 2;
-//       padding-left: $grid-item-margin-y / 2;
-//       padding-right: $grid-item-margin-y / 2;
-//     }
-//
-//     @at-root .grid--accents & {
-//       margin-top: $grid-item-accents-gap-size / 2;
-//       margin-bottom: $grid-item-accents-gap-size / 2;
-//       padding-left: $grid-item-accents-gap-size / 2;
-//       padding-right: $grid-item-accents-gap-size / 2;
-//     }
-//
-//     @at-root .grid--modules > * > & {
-//       @include media-breakpoint-down(md) {
-//         margin-top: $grid-item-margin-y / 2;
-//         margin-bottom: $grid-item-margin-y / 2;
-//         padding-left: $grid-item-margin-y / 2;
-//         padding-right: $grid-item-margin-y / 2;
-//       }
-//
-//       @include media-breakpoint-up(lg) {
-//         margin-top: $grid-gutter-width / 2;
-//         margin-bottom: $grid-gutter-width / 2;
-//         padding-left: $grid-gutter-width / 2;
-//         padding-right: $grid-gutter-width / 2;
-//       }
-//     }
-//
-//     @include media-breakpoint-down(md) {
-//       padding-left: 0;
-//       padding-right: 0;
-//     }
-//   }
-// }
-
 .grid {
   $grid-small-gaps-item-v-gap-size: 1px;
   $grid-small-gaps-item-h-gap-size: 1px;
@@ -159,6 +19,13 @@
   flex-wrap: wrap;
 
   &--modules {
+    margin-top: -$grid-modules-item-v-gap-size / 2;
+    margin-bottom: -$grid-modules-item-v-gap-size / 2;
+    margin-left: -$grid-modules-item-h-gap-size / 2;
+    margin-right: -$grid-modules-item-h-gap-size / 2;
+  }
+
+  &--force-modules {
     margin-top: -$grid-modules-item-v-gap-size / 2;
     margin-bottom: -$grid-modules-item-v-gap-size / 2;
     margin-left: -$grid-modules-item-h-gap-size / 2;

@@ -117,6 +117,13 @@
   padding-right: $container-padding-x;
 }
 
+@mixin heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  line-height: $heading-line-height;
+}
+
 @mixin placeholder {
   &::-webkit-input-placeholder {@content}
   &:-moz-placeholder           {opacity: 1; @content}

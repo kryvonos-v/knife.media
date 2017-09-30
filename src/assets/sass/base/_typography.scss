@@ -1,3 +1,5 @@
+@import '../abstracts/typography';
+
 /**
  * Basic typography style for copy text.
  */
@@ -10,43 +12,12 @@ html, body {
 /**
  * Initializing of typi.
  */
-@include typi-init;
-@include typi-create-classes;
+// @include typi-init;
+// @include typi-create-classes;
+@include make-typography;
 
-.h2 {
-  font-size: 18px;
-
-  @include media-breakpoint-up(md) {
-    font-size: 30px;
-  }
-}
-
-.h3 {
-  font-size: 18px;
-
-  @include media-breakpoint-up(md) {
-    font-size: 21px;
-  }
-}
-
-.h1 {
-  &-md {
-    @include media-breakpoint-up(md) {
-      font-size: 43px;
-    }
-  }
-
-  &-lg {
-    @include media-breakpoint-up(lg) {
-      font-size: 43px;
-    }
-  }
-
-  &-xl {
-    @include media-breakpoint-up(xl) {
-      font-size: 43px;
-    }
-  }
+.h1, .h2, .h3 {
+  @include heading;
 }
 
 .text-lg {
