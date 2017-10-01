@@ -1,0 +1,5 @@
+@import '../abstracts/mixins';
+
+.img-link {
+  @include img-link;
+}

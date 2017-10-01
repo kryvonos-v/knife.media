@@ -1,0 +1,8 @@
+@import '../abstracts/functions';
+
+.brand-link {
+  &:hover {
+    text-decoration: none !important;
+    color: color(primary) !important;
+  }
+}

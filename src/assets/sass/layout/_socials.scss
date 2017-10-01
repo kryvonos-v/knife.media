@@ -25,6 +25,10 @@
       color: color(text);
       text-decoration: none;
 
+      @at-root .socials--theme-light & {
+        color: #FFF;
+      }
+
       @at-root .socials--md-theme-light & {
         @include media-breakpoint-up(md) {
           color: #FFF;
@@ -40,6 +44,10 @@
       &:hover {
         color: color(text);
         text-decoration: none;
+
+        @at-root .socials--theme-light & {
+          color: #FFF;
+        }
 
         @at-root .socials--md-theme-light & {
           @include media-breakpoint-up(md) {

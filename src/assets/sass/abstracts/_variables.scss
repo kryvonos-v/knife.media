@@ -210,8 +210,7 @@ $typography: (
   ),
   h1: (
     null: $h1-font-map,
-    md:   $h1-font-map-md,
-    lg:   $h1-font-map-lg
+    md:   $h1-font-map-md
   ),
   h1-md: (
     md:   $h1-font-map-md,
@@ -261,11 +260,17 @@ $socials-items-padding-x: 10px;
 $content-info-separator-margin-x: .25rem;
 $content-info-separator-margin-x-large: .5rem;
 
+/// Img link
+$img-link-transition-duration: 300ms;
+$img-link-transition-timing-function: ease-in-out;
+$img-link-hover-filter-brightness: 130%;
+
 /// Module
 $module-padding-x: 22px;
 $module-padding-y: 22px;
 $module-padding-x-md: 22px;
 $module-padding-y-md: 22px;
+$module-img-hover-filter-brightness: $img-link-hover-filter-brightness;
 
 /// Label
 $label-padding-x: $container-padding-x;

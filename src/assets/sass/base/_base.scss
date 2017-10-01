@@ -30,11 +30,11 @@ html {
  * Basic styles for links
  */
 a {
-  color: color(text);
+  color: inherit;
   text-decoration: none;
 
   &:hover {
-    color: color(text);
+    color: color(primary);
   }
 }
 

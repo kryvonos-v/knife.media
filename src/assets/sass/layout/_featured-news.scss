@@ -1,0 +1,13 @@
+.featured-news {
+  &__img {
+    max-width: 50px;
+
+    @include media-breakpoint-up(sm) {
+      max-width: 70px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: 80px;
+    }
+  }
+}

@@ -124,6 +124,20 @@
   line-height: $heading-line-height;
 }
 
+@mixin img-link {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  cursor: pointer;
+  filter: brightness(100%);
+  transition: filter $img-link-transition-duration $img-link-transition-timing-function;
+
+  &:hover {
+    text-decoration: none;
+    filter: brightness($img-link-hover-filter-brightness);
+  }
+}
+
 @mixin placeholder {
   &::-webkit-input-placeholder {@content}
   &:-moz-placeholder           {opacity: 1; @content}

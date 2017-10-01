@@ -78,20 +78,10 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    filter: opacity(100%);
-    transition: filter 300ms ease-in-out;
 
     @at-root .module--wide & {
       padding: 0;
       height: 100%;
-    }
-
-    @at-root .module--full-img:hover & {
-      filter: opacity(80%);
-    }
-
-    &:hover {
-      filter: opacity(80%);
     }
   }
 
@@ -121,13 +111,14 @@
     }
   }
 
-  &__img-container {
+  &__img-link {
+    @include img-link;
     display: block;
     position: relative;
     width: 100%;
 
-    &:hover {
-      text-decoration: none;
+    @at-root .module--full-img:hover & {
+      filter: brightness($module-img-hover-filter-brightness);
     }
 
     @at-root .module--full-img & {
