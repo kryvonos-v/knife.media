@@ -1,0 +1,33 @@
+.article-quote {
+  padding-top: $article-quote-padding-y;
+  padding-bottom: $article-quote-padding-y;
+
+  &__source {
+    display: block;
+    line-height: $article-quote-source-line-heihgt;
+    font-size: $article-quote-source-font-size;
+    font-weight: $article-quote-source-font-weight;
+    font-style: normal;
+  }
+
+  &__source-info {
+    font-size: $article-quote-source-info-font-size;
+    font-weight: $article-quote-source-info-font-weight;
+  }
+
+  &__content {
+    margin-top: $article-quote-content-margin-top;
+    margin-bottom: 0;
+
+    > p {
+      margin-bottom: $article-quote-content-text-margin-y;
+      line-height: $article-quote-content-text-line-height;
+      font-weight: $article-quote-content-text-font-weight;
+      letter-spacing: $article-quote-content-text-letter-spacing;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

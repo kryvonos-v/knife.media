@@ -291,6 +291,33 @@ $short-news-padding-y-md: 25px;
 $featured-news-element-margin-y: 0.7rem;
 $featured-news-heading-lg-max-width: 85%;
 
+/// Article highlight
+$article-hightlight-target-line-height: 1 !default;
+$article-hightlight-target-font-size: 80px !default;
+$article-hightlight-target-font-size-md: 140px !default;
+$article-hightlight-target-font-weight: 400 !default;
+$article-hightlight-description-margin-top: 0.5rem;
+$article-hightlight-description-line-height: 1.25 !default;
+$article-hightlight-description-font-size: 16px !default;
+$article-hightlight-description-font-size-md: 21px !default;
+$article-hightlight-description-font-weight: bold !default;
+$article-hightlight-description-text-margin-y: 0.5rem !default;
+$article-hightlight-info-line-height: 1.2 !default;
+$article-hightlight-info-font-size: 12px !default;
+
+/// Article quote
+$article-quote-padding-y: 0.8rem !default;
+$article-quote-source-line-heihgt: 1.25 !default;
+$article-quote-source-font-size: 21px !default;
+$article-quote-source-font-weight: bold !default;
+$article-quote-source-info-font-size: 12px !default;
+$article-quote-source-info-font-weight: 500 !default;
+$article-quote-content-margin-top: 0.75rem !default;
+$article-quote-content-text-margin-y: 0.5rem !default;
+$article-quote-content-text-line-height: 1.66 !default;
+$article-quote-content-text-font-weight: 500 !default;
+$article-quote-content-text-letter-spacing: 0.02em !default;
+
 /// Author
 $author-description-font-size: 15px;
 $author-description-font-size-md: 23.5px;
