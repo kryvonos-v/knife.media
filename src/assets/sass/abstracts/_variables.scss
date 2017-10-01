@@ -28,6 +28,8 @@ $color-spring-green: #00fe62 !default;
 $color-white: #fff !default;
 $color-ecru-white: #faf9f3 !default;
 
+$body-bg: inherit !default;
+
 /// The storage of all colors that are used on site.
 /// If there are similar colors we create map.
 /// We namespace this variable because some frameworks like bootstrap can have variable 'color'.

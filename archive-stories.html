@@ -12,96 +12,99 @@
   <link rel="stylesheet" href="css/app.css" />
 </head>
 <body>
-<header class="header">
-  <div class="container header__inner navbar navbar-expand-lg">
-    <div class="header__mobile-group">
-    <div id="menuBurger" class="burger header__burger" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="burger__stick"></div>
-      <div class="burger__stick"></div>
-      <div class="burger__stick"></div>
+  <header class="header">
+    <div class="container header__inner navbar navbar-expand-lg">
+      <div class="header__mobile-group">
+      <div id="menuBurger" class="burger header__burger" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="burger__stick"></div>
+        <div class="burger__stick"></div>
+        <div class="burger__stick"></div>
+      </div>
+
+      <a href="/" class="logo mx-auto">
+        <img class="logo__img" width="100" src="src/assets/imgs/logo.svg" alt="Site logo">
+      </a>
+
+      <a href="#" class="header__search"><img class="d-block" src="src/assets/imgs/icons/search.svg" /></a>
     </div>
 
-    <a href="/" class="logo mx-auto">
-      <img class="logo__img" width="100" src="src/assets/imgs/logo.svg" alt="Site logo">
-    </a>
+      <nav class="header__nav collapse navbar-collapse" id="mainNav">
+      <ul class="menu sm header__menu" id="mainMenu">
+        <li class="menu__item">
+          <a class="menu__link" href="#">Россия</a>
+          </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Тесты</a>
+          </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Секс</a>
+          </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Мнения</a>
+          </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Stories</a>
+          </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Больше ></a>
+          <ul class="submenu">
+            <li class="submenu__item">
+              <a class="submenu__link">Кино</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Музыка</a>
+            </li>
+            <li class="submenu__item submenu__item_active">
+              <a class="submenu__link">Нищегоды</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Еда</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Персонажи</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Неизвестная Россия</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Фотографии</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Личный опыт</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Итервью</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Классика</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
 
-    <a href="#" class="header__search"><img class="d-block" src="src/assets/imgs/icons/search.svg" /></a>
-  </div>
-
-    <nav class="header__nav collapse navbar-collapse" id="mainNav">
-    <ul class="menu sm header__menu" id="mainMenu">
-      <li class="menu__item">
-        <a class="menu__link" href="#">Россия</a>
-        </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Тесты</a>
-        </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Секс</a>
-        </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Мнения</a>
-        </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Stories</a>
-        </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Больше ></a>
-        <ul class="submenu">
-          <li class="submenu__item">
-            <a class="submenu__link">Кино</a>
+      <div class="socials header__socials">
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a href="#" class="socials__link brand-link"><i class="fa fa-facebook socials__fb" aria-hidden="true"></i></a>
           </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Музыка</a>
+          <li class="socials__item">
+            <a href="#" class="socials__link brand-link"><i class="fa fa-vk socials__vk" aria-hidden="true"></i></a>
           </li>
-          <li class="submenu__item submenu__item_active">
-            <a class="submenu__link">Нищегоды</a>
+          <li class="socials__item">
+            <a href="#" class="socials__link brand-link"><i class="fa fa-telegram socials__tg" aria-hidden="true"></i></a>
           </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Еда</a>
+          <li class="socials__item">
+            <a href="#" class="socials__link brand-link"><i class="fa fa-twitter socials__tw" aria-hidden="true"></i></a>
           </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Персонажи</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Неизвестная Россия</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Фотографии</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Личный опыт</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Итервью</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Классика</a>
+          <li class="socials__item">
+            <a href="#" class="socials__link brand-link"><i class="fa fa-search socials__search" aria-hidden="true"></i></a>
           </li>
         </ul>
-      </li>
-    </ul>
+      </div>
+    </nav>
+    </div>
+  </header>
 
-    <ul class="socials header__socials">
-      <li class="socials__item">
-        <a href="#" class="socials__link"><i class="fa fa-facebook socials__fb" aria-hidden="true"></i></a>
-      </li>
-      <li class="socials__item">
-        <a href="#" class="socials__link"><i class="fa fa-vk socials__vk" aria-hidden="true"></i></a>
-      </li>
-      <li class="socials__item">
-        <a href="#" class="socials__link"><i class="fa fa-telegram socials__tg" aria-hidden="true"></i></a>
-      </li>
-      <li class="socials__item">
-        <a href="#" class="socials__link"><i class="fa fa-twitter socials__tw" aria-hidden="true"></i></a>
-      </li>
-      <li class="socials__item">
-        <a href="#" class="socials__link"><i class="fa fa-search socials__search" aria-hidden="true"></i></a>
-      </li>
-    </ul>
-  </nav>
-  </div>
-</header>
 
 <main class="stories-archive">
   <div class="container px-0 mt-3">
@@ -113,7 +116,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/5.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">Marvel показалтизер фильма «Мстители. Война бесконечности»</h2>
           </div>
         </article>
@@ -126,7 +129,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/6.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">Reebok довеладо бешенствапользователейТвиттера</h2>
           </div>
         </article>
@@ -139,7 +142,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/7.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">Disney показалифрагмент «Короля Льва». Симба неотличим от настоящего льва</h2>
           </div>
         </article>
@@ -152,7 +155,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/8.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">Шеф-повар отрезалсебе палец во время прямого эфира ВВС</h2>
           </div>
         </article>
@@ -165,7 +168,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/9.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">В Краснодарскомкрае жители поселка под сносперекрыли трассугробами</h2>
           </div>
         </article>
@@ -178,7 +181,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/10.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">Российские язычники борютсяза права верующих</h2>
           </div>
         </article>
@@ -191,7 +194,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/11.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">Футбольные фанаты поддержали запрет фильма «Матильда»</h2>
           </div>
         </article>
@@ -204,7 +207,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/12.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">Макрон показал Дональду Трампу, возможно, лучший кавер на Daft Punk</h2>
           </div>
         </article>
@@ -229,7 +232,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/7.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">Disney показалифрагмент «Короля Льва». Симба неотличим от настоящего льва</h2>
           </div>
         </article>
@@ -242,7 +245,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/13.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">Шеф-повар отрезалсебе палец во время прямого эфира ВВС</h2>
           </div>
         </article>
@@ -255,7 +258,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/5.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">Marvel показалтизер фильма «Мстители. Война бесконечности»</h2>
           </div>
         </article>
@@ -268,7 +271,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/6.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">Reebok довеладо бешенствапользователейТвиттера</h2>
           </div>
         </article>
@@ -281,7 +284,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/7.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">Disney показалифрагмент «Короля Льва». Симба неотличим от настоящего льва</h2>
           </div>
         </article>
@@ -294,7 +297,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/8.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">Шеф-повар отрезалсебе палец во время прямого эфира ВВС</h2>
           </div>
         </article>
@@ -307,7 +310,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/9.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">В Краснодарскомкрае жители поселка под сносперекрыли трассугробами</h2>
           </div>
         </article>
@@ -320,7 +323,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/10.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">Российские язычники борютсяза права верующих</h2>
           </div>
         </article>
@@ -333,7 +336,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/11.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">Футбольные фанаты поддержали запрет фильма «Матильда»</h2>
           </div>
         </article>
@@ -346,7 +349,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/12.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">Макрон показал Дональду Трампу, возможно, лучший кавер на Daft Punk</h2>
           </div>
         </article>
@@ -359,7 +362,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/7.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">Disney показалифрагмент «Короля Льва». Симба неотличим от настоящего льва</h2>
           </div>
         </article>
@@ -372,7 +375,7 @@
             <img class="module__img-height-fix" src="src/assets/imgs/stories/13.jpg" />
           </div>
 
-          <div class="module__content container">
+          <div class="module__content">
             <h2 class="module__heading">Шеф-повар отрезалсебе палец во время прямого эфира ВВС</h2>
           </div>
         </article>
@@ -386,7 +389,7 @@
   <div class="footer__inner container">
     <div class="row">
       <div class="col-12 col-lg footer__brand">
-        <a href="/" class="footer__logo mx-auto">НОЖ</a>
+        <a href="/" class="footer__logo">НОЖ</a>
         <p class="footer__subheading">Интеллектуальный журнал<br>о культуре и обществе</p>
       </div>
 
@@ -398,21 +401,21 @@
           <li class="nav-item"><a class="footer__nav-link" href="#">Стать частью проекта</a></li>
         </ul>
 
-        <ul class="socials footer__socials mt-4">
+        <ul class="socials socials--theme-light footer__socials mt-4">
           <li class="socials__item">
-            <a href="#" class="socials__link c-white"><i class="fa fa-facebook socials__fb" aria-hidden="true"></i></a>
+            <a href="#" class="socials__link brand-link"><i class="fa fa-facebook socials__fb" aria-hidden="true"></i></a>
           </li>
           <li class="socials__item">
-            <a href="#" class="socials__link c-white"><i class="fa fa-vk socials__vk" aria-hidden="true"></i></a>
+            <a href="#" class="socials__link brand-link"><i class="fa fa-vk socials__vk" aria-hidden="true"></i></a>
           </li>
           <li class="socials__item">
-            <a href="#" class="socials__link c-white"><i class="fa fa-telegram socials__tg" aria-hidden="true"></i></a>
+            <a href="#" class="socials__link brand-link"><i class="fa fa-telegram socials__tg" aria-hidden="true"></i></a>
           </li>
           <li class="socials__item">
-            <a href="#" class="socials__link c-white"><i class="fa fa-twitter socials__tw" aria-hidden="true"></i></a>
+            <a href="#" class="socials__link brand-link"><i class="fa fa-twitter socials__tw" aria-hidden="true"></i></a>
           </li>
           <li class="socials__item">
-            <a href="#" class="socials__link c-white"><i class="fa fa-search socials__search" aria-hidden="true"></i></a>
+            <a href="#" class="socials__link brand-link"><i class="fa fa-search socials__search" aria-hidden="true"></i></a>
           </li>
         </ul>
       </div>

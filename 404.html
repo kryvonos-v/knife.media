@@ -12,96 +12,98 @@
   <link rel="stylesheet" href="css/app.css" />
 </head>
 <body>
-<header class="header">
-  <div class="container header__inner navbar navbar-expand-lg">
-    <div class="header__mobile-group">
-    <div id="menuBurger" class="burger header__burger" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="burger__stick"></div>
-      <div class="burger__stick"></div>
-      <div class="burger__stick"></div>
+  <header class="header">
+    <div class="container header__inner navbar navbar-expand-lg">
+      <div class="header__mobile-group">
+      <div id="menuBurger" class="burger header__burger" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="burger__stick"></div>
+        <div class="burger__stick"></div>
+        <div class="burger__stick"></div>
+      </div>
+
+      <a href="/" class="logo mx-auto">
+        <img class="logo__img" width="100" src="src/assets/imgs/logo.svg" alt="Site logo">
+      </a>
+
+      <a href="#" class="header__search"><img class="d-block" src="src/assets/imgs/icons/search.svg" /></a>
     </div>
 
-    <a href="/" class="logo mx-auto">
-      <img class="logo__img" width="100" src="src/assets/imgs/logo.svg" alt="Site logo">
-    </a>
+      <nav class="header__nav collapse navbar-collapse" id="mainNav">
+      <ul class="menu sm header__menu" id="mainMenu">
+        <li class="menu__item">
+          <a class="menu__link" href="#">Россия</a>
+          </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Тесты</a>
+          </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Секс</a>
+          </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Мнения</a>
+          </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Stories</a>
+          </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Больше ></a>
+          <ul class="submenu">
+            <li class="submenu__item">
+              <a class="submenu__link">Кино</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Музыка</a>
+            </li>
+            <li class="submenu__item submenu__item_active">
+              <a class="submenu__link">Нищегоды</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Еда</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Персонажи</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Неизвестная Россия</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Фотографии</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Личный опыт</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Итервью</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Классика</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
 
-    <a href="#" class="header__search"><img class="d-block" src="src/assets/imgs/icons/search.svg" /></a>
-  </div>
-
-    <nav class="header__nav collapse navbar-collapse" id="mainNav">
-    <ul class="menu sm header__menu" id="mainMenu">
-      <li class="menu__item">
-        <a class="menu__link" href="#">Россия</a>
-        </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Тесты</a>
-        </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Секс</a>
-        </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Мнения</a>
-        </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Stories</a>
-        </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Больше ></a>
-        <ul class="submenu">
-          <li class="submenu__item">
-            <a class="submenu__link">Кино</a>
+      <div class="socials header__socials">
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a href="#" class="socials__link brand-link"><i class="fa fa-facebook socials__fb" aria-hidden="true"></i></a>
           </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Музыка</a>
+          <li class="socials__item">
+            <a href="#" class="socials__link brand-link"><i class="fa fa-vk socials__vk" aria-hidden="true"></i></a>
           </li>
-          <li class="submenu__item submenu__item_active">
-            <a class="submenu__link">Нищегоды</a>
+          <li class="socials__item">
+            <a href="#" class="socials__link brand-link"><i class="fa fa-telegram socials__tg" aria-hidden="true"></i></a>
           </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Еда</a>
+          <li class="socials__item">
+            <a href="#" class="socials__link brand-link"><i class="fa fa-twitter socials__tw" aria-hidden="true"></i></a>
           </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Персонажи</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Неизвестная Россия</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Фотографии</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Личный опыт</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Итервью</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Классика</a>
+          <li class="socials__item">
+            <a href="#" class="socials__link brand-link"><i class="fa fa-search socials__search" aria-hidden="true"></i></a>
           </li>
         </ul>
-      </li>
-    </ul>
-
-    <ul class="socials header__socials">
-      <li class="socials__item">
-        <a href="#" class="socials__link"><i class="fa fa-facebook socials__fb" aria-hidden="true"></i></a>
-      </li>
-      <li class="socials__item">
-        <a href="#" class="socials__link"><i class="fa fa-vk socials__vk" aria-hidden="true"></i></a>
-      </li>
-      <li class="socials__item">
-        <a href="#" class="socials__link"><i class="fa fa-telegram socials__tg" aria-hidden="true"></i></a>
-      </li>
-      <li class="socials__item">
-        <a href="#" class="socials__link"><i class="fa fa-twitter socials__tw" aria-hidden="true"></i></a>
-      </li>
-      <li class="socials__item">
-        <a href="#" class="socials__link"><i class="fa fa-search socials__search" aria-hidden="true"></i></a>
-      </li>
-    </ul>
-  </nav>
-  </div>
-</header>
+      </div>
+    </nav>
+    </div>
+  </header>
 
 <main style="overflow: hidden;" class="not-found">
 
@@ -119,15 +121,17 @@
           <div class="grid grid--small-gaps grid--lg-modules">
             <div class="grid__item col-12 col-md-6 col-xl-12">
               <article id="firstBigModule" class="module module--full-img module--wide">
-                <span class="label module__label">Личный опыт</span>
+                <a href="#" class="label module__label">Личный опыт</a>
 
                 <div class="module__img-link">
                   <div class="module__img" style="background-image: url('src/assets/imgs/photos/1.jpg');"></div>
                   <img class="module__img-height-fix" src="src/assets/imgs/photos/1.jpg" />
                 </div>
 
-                <div class="module__content container">
-                  <h2 class="module__heading">Кто и почему торгует на московских блошиных рынках</h2>
+                <div class="module__content">
+                  <h2 class="module__heading">
+                    <a href="#" class="brand-link">Кто и почему торгует на московских блошиных рынках</a>
+                  </h2>
 
                   <footer class="content-info content-info--large module__content-info">
                     <a class="content-info__item" href="#">Агата Коровина</a>
@@ -140,15 +144,17 @@
 
             <div class="grid__item col-12 col-md-6 col-xl-4 height-fix">
               <article class="module flex-auto">
-                <span class="label module__label">Гид</span>
+                <a href="#" class="label module__label">Гид</a>
 
                 <div class="module__img-link">
                   <div class="module__img" style="background-image: url('src/assets/imgs/photos/2.jpg');"></div>
                   <img class="module__img-height-fix" src="src/assets/imgs/photos/2.jpg" />
                 </div>
 
-                <div class="module__content container">
-                  <h2 class="module__heading">20 типов людей, которые вы не хотите знать</h2>
+                <div class="module__content">
+                  <h2 class="module__heading">
+                    <a href="#" class="brand-link">20 типов людей, которые вы не хотите знать</a>
+                  </h2>
 
                   <footer class="content-info content-info--large module__content-info">
                     <a class="content-info__item" href="#">Коля Сулима</a>
@@ -161,15 +167,17 @@
 
             <div class="grid__item col-12 col-md-6 col-xl-4 height-fix">
               <article class="module flex-auto">
-                <span class="label module__label">Россия</span>
+                <a href="#" class="label module__label">Россия</a>
 
                 <div class="module__img-link">
                   <div class="module__img" style="background-image: url('src/assets/imgs/photos/3.jpg');"></div>
                   <img class="module__img-height-fix" src="src/assets/imgs/photos/3.jpg" />
                 </div>
 
-                <div class="module__content container">
-                  <h2 class="module__heading">Как душевные болезни помогалии мешали русскимписателям творить</h2>
+                <div class="module__content">
+                  <h2 class="module__heading">
+                    <a href="#" class="brand-link">Как душевные болезни помогалии мешали русскимписателям творить</a>
+                  </h2>
 
                   <footer class="content-info content-info--large module__content-info">
                     <a class="content-info__item" href="#">Евгения Боярская</a>
@@ -182,15 +190,17 @@
 
             <div class="grid__item col-12 col-md-6 col-xl-4 height-fix">
               <article class="module flex-auto">
-                <span class="label module__label">История</span>
+                <a href="#" class="label module__label">История</a>
 
                 <div class="module__img-link">
                   <div class="module__img" style="background-image: url('src/assets/imgs/photos/4.jpg');"></div>
                   <img class="module__img-height-fix" src="src/assets/imgs/photos/4.jpg" />
                 </div>
 
-                <div class="module__content container">
-                  <h2 class="module__heading">Истории: Что нас раздражает и как с этим бороться</h2>
+                <div class="module__content">
+                  <h2 class="module__heading">
+                    <a href="#" class="brand-link">Истории: Что нас раздражает и как с этим бороться</a>
+                  </h2>
 
                   <footer class="content-info content-info--large module__content-info">
                     <a class="content-info__item" href="#">Дамир Бикчурин</a>
@@ -319,65 +329,77 @@
     </div> <!-- End of the row -->
   </div> <!-- End of the container -->
 
-  <div class="container px-0 mt-4">
+  <div class="container mt-4">
     <div class="position-relative">
       <div class="hr"></div>
-      <span class="label position-absolute align-bottom">день рождения стивена хокинга</span>
+      <a href="#" class="label position-absolute align-bottom">день рождения стивена хокинга</a>
     </div>
 
-    <div class="row">
-      <div class="col-12 col-xl-6 align-self-md-end mt-5 c-white">
+    <div class="content-container px-sm-0 row">
+      <div class="col-12 col-xl-6 align-self-md-end mt-5 pr-xl-4 c-white">
         <footer class="content-info content-info--large c-white mb-3">
-          <time class="content-info__item" datetime="">Роман Навескин </time>
+          <a class="brand-link content-info__item">Роман Навескин </a>
           <span class="content-info__separator">•</span>
-          <a class="content-info__item" href="#">17 июля</a>
+          <a class="content-info__item brand-link" href="#">17 июля</a>
         </footer>
 
-        <h2 class="h1">Стивен Хокинг — о восстановлении экспериментальной физики в России</h2>
+        <h2 class="h1"><a href="#" class="brand-link">Стивен Хокинг — о восстановлении экспериментальной физики в России</a></h2>
       </div>
 
       <div class="col-12 col-xl-6">
-        <article class="media c-white mt-4">
-          <img class="align-self-center d-flex mr-3" src="src/assets/imgs/stickers/diamond.png" alt="">
+        <article class="special-news media c-white mt-4">
+          <a href="#" class="img-link align-self-center mr-3">
+            <img class="special-news__img" src="src/assets/imgs/stickers/diamond.png" alt="">
+          </a>
 
           <div class="media-body">
             <footer class="content-info content-info--large c-white">
-              <time class="content-info__item" datetime="">Иван Шипнигов</time>
+              <a class="brand-link content-info__item">Иван Шипнигов</a>
               <span class="content-info__separator">•</span>
-              <a class="content-info__item" href="#">19 июля</a>
+              <a class="content-info__item brand-link" href="#">19 июля</a>
             </footer>
 
-            <h2 class="h2 mt-3">Ольга Славникова — о Хокинге, уральском мифе и своих новых романах</h2>
+            <h2 class="h2 mt-3">
+              <a class="brand-link" href="#">Ольга Славникова — о Хокинге, уральском мифе и своих новых романах</a>
+            </h2>
             <div class="hr mt-4"></div>
           </div>
         </article>
 
-        <article class="media c-white mt-4">
-          <img class="align-self-center d-flex mr-3" src="src/assets/imgs/stickers/face.png" alt="">
+        <article class="special-news media c-white mt-4">
+          <a href="#" class="img-link align-self-center mr-3">
+            <img class="special-news__img" src="src/assets/imgs/stickers/face.png" alt="">
+          </a>
 
           <div class="media-body">
             <footer class="content-info content-info--large c-white">
-              <time class="content-info__item" datetime="">Иван Шипнигов</time>
+              <a class="brand-link content-info__item">Иван Шипнигов</a>
               <span class="content-info__separator">•</span>
-              <a class="content-info__item" href="#">18 июля</a>
+              <a class="content-info__item brand-link" href="#">18 июля</a>
             </footer>
 
-            <h2 class="h2 mt-3">Денис Драгунский — о том, как бы вел себя Хокинг в русском фейсбуке</h2>
+            <h2 class="h2 mt-3">
+              <a class="brand-link" href="#">Денис Драгунский — о том, как бы вел себя Хокинг в русском фейсбуке</a>
+            </h2>
             <div class="hr mt-4"></div>
           </div>
         </article>
 
-        <article class="media c-white mt-4">
-          <img class="align-self-center d-flex mr-3" src="src/assets/imgs/stickers/explosion.png" alt="">
+        <article class="special-news media c-white mt-4">
+          <a href="#" class="img-link align-self-center mr-3">
+            <img class="special-news__img" src="src/assets/imgs/stickers/explosion.png" alt="">
+          </a>
 
           <div class="media-body">
             <footer class="content-info content-info--large c-white">
-              <time class="content-info__item" datetime="">Иван Шипнигов</time>
+              <a class="brand-link content-info__item">Иван Шипнигов</a>
               <span class="content-info__separator">•</span>
-              <a class="content-info__item" href="#">16 июля</a>
+              <a class="content-info__item brand-link" href="#">16 июля</a>
             </footer>
 
-            <h2 class="h2 mt-3">Илья Найшуллер — о прогрессивной роли порнографии, плоскогубцах и носе Хокинга</h2>
+            <h2 class="h2 mt-3">
+              <a class="brand-link" href="#">Илья Найшуллер — о прогрессивной роли порнографии, плоскогубцах и носе Хокинга</a>
+            </h2>
           </div>
         </article>
       </div>
@@ -388,15 +410,17 @@
     <div class="grid grid--small-gaps grid--lg-modules">
       <div class="grid__item col-12 col-md-6 height-fix">
         <article class="module module--large flex-auto">
-          <span class="label module__label">Книги</span>
+          <a href="#" class="label module__label">Книги</a>
 
           <div class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/photos/5.jpg');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/photos/5.jpg" />
           </div>
 
-          <div class="module__content container">
-            <h2 class="module__heading"><span color="c-primary">Тренд</span>: Кто выбирает <em>работпуски</em> — длинные путешествия без отрыва от карьеры</h2>
+          <div class="module__content">
+            <h2 class="module__heading">
+              <a href="#" class="brand-link"><span color="c-primary">Тренд</span>: Кто выбирает <em>работпуски</em> — длинные путешествия без отрыва от карьеры</a>
+            </h2>
 
             <footer class="content-info content-info--large module__content-info">
               <a class="content-info__item" href="#">Агата Коровина</a>
@@ -409,15 +433,17 @@
 
       <div class="grid__item col-12 col-md-6 height-fix">
         <article class="module module--large module--full-img flex-auto">
-          <span class="label module__label">Гид</span>
+          <a href="#" class="label module__label">Гид</a>
 
           <div class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/photos/6.jpg');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/photos/6.jpg" />
           </div>
 
-          <div class="module__content container c-md-white">
-            <h2 class="module__heading">Девять признаков того, что выникогда не разбогатеете</h2>
+          <div class="module__content c-md-white">
+            <h2 class="module__heading">
+              <a href="#" class="brand-link">Девять признаков того, что выникогда не разбогатеете</a>
+            </h2>
 
             <footer class="content-info content-info--large module__content-info c-md-white">
               <a class="content-info__item" href="#">Кэтлин Элкнис</a>
@@ -430,15 +456,17 @@
 
       <div class="grid__item col-12 col-md-12">
         <article class="module module--wide module--full-img">
-          <span class="label module__label">будущее</span>
+          <a href="#" class="label module__label">будущее</a>
 
           <div class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/photos/7.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/photos/7.png" />
           </div>
 
-          <div class="module__content container">
-            <h2 class="module__heading">Пять книг для разговоров обо всем на свете</h2>
+          <div class="module__content">
+            <h2 class="module__heading">
+              <a href="#" class="brand-link">Пять книг для разговоров обо всем на свете</a>
+            </h2>
 
             <footer class="content-info content-info--large module__content-info">
               <a class="content-info__item" href="#">Борис Барбизон</a>
@@ -473,15 +501,17 @@
     <div class="grid grid--small-gaps grid--lg-modules">
       <div class="grid__item col-12 col-md-4 height-fix">
         <article class="module flex-auto">
-          <span class="label module__label">Тест</span>
+          <a href="#" class="label module__label">Тест</a>
 
           <div class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/photos/8.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/photos/8.png" />
           </div>
 
-          <div class="module__content container">
-            <h2 class="module__heading"><em class="c-primary">Тест для женщин:</em><br>Каков ваш сексуальный темперамент</h2>
+          <div class="module__content">
+            <h2 class="module__heading">
+              <a href="#" class="brand-link"><em class="c-primary">Тест для женщин:</em><br>Каков ваш сексуальный темперамент</a>
+            </h2>
 
             <footer class="content-info content-info--large module__content-info">
               <a class="content-info__item" href="#">Наталья Белоусова</a>
@@ -494,15 +524,17 @@
 
       <div class="grid__item col-12 col-md-4 height-fix">
         <article class="module module--full-img flex-auto">
-          <span class="label module__label">Наука</span>
+          <a href="#" class="label module__label">Наука</a>
 
           <div class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/photos/9.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/photos/9.png" />
           </div>
 
-          <div class="module__content container c-md-white">
-            <h2 class="module__heading">Как избавится от месячныхи начать жить</h2>
+          <div class="module__content c-md-white">
+            <h2 class="module__heading">
+              <a href="#" class="brand-link">Как избавится от месячныхи начать жить</a>
+            </h2>
 
             <footer class="content-info content-info--large module__content-info c-md-white">
               <a class="content-info__item" href="#">Таня Коэн</a>
@@ -515,15 +547,17 @@
 
       <div class="grid__item col-12 col-md-4 height-fix">
         <article class="module flex-auto">
-          <span class="label module__label">Личный опыт</span>
+          <a href="#" class="label module__label">Личный опыт</a>
 
           <div class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/photos/10.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/photos/10.png" />
           </div>
 
-          <div class="module__content container">
-            <h2 class="module__heading">Сколько зарабатывает и сколько работает судмедэксперт в России</h2>
+          <div class="module__content">
+            <h2 class="module__heading">
+              <a href="#" class="brand-link">Сколько зарабатывает и сколько работает судмедэксперт в России</a>
+            </h2>
 
             <footer class="content-info content-info--large module__content-info">
               <a class="content-info__item" href="#">Таня Коэн</a>
@@ -570,15 +604,17 @@
     <div class="grid grid--small-gaps grid--lg-modules">
       <div class="grid__item col-12 col-md-6 height-fix">
         <article class="module module--large module--full-img flex-auto">
-          <span class="label module__label">Наука</span>
+          <a href="#" class="label module__label">Наука</a>
 
           <div class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/photos/11.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/photos/11.png" />
           </div>
 
-          <div class="module__content container">
-            <h2 class="module__heading"><span color="c-primary">Хороший вопрос:</span> Что на самом деле отличает гуманитарныенауки от естественных</h2>
+          <div class="module__content">
+            <h2 class="module__heading">
+              <a href="#" class="brand-link"><span color="c-primary">Хороший вопрос:</span> Что на самом деле отличает гуманитарныенауки от естественных</a>
+            </h2>
 
             <footer class="content-info content-info--large module__content-info">
               <a class="content-info__item" href="#">Таня Коэн</a>
@@ -591,15 +627,17 @@
 
       <div class="grid__item col-12 col-md-6 height-fix">
         <article class="module module--large flex-auto">
-          <span class="label module__label">Книги</span>
+          <a href="#" class="label module__label">Книги</a>
 
           <div class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/photos/12.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/photos/12.png" />
           </div>
 
-          <div class="module__content container">
-            <h2 class="module__heading">Что такое <em>сверхчувствительностьи</em> как с ней жить</h2>
+          <div class="module__content">
+            <h2 class="module__heading">
+              <a href="#" class="brand-link">Что такое <em>сверхчувствительностьи</em> как с ней жить</a>
+            </h2>
 
             <footer class="content-info content-info--large module__content-info">
               <a class="content-info__item" href="#">Кэтлин Элкнис</a>
@@ -612,15 +650,17 @@
 
       <div class="grid__item col-12 col-md-12">
         <article class="module module--wide module--full-img">
-          <span class="label module__label">будущее</span>
+          <a href="#" class="label module__label">будущее</a>
 
           <div class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/photos/13.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/photos/13.png" />
           </div>
 
-          <div class="module__content container c-md-white">
-            <h2 class="module__heading">20 доказательств того, что мы живем в иммитации реальности</h2>
+          <div class="module__content c-md-white">
+            <h2 class="module__heading">
+              <a href="#" class="brand-link">20 доказательств того, что мы живем в иммитации реальности</a>
+            </h2>
 
             <footer class="content-info content-info--large module__content-info c-md-white">
               <a class="content-info__item" href="#">Миша Цыган</a>
@@ -633,65 +673,79 @@
     </div>
   </div>
 
-  <div class="container px-0 mt-4">
+  <div class="container mt-4">
     <div class="position-relative">
       <div class="hr"></div>
-      <span class="label position-absolute align-bottom">отношения и секс</span>
+      <a href="#" class="label position-absolute align-bottom">отношения и секс</a>
     </div>
 
-    <div class="row">
-      <div class="col-12 col-xl-6 align-self-md-end mt-5 c-white pr-lg-5">
+    <div class="content-container px-sm-0 row">
+      <div class="col-12 col-xl-6 align-self-md-end mt-5 pr-xl-4 c-white ">
         <footer class="content-info content-info--large c-white mb-3">
-          <time class="content-info__item">Наталья Белоусова</time>
+          <a href="#" class="brand-link content-info__item">Наталья Белоусова</>
           <span class="content-info__separator">•</span>
-          <a class="content-info__item" href="#">11 июля</a>
+          <a class="content-info__item brand-link" href="#">11 июля</a>
         </footer>
 
-        <h2 class="h1">8 вещей, которыеделают нас непривлекательными в глазах других</h2>
+        <h2 class="h1">
+          <a class="brand-link" href="#">8 вещей, которыеделают нас непривлекательными в глазах других</a>
+        </h2>
       </div>
 
       <div class="col-12 col-xl-6">
-        <article class="media c-white mt-4">
-          <img class="align-self-center d-flex mr-3" src="src/assets/imgs/stickers/smile.png" alt="">
+        <article class="special-news media c-white mt-4">
+          <a href="#" class="img-link align-self-center mr-3">
+            <img class="special-news__img" src="src/assets/imgs/stickers/smile.png" alt="">
+          </a>
 
           <div class="media-body">
             <footer class="content-info content-info--large c-white">
-              <time class="content-info__item" datetime="">Елена Серафимович</time>
+              <a href="#" class="brand-link content-info__item">Елена Серафимович</>
               <span class="content-info__separator">•</span>
-              <a class="content-info__item" href="#">9 июля</a>
+              <a class="content-info__item brand-link" href="#">9 июля</a>
             </footer>
 
-            <h2 class="h2 mt-3">Что такое полиаморияи подходит ли она вам</h2>
+            <h2 class="h2 mt-3">
+              <a class="brand-link" href="#">Что такое полиаморияи подходит ли она вам</a>
+            </h2>
             <div class="hr mt-4"></div>
           </div>
         </article>
 
-        <article class="media c-white mt-4">
-          <img class="align-self-center d-flex mr-3" src="src/assets/imgs/stickers/apple.png" alt="">
+        <article class="special-news media c-white mt-4">
+          <a href="#" class="img-link align-self-center mr-3">
+            <img class="special-news__img" src="src/assets/imgs/stickers/apple.png" alt="">
+          </a>
 
           <div class="media-body">
             <footer class="content-info content-info--large c-white">
-              <time class="content-info__item" datetime="">Яна Тэллон-Хикс</time>
+              <a href="#" class="brand-link content-info__item">Яна Тэллон-Хикс</>
               <span class="content-info__separator">•</span>
-              <a class="content-info__item" href="#">8 июля</a>
+              <a class="content-info__item brand-link" href="#">8 июля</a>
             </footer>
 
-            <h2 class="h2 mt-3">Как бесплатное онлайн-порноизменило мужскую мастурбацию</h2>
+            <h2 class="h2 mt-3">
+              <a class="brand-link" href="#">Как бесплатное онлайн-порноизменило мужскую мастурбацию</a>
+            </h2>
             <div class="hr mt-4"></div>
           </div>
         </article>
 
-        <article class="media c-white mt-4">
-          <img class="align-self-center d-flex mr-3" src="src/assets/imgs/stickers/penis.png" alt="">
+        <article class="special-news media c-white mt-4">
+          <a href="#" class="img-link align-self-center mr-3">
+            <img class="special-news__img" src="src/assets/imgs/stickers/penis.png" alt="">
+          </a>
 
           <div class="media-body">
             <footer class="content-info content-info--large c-white">
-              <time class="content-info__item" datetime="">Борис Ван Зантен</time>
+              <a href="#" class="brand-link content-info__item">Борис Ван Зантен</>
               <span class="content-info__separator">•</span>
-              <a class="content-info__item" href="#">6 июля</a>
+              <a class="content-info__item brand-link" href="#">6 июля</a>
             </footer>
 
-            <h2 class="h2 mt-3">Как смотреть порно на работеи не спалиться</h2>
+            <h2 class="h2 mt-3">
+              <a class="brand-link" href="#">Как смотреть порно на работеи не спалиться</a>
+            </h2>
           </div>
         </article>
       </div>
@@ -702,15 +756,17 @@
     <div class="grid grid--small-gaps grid--lg-modules">
       <div class="grid__item col-12 col-md-4 height-fix">
         <article class="module flex-auto">
-          <span class="label module__label">Тест</span>
+          <a href="#" class="label module__label">Тест</a>
 
           <div class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/photos/14.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/photos/14.png" />
           </div>
 
-          <div class="module__content container">
-            <h2 class="module__heading"><em class="c-primary">IQ-тест</em><br>Всего в двух вопросах</h2>
+          <div class="module__content">
+            <h2 class="module__heading">
+              <a href="#" class="brand-link"><em class="c-primary">IQ-тест</em><br>Всего в двух вопросах</a>
+            </h2>
 
             <footer class="content-info content-info--large module__content-info">
               <a class="content-info__item" href="#">Наталья Белоусова</a>
@@ -723,15 +779,17 @@
 
       <div class="grid__item col-12 col-md-4 height-fix">
         <article class="module flex-auto">
-          <span class="label module__label">Истории</span>
+          <a href="#" class="label module__label">Истории</a>
 
           <div class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/photos/15.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/photos/15.png" />
           </div>
 
-          <div class="module__content container">
-            <h2 class="module__heading"><span style="c-primary">Бородатые счастливчики:</span><br>Как мужчин дискриминируют на работе</h2>
+          <div class="module__content">
+            <h2 class="module__heading">
+              <a href="#" class="brand-link"><span style="c-primary">Бородатые счастливчики:</span><br>Как мужчин дискриминируют на работе</a>
+            </h2>
 
             <footer class="content-info content-info--large module__content-info">
               <a class="content-info__item" href="#">Сергей Лебедев</a>
@@ -744,15 +802,17 @@
 
       <div class="grid__item col-12 col-md-4 height-fix">
         <article class="module module--full-img flex-auto">
-          <span class="label module__label">Наука</span>
+          <a href="#" class="label module__label">Наука</a>
 
           <div class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/photos/16.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/photos/16.png" />
           </div>
 
-          <div class="module__content container">
-            <h2 class="module__heading c-md-white">Почему совы должныподчиняться жаворонкам</h2>
+          <div class="module__content">
+            <h2 class="module__heading c-md-white">
+              <a href="#" class="brand-link">Почему совы должныподчиняться жаворонкам</a>
+            </h2>
 
             <footer class="content-info content-info--large module__content-info c-md-white">
               <a class="content-info__item" href="#">Таня Коэн</a>
@@ -765,15 +825,17 @@
 
       <div class="grid__item col-12 col-md-6 height-fix">
         <article class="module module--large module--full-img flex-auto">
-          <span class="label module__label">Путешествия</span>
+          <a href="#" class="label module__label">Путешествия</a>
 
           <div class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/photos/17.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/photos/17.png" />
           </div>
 
-          <div class="module__content container">
-            <h2 class="module__heading c-md-white">Как объехать всю Скандинавиюза 250 евро</h2>
+          <div class="module__content">
+            <h2 class="module__heading c-md-white">
+              <a href="#" class="brand-link">Как объехать всю Скандинавиюза 250 евро</a>
+            </h2>
 
             <footer class="content-info content-info--large module__content-info c-md-white">
               <a class="content-info__item" href="#">Карина Абдусаламова</a>
@@ -786,15 +848,17 @@
 
       <div class="grid__item col-12 col-md-6 height-fix">
         <article class="module module--large flex-auto">
-          <span class="label module__label">Наука</span>
+          <a href="#" class="label module__label">Наука</a>
 
           <div class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/photos/18.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/photos/18.png" />
           </div>
 
-          <div class="module__content container">
-            <h2 class="module__heading">Мой нейробиолог Далай Лама: Как медитация покорила ученых</h2>
+          <div class="module__content">
+            <h2 class="module__heading">
+              <a href="#" class="brand-link">Мой нейробиолог Далай Лама: Как медитация покорила ученых</a>
+            </h2>
 
             <footer class="content-info content-info--large module__content-info">
               <a class="content-info__item" href="#">Кэтлин Элкнис</a>
@@ -807,74 +871,75 @@
     </div>
   </div>
 
-  <div class="container px-0 mt-4">
+  <div class="container mt-4">
     <div class="position-relative mb-5">
       <div class="hr"></div>
       <span class="label position-absolute align-bottom">Сториз</span>
     </div>
 
-    <div class="grid grid--force-modules" id="stories">
+    <!-- d-block is hack for ie 10 -->
+    <div class="grid grid--force-modules m-lg-0 d-block" id="stories">
       <div class="grid__item">
         <article class="module module--story h-100">
-          <div class="module__img-link">
+          <a href="#" class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/stories/1.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/stories/1.png" />
-          </div>
+          </a>
 
-          <div class="module__content container">
-            <h2 class="module__heading">Зеленоградские ученые клонировали 14 Медведевых</h2>
+          <div class="module__content">
+            <h2 class="module__heading"><a href="#" class="module__link">Зеленоградские ученые клонировали 14 Медведевых</a></h2>
           </div>
         </article>
       </div>
 
       <div class="grid__item">
         <article class="module module--story h-100">
-          <div class="module__img-link">
+          <a href="#" class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/stories/2.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/stories/1.png" />
-          </div>
+          </a>
 
-          <div class="module__content container">
-            <h2 class="module__heading">Сергей Минаев назначен главой Литфонда России</h2>
+          <div class="module__content">
+            <h2 class="module__heading"><a href="#" class="module__link">Сергей Минаев назначен главой Литфонда России</a></h2>
           </div>
         </article>
       </div>
 
       <div class="grid__item">
         <article class="module module--story h-100">
-          <div class="module__img-link">
+          <a href="#" class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/stories/3.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/stories/1.png" />
-          </div>
+          </a>
 
-          <div class="module__content container">
-            <h2 class="module__heading">Фестиваль гусей в Воркуте закончился массовой оргией</h2>
+          <div class="module__content">
+            <h2 class="module__heading"><a href="#" class="module__link">Фестиваль гусей в Воркуте закончился массовой оргией</a></h2>
           </div>
         </article>
       </div>
 
       <div class="grid__item">
         <article class="module module--story h-100">
-          <div class="module__img-link">
+          <a href="#" class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/stories/4.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/stories/1.png" />
-          </div>
+          </a>
 
-          <div class="module__content container">
-            <h2 class="module__heading">В центре Москвы арестована девочка, декламировавшая Полозкову</h2>
+          <div class="module__content">
+            <h2 class="module__heading"><a href="#" class="module__link">В центре Москвы арестована девочка, декламировавшая Полозкову</a></h2>
           </div>
         </article>
       </div>
 
       <div class="grid__item">
         <article class="module module--story h-100">
-          <div class="module__img-link">
-            <div class="module__img" style="background-image: url('src/assets/imgs/stories/1.png');"></div>
+          <a href="#" class="module__img-link">
+            <div class="module__img" style="background-image: url('src/assets/imgs/stories/3.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/stories/1.png" />
-          </div>
+          </a>
 
-          <div class="module__content container">
-            <h2 class="module__heading">Зеленоградские ученые клонировали 14 Медведевых</h2>
+          <div class="module__content">
+            <h2 class="module__heading"><a href="#" class="module__link">Фестиваль гусей в Воркуте закончился массовой оргией</a></h2>
           </div>
         </article>
       </div>
@@ -890,18 +955,21 @@
         <button id="mediaNewsMediaControl" class="media-news__media-control youtube-btn" type="button">
           <svg class="youtube-btn__svg" width="100px" height="75px" x="0px" y="0px" viewBox="-143 -22 512 384" xml:space="preserve">
             <g>
-            	<path class="youtube-btn__shape" d="M365.6,62.8c0-45-33.1-81.2-74-81.2C236.2-21,179.7-22,122-22c-3,0-6,0-9,0s-6,0-9,0c-57.6,0-114.2,1-169.6,3.6
-            		c-40.8,0-73.9,36.4-73.9,81.4c-2.5,35.6-3.6,71.2-3.5,106.8c-0.1,35.6,1,71.2,3.4,106.9c0,45,33.1,81.5,73.9,81.5
-            		c58.2,2.7,117.9,3.9,178.6,3.8c60.8,0.2,120.3-1,178.6-3.8c40.9,0,74-36.5,74-81.5c2.4-35.7,3.5-71.3,3.4-107
-            		C369.1,134.1,368,98.5,365.6,62.8z M64,267.9V71.4l145,98.2L64,267.9z"/>
+              <path class="youtube-btn__shape" d="M365.6,62.8c0-45-33.1-81.2-74-81.2C236.2-21,179.7-22,122-22c-3,0-6,0-9,0s-6,0-9,0c-57.6,0-114.2,1-169.6,3.6
+                c-40.8,0-73.9,36.4-73.9,81.4c-2.5,35.6-3.6,71.2-3.5,106.8c-0.1,35.6,1,71.2,3.4,106.9c0,45,33.1,81.5,73.9,81.5
+                c58.2,2.7,117.9,3.9,178.6,3.8c60.8,0.2,120.3-1,178.6-3.8c40.9,0,74-36.5,74-81.5c2.4-35.7,3.5-71.3,3.4-107
+                C369.1,134.1,368,98.5,365.6,62.8z M64,267.9V71.4l145,98.2L64,267.9z"/>
             </g>
           </svg>
         </button>
       </div>
+    </div>
 
-      <footer>
-        <a class="media-news__heading gt g-light-blue-to-spring-green" href="#">Антон Кораблев</a>
-      </footer>
+    <div class="ticker media-news__ticker">
+      <div class="ticker__offset"></div>
+      <div class="ticker__items">
+        <a class="ticker__item gt g-light-blue-to-spring-green media-news__heading" href="#">Антон Кораблев</a>
+      </div>
     </div>
   </div>
 </main>
@@ -910,7 +978,7 @@
   <div class="footer__inner container">
     <div class="row">
       <div class="col-12 col-lg footer__brand">
-        <a href="/" class="footer__logo mx-auto">НОЖ</a>
+        <a href="/" class="footer__logo">НОЖ</a>
         <p class="footer__subheading">Интеллектуальный журнал<br>о культуре и обществе</p>
       </div>
 
@@ -922,21 +990,21 @@
           <li class="nav-item"><a class="footer__nav-link" href="#">Стать частью проекта</a></li>
         </ul>
 
-        <ul class="socials footer__socials mt-4">
+        <ul class="socials socials--theme-light footer__socials mt-4">
           <li class="socials__item">
-            <a href="#" class="socials__link c-white"><i class="fa fa-facebook socials__fb" aria-hidden="true"></i></a>
+            <a href="#" class="socials__link brand-link"><i class="fa fa-facebook socials__fb" aria-hidden="true"></i></a>
           </li>
           <li class="socials__item">
-            <a href="#" class="socials__link c-white"><i class="fa fa-vk socials__vk" aria-hidden="true"></i></a>
+            <a href="#" class="socials__link brand-link"><i class="fa fa-vk socials__vk" aria-hidden="true"></i></a>
           </li>
           <li class="socials__item">
-            <a href="#" class="socials__link c-white"><i class="fa fa-telegram socials__tg" aria-hidden="true"></i></a>
+            <a href="#" class="socials__link brand-link"><i class="fa fa-telegram socials__tg" aria-hidden="true"></i></a>
           </li>
           <li class="socials__item">
-            <a href="#" class="socials__link c-white"><i class="fa fa-twitter socials__tw" aria-hidden="true"></i></a>
+            <a href="#" class="socials__link brand-link"><i class="fa fa-twitter socials__tw" aria-hidden="true"></i></a>
           </li>
           <li class="socials__item">
-            <a href="#" class="socials__link c-white"><i class="fa fa-search socials__search" aria-hidden="true"></i></a>
+            <a href="#" class="socials__link brand-link"><i class="fa fa-search socials__search" aria-hidden="true"></i></a>
           </li>
         </ul>
       </div>
