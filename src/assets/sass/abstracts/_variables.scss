@@ -190,7 +190,7 @@ $h1-font-size-md: 43px !default;
 $h1-font-size-lg: 50px !default;
 $h2-font-size: 18px !default;
 $h2-font-size-md: 30px !default;
-$h3-font-size: 15px !default;
+$h3-font-size: 18px !default;
 $h3-font-size-md: 23.5px !default;
 
 $h1-font-map: (#{$h1-font-size / $base-font-size}rem) !default;
@@ -284,6 +284,10 @@ $short-news-padding-x-md: 25px;
 $short-news-padding-top-md: 16px;
 $short-news-padding-bottom-md: 17px;
 $short-news-padding-y-md: 25px;
+
+/// Featured news
+$featured-news-element-margin-y: 0.7rem;
+$featured-news-heading-lg-max-width: 85%;
 
 /// Author
 $author-description-font-size: 15px;
