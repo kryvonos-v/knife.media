@@ -1,6 +1,10 @@
 'use strict'
 
 require('./assets/sass/main.scss')
-// let appContainer = document.querySelector('#app');
+require('./vendor/modernizr')
 
-// appContainer.innerHTML = '<div class="main-component"><h1 class="main-component__title">Welcome!</h1></div>';
+const isSupportedBrowser = Modernizr.flexwrap && (Modernizr.flexbox || Modernizr.flexboxtweener)
+
+if (!isSupportedBrowser) {
+  window.location.href = '/browser-update.html'
+}

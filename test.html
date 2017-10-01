@@ -5,26 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-
-  <style>
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .grid__item {
-      flex: 0 0 auto;
-      background: tomato;
-    }
-  </style>
 </head>
 <body>
-
-  <div class="grid">
-    <div class="grid__item">1</div>
-    <div class="grid__item">230</div>
-    <div class="grid__item">150</div>
-  </div>
+  <div id="backgroundClipSupport"></div>
+  <div id="flexbox"></div>
 </body>
+<script src="src/vendor/modernizr.js"></script>
+<script>
+  var isSupportedBrowser = Modernizr.flexwrap && (Modernizr.flexbox || Modernizr.flexboxtweener)
+
+  document.write('Do we support your browser: ' + isSupportedBrowser + '<br>' + document.documentElement.getAttribute('class'))
+</script>
 </html>

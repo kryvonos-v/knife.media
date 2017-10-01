@@ -30,6 +30,7 @@
     }
 
     @include media-breakpoint-up(lg) {
+      display: block;
       margin-left: auto;
       margin-top: $featured-news-element-margin-y;
       margin-bottom: $featured-news-element-margin-y;

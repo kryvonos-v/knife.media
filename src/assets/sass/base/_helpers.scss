@@ -24,6 +24,14 @@
        background-clip: text !important;
      }
    }
+
+   @at-root .no-backgroundcliptext & {
+     color: white !important;
+
+     &[class*="g-"] {
+       background: transparent !important;
+     }
+   }
  }
 
 /**

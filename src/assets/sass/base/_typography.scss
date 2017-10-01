@@ -5,15 +5,14 @@
  */
 html, body {
   color: $text-color;
-  font: normal 1.4 $text-font-stack;
-  font-family: 'Formular';
+  line-height: 1.4;
+  font-weight: normal;
+  font-family: $text-font-stack;
 }
 
 /**
  * Initializing of typi.
  */
-// @include typi-init;
-// @include typi-create-classes;
 @include make-typography;
 
 .h1, .h2, .h3 {
