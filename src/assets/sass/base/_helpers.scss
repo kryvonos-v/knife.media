@@ -115,3 +115,12 @@
 .mt-1px {
   margin-top: 1px;
 }
+
+.embed-responsive-md-21by9 {
+
+  &::before {
+    @include media-breakpoint-up(md) {
+      padding-top: percentage(9 / 21);
+    }
+  }
+}
