@@ -1,0 +1,11 @@
+.single-news-nosidebar {
+  &__first-article {
+    @include media-breakpoint-up(sm) {
+      margin-top: 1.5rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 22%;
+    }
+  }
+}
