@@ -29,6 +29,21 @@ $container-padding-x: 15px;
     max-width: $article-narrow-max-width;
   }
 
+  &--transparent {
+    background-color: transparent;
+    color: color(white);
+
+    .link {
+      color: color(white);
+      border-color: color(white);
+
+      &:hover {
+        color: color(white);
+        border-color: transparent;
+      }
+    }
+  }
+
   @include media-breakpoint-up(sm) {
     padding-left: $article-padding-x-sm;
     padding-right: $article-padding-x-sm;
@@ -106,6 +121,11 @@ $container-padding-x: 15px;
     padding-right: $article-block-padding-x;
     line-height: 1.25;
     background: color(ecru-white);
+
+    @at-root .article--transparent & {
+      border: 1px solid color(white);
+      background: transparent;
+    }
 
     @include media-breakpoint-up(sm) {
       margin-left: -$article-block-padding-x-sm;
