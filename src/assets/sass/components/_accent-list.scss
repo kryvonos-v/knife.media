@@ -1,0 +1,13 @@
+.accent-list {
+  .grid__item {
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+  .accent {
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+}

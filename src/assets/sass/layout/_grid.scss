@@ -33,8 +33,7 @@
   }
 
   &--small-gaps {
-    margin-top: -$grid-small-gaps-item-v-gap-size / 2;
-    margin-bottom: -$grid-small-gaps-item-v-gap-size / 2;
+    margin-top: -$grid-small-gaps-item-v-gap-size;
     margin-left: -$grid-small-gaps-item-h-gap-size / 2;
     margin-right: -$grid-small-gaps-item-h-gap-size / 2;
   }
@@ -80,8 +79,7 @@
     }
 
     @at-root .grid--small-gaps > & {
-      padding-top: $grid-small-gaps-item-v-gap-size / 2;
-      padding-bottom: $grid-small-gaps-item-v-gap-size / 2;
+      padding-top: $grid-small-gaps-item-v-gap-size;
       padding-left: $grid-small-gaps-item-h-gap-size / 2;
       padding-right: $grid-small-gaps-item-h-gap-size / 2;
     }

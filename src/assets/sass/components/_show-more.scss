@@ -1,19 +1,21 @@
 @import '../abstracts/functions';
 
 .show-more {
-  display: none;
+  padding-left: $content-container-padding-x;
+  padding-right: $content-container-padding-x;
+  font-size: 13px;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: color(white);
+
+  &--reversed-colors {
+    background: color(primary);
+  }
 
   @include media-breakpoint-up(md) {
-    display: block;
-    padding-top: 10px;
-    padding-bottom: 10px;
     padding-left: $short-news-padding-x-md;
     padding-right: $short-news-padding-x-md;
-    background: color(white);
-
-    &--reversed-colors {
-      background: color(primary);
-    }
   }
 
   &__icon {
@@ -27,6 +29,17 @@
 
     @at-root .show-more--reversed-colors & {
       fill: color(white)
+    }
+  }
+
+  &__link {
+    display: block;
+    color: #fff;
+    text-transform: lowercase;
+
+    &:hover {
+      color: #fff;
+      text-decoration: none;
     }
   }
 }

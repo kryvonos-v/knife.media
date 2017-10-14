@@ -1,0 +1,23 @@
+.mobile-search-btn {
+  display: inline-block;
+  width: 14px;
+  vertical-align: middle;
+
+  &__search-icon {
+    display: inline-block;
+    vertical-align: middle;
+
+    @at-root .mobile-search-btn--active & {
+      display: none;
+    }
+  }
+
+  &__close-icon {
+    display: none;
+
+    @at-root .mobile-search-btn--active & {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}

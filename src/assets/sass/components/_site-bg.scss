@@ -8,9 +8,15 @@
     right: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/src/assets/imgs/bg-full.jpg');
     background-size: 100% auto;
-    background-repeat: repeat;
+  }
+
+  &--bottom {
+    background-position-y: 100%;
+  }
+
+  &--fixed {
+    background-attachment: fixed;
   }
 
   &--size-cover {

@@ -4,6 +4,7 @@ var path = require('path');
 var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var styleLintPlugin = require('stylelint-webpack-plugin');
 
 require('es6-promise').polyfill();
@@ -27,6 +28,10 @@ module.exports = {
   plugins: [
     // Specify the resulting CSS filename
     new ExtractTextPlugin('css/app.css'),
+    new HtmlWebpackPlugin({
+      title: 'Project demo',
+      filename: './src/home.pug'
+    }),
     new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery',

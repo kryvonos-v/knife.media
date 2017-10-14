@@ -4,7 +4,7 @@
 
 .header {
   position: relative;
-  z-index: 1;
+  z-index: 20;
   padding: 0;
   background: #FFF;
 
@@ -13,7 +13,7 @@
   }
 
   &__inner {
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       margin-left: 0;
       margin-right: 0;
       width: 100%;
@@ -42,15 +42,31 @@
     @include media-breakpoint-up(lg) {
       display: none;
     }
+
+    @at-root .header--search-active & {
+      filter: blur($header-search-active-blur);
+      pointer-events: none;
+    }
   }
 
-  &__search {
+  &__logo {
+    @at-root .header--search-active & {
+      filter: blur($header-search-active-blur);
+      pointer-events: none;
+    }
+  }
+
+  &__mobile-search-btn {
     display: block;
     position: absolute;
     top: $header-padding-y + ($logo-height - $search-height) / 2;
     right: $header-padding-x;
     margin-top: auto;
     margin-bottom: auto;
+
+    @at-root .header--search-active & {
+      top: 18px;
+    }
 
     img {
       width: $search-width;
@@ -73,19 +89,18 @@
     @include media-breakpoint-up(lg) {
       margin-left: auto;
     }
+
+    @at-root .header--search-active & {
+      filter: blur($header-search-active-blur);
+      pointer-events: none;
+    }
   }
 
   &__socials {
-    @include media-breakpoint-down(lg) {
-
+    @include media-breakpoint-down(md) {
       .socials__list {
         margin-left: -$header-socials-items-padding-x;
         margin-right: -$header-socials-items-padding-x;
-      }
-
-      .socials__link {
-        padding-left: $header-socials-items-padding-x;
-        padding-right: $header-socials-items-padding-x;
       }
 
       .fa {
@@ -96,6 +111,31 @@
 
     @include media-breakpoint-up(lg) {
       margin-left: auto;
+    }
+  }
+
+  &__socials-link {
+    @include media-breakpoint-down(md) {
+      padding-left: $header-socials-items-padding-x;
+      padding-right: $header-socials-items-padding-x;
+    }
+
+    @at-root .header--search-active & {
+      filter: blur($header-search-active-blur);
+      pointer-events: none;
+    }
+  }
+
+  &__search-btn {
+    width: 2 * $socials-items-padding-x + 14px;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
+    @at-root .header--search-active & {
+      filter: blur(0);
+      pointer-events: auto;
     }
   }
 

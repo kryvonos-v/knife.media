@@ -1,6 +1,7 @@
 @import '../abstracts/functions';
 
 .accent {
+  display: inline-block;
   padding: 0.4em 0.6em;
   line-height: 1.2;
   font-size: 19px;
@@ -9,9 +10,11 @@
   color: #FFF;
 
   &:before {
-    content: '•';
-    display: inline-block;
-    margin-right: 0.3em;
+    @include media-breakpoint-up(md) {
+      content: '•';
+      display: inline-block;
+      margin-right: 0.3em;
+    }
   }
 
   @include media-breakpoint-up(md) {
@@ -20,7 +23,12 @@
 
   &--large {
     background: color(secondary);
+
     @include media-breakpoint-up(md) {
+      font-size: 25px;
+    }
+
+    @include media-breakpoint-up(xl) {
       font-size: 30px;
     }
   }
