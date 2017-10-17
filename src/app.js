@@ -1,6 +1,6 @@
 'use strict'
 
-require('./assets/sass/main.scss')
+require('./assets/styles/main.scss')
 require('./vendor/modernizr')
 
 const isSupportedBrowser = Modernizr.flexwrap && (Modernizr.flexbox || Modernizr.flexboxtweener)
