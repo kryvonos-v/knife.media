@@ -1,0 +1,31 @@
+.stories {
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+
+  &__story {
+    max-width: 250px;
+    height: 100%;
+
+    @include media-breakpoint-up(md) {
+      max-width: 300px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: 250px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 300px;
+    }
+  }
+
+  .slick-slide {
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+  }
+}
+
+.stories-opacity {
+  opacity: 0.6 !important;
+}

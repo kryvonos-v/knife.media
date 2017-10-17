@@ -1,0 +1,18 @@
+@import '../abstracts/variables';
+@import '../abstracts/functions';
+
+.tag-link {
+  border-bottom: 1px solid color(text);
+  font-size: 18px;
+  color: color(text);
+
+  @include media-breakpoint-up(md) {
+    font-size: 21px;
+  }
+
+  &:hover {
+    color: color(primary);
+    border-color: color(primary);
+    text-decoration: none;
+  }
+}

@@ -863,9 +863,9 @@
     </div>
 
     <!-- d-block is hack for ie 10 -->
-    <div class="grid grid--force-modules d-block" id="stories">
+    <div class="grid grid--force-small-gaps grid--lg-force-modules d-block stories" id="stories">
       <div class="grid__item">
-        <article class="module module--story h-100">
+        <article class="module module--story stories__story">
           <a href="#" class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/stories/1.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/stories/1.png" />
@@ -878,7 +878,7 @@
       </div>
 
       <div class="grid__item">
-        <article class="module module--story h-100">
+        <article class="module module--story stories__story">
           <a href="#" class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/stories/2.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/stories/1.png" />
@@ -891,7 +891,7 @@
       </div>
 
       <div class="grid__item">
-        <article class="module module--story h-100">
+        <article class="module module--story stories__story">
           <a href="#" class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/stories/3.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/stories/1.png" />
@@ -904,7 +904,7 @@
       </div>
 
       <div class="grid__item">
-        <article class="module module--story h-100">
+        <article class="module module--story stories__story">
           <a href="#" class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/stories/4.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/stories/1.png" />
@@ -917,7 +917,20 @@
       </div>
 
       <div class="grid__item">
-        <article class="module module--story h-100">
+        <article class="module module--story stories__story">
+          <a href="#" class="module__img-link">
+            <div class="module__img" style="background-image: url('src/assets/imgs/stories/2.png');"></div>
+            <img class="module__img-height-fix" src="src/assets/imgs/stories/1.png" />
+          </a>
+
+          <div class="module__content">
+            <h2 class="module__heading"><a href="#" class="module__link">Сергей Минаев назначен главой Литфонда России</a></h2>
+          </div>
+        </article>
+      </div>
+
+      <div class="grid__item">
+        <article class="module module--story stories__story">
           <a href="#" class="module__img-link">
             <div class="module__img" style="background-image: url('src/assets/imgs/stories/3.png');"></div>
             <img class="module__img-height-fix" src="src/assets/imgs/stories/1.png" />
@@ -929,6 +942,7 @@
         </article>
       </div>
     </div>
+
   </div>
 
   <div class="media-news mt-3">
@@ -1124,9 +1138,9 @@ var breakpoints = {
 $(function() {
   var $stories = $('#stories')
 
-  $stories.on('init', slickEventHandler)
-  $stories.on('afterChange', slickEventHandler)
-  $stories.on('beforeChange', slickEventHandler)
+  $stories.on('init', slickInitEventHandler)
+  $stories.on('afterChange', slickAfterEventEventHandler)
+  $stories.on('beforeChange', slickBeforeChangeEventHandler)
   $stories.on('breakpoint', slickEventHandler)
   $stories.on('destroy', slickEventHandler)
   $stories.on('reInit', slickEventHandler)
@@ -1136,29 +1150,23 @@ $(function() {
   $stories.slick({
     appendArrows: null,
     infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToShow: 3,
+    centerMode: true,
+    slidesToScroll: 3,
     scrolling: false,
+    variableWidth: true,
     responsive: [
       {
-        breakpoint: breakpoints.xl,
+        breakpoint: breakpoints.lg,
         settings: {
-          centerMode: false,
+          centerMode: true,
           slidesToShow: 3
         }
       },
       {
-        breakpoint: breakpoints.lg,
-        settings: {
-          centerMode: false,
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 450,
+        breakpoint: 0,
         settings: {
           centerMode: true,
-          centerPadding: '40px',
           slidesToShow: 1
         }
       }
@@ -1171,6 +1179,29 @@ $(function() {
     } else {
       makeSlickSlidesFitToParentHeight(slick)
     }
+  }
+
+  function slickInitEventHandler (event, slick, direction) {
+    // slick.$list.find('.slick-slide:not([aria-hidden=false])').addClass('stories-opacity')
+    // getSlickSlides(slick).addClass('stories-opacity')
+    slickEventHandler.apply(this, arguments)
+  }
+
+  function slickBeforeChangeEventHandler (event, slick, currentSlideIndex, nextSlideIndex) {
+    // var visibleSlides = slick.$list.find('[aria-hidden=false]')
+    //
+    // visibleSlides.first().addClass('stories-opacity')
+    // visibleSlides.last().next().removeClass('stories-opacity')
+    slickEventHandler.apply(this, arguments)
+  }
+
+  function slickAfterEventEventHandler (event, slick, direction) {
+    // var visibleSlides = slick.$list.find('[aria-hidden=false]')
+    //
+    // visibleSlides.first().prev().prev().removeClass('stories-opacity')
+    // visibleSlides.first().prev().addClass('stories-opacity')
+    // visibleSlides.last().next().addClass('stories-opacity')
+    slickEventHandler.apply(this, arguments)
   }
 
   function makeSlickSlidesFitToParentHeight (slick) {

@@ -12,99 +12,109 @@
   <link rel="stylesheet" href="css/app.css" />
 </head>
 <body>
-<header class="header">
-  <div class="container header__inner navbar navbar-expand-lg">
-    <div class="header__mobile-group">
-    <div id="menuBurger" class="burger header__burger" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="burger__stick"></div>
-      <div class="burger__stick"></div>
-      <div class="burger__stick"></div>
+  <div id="siteWrapper" class="site-wrapper">
+
+  <header class="header" id="header">
+    <div class="container header__inner navbar navbar-expand-lg">
+      <div class="header__mobile-group">
+      <div id="menuBurger" class="burger header__burger" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="burger__stick"></div>
+        <div class="burger__stick"></div>
+        <div class="burger__stick"></div>
+      </div>
+
+      <a href="/" class="logo mx-auto header__logo">
+        <img class="logo__img" width="100" src="src/assets/imgs/logo.svg" alt="Site logo">
+      </a>
+
+      <a id="mobileSearchBtn" href="#" class="header__mobile-search-btn search-btn">
+        <img class="search-btn__search-icon" src="src/assets/imgs/icons/search.svg" />
+        <svg width="18px" class="search-btn__close-icon" x="0px" y="0px" viewBox="0 0 20 20">
+          <path d="M11.4,10l8.2-8.2c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0L10,8.6L1.7,0.3c-0.4-0.4-1-0.4-1.4,0
+                   s-0.4,1,0,1.4L8.6,10l-8.3,8.3c-0.4,0.4-0.4,1,0,1.4s1,0.4,1.4,0l8.3-8.3l8.3,8.3c0.4,0.4,1,0.4,1.4,0s0.4-1,0-1.4L11.4,10z"/>
+        </svg>
+      </a>
     </div>
 
-    <a href="/" class="logo mx-auto">
-      <img class="logo__img" width="100" src="src/assets/imgs/logo.svg" alt="Site logo">
-    </a>
-
-    <a href="#" class="header__search"><img class="d-block" src="src/assets/imgs/icons/search.svg" /></a>
-  </div>
-
-    <nav class="header__nav collapse navbar-collapse" id="mainNav">
-    <ul class="menu sm header__menu" id="mainMenu">
-      <li class="menu__item">
-        <a class="menu__link" href="#">Россия</a>
-        </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Тесты</a>
-        </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Секс</a>
-        </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Мнения</a>
-        </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Stories</a>
-        </li>
-      <li class="menu__item">
-        <a class="menu__link" href="#">Больше ></a>
-        <ul class="submenu">
-          <li class="submenu__item">
-            <a class="submenu__link">Кино</a>
+      <nav class="header__nav collapse navbar-collapse" id="mainNav">
+      <ul class="menu sm header__menu" id="mainMenu">
+        <li class="menu__item">
+          <a class="menu__link" href="#">Россия</a>
           </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Музыка</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Тесты</a>
           </li>
-          <li class="submenu__item submenu__item_active">
-            <a class="submenu__link">Нищегоды</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Секс</a>
           </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Еда</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Мнения</a>
           </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Персонажи</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Stories</a>
           </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Неизвестная Россия</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Фотографии</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Личный опыт</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Итервью</a>
-          </li>
-          <li class="submenu__item">
-            <a class="submenu__link">Классика</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-
-    <div class="socials header__socials">
-      <ul class="socials__list">
-        <li class="socials__item">
-          <a href="#" class="socials__link brand-link"><i class="fa fa-facebook socials__fb" aria-hidden="true"></i></a>
-        </li>
-        <li class="socials__item">
-          <a href="#" class="socials__link brand-link"><i class="fa fa-vk socials__vk" aria-hidden="true"></i></a>
-        </li>
-        <li class="socials__item">
-          <a href="#" class="socials__link brand-link"><i class="fa fa-telegram socials__tg" aria-hidden="true"></i></a>
-        </li>
-        <li class="socials__item">
-          <a href="#" class="socials__link brand-link"><i class="fa fa-twitter socials__tw" aria-hidden="true"></i></a>
-        </li>
-        <li class="socials__item">
-          <a href="#" class="socials__link brand-link"><i class="fa fa-search socials__search" aria-hidden="true"></i></a>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Больше ></a>
+          <ul class="submenu">
+            <li class="submenu__item">
+              <a class="submenu__link">Кино</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Музыка</a>
+            </li>
+            <li class="submenu__item submenu__item_active">
+              <a class="submenu__link">Нищегоды</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Еда</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Персонажи</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Неизвестная Россия</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Фотографии</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Личный опыт</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Итервью</a>
+            </li>
+            <li class="submenu__item">
+              <a class="submenu__link">Классика</a>
+            </li>
+          </ul>
         </li>
       </ul>
-    </div>
-  </nav>
-  </div>
-</header>
 
+      <div class="socials header__socials">
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a href="#" class="socials__link brand-link header__socials-link"><i class="fa fa-facebook socials__fb" aria-hidden="true"></i></a>
+          </li>
+          <li class="socials__item">
+            <a href="#" class="socials__link brand-link header__socials-link"><i class="fa fa-vk socials__vk" aria-hidden="true"></i></a>
+          </li>
+          <li class="socials__item">
+            <a href="#" class="socials__link brand-link header__socials-link"><i class="fa fa-telegram socials__tg" aria-hidden="true"></i></a>
+          </li>
+          <li class="socials__item">
+            <a href="#" class="socials__link brand-link header__socials-link"><i class="fa fa-twitter socials__tw" aria-hidden="true"></i></a>
+          </li>
+          <li class="socials__item">
+            <a id="searchBtn" href="#" class="socials__link brand-link header__socials-link header__search-btn search-btn">
+              <i class="fa fa-search search-btn__search-icon" aria-hidden="true"></i>
+              <i class="fa fa-times search-btn__close-icon" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    </div>
+  </header>
 
 <main>
   <div class="container px-0 mt-5" style="overflow: hidden;">
@@ -739,7 +749,67 @@
     </div>
   </div>
 </footer>
+<!-- End of site wrapper -->
+<div>
 
+<script type="text/template" id="searchTemplate">
+  <div id="search" class="search hidden">
+    <div class="search__inner">
+      <div class="search__input-wrapper content-container">
+        <input id="searchInput" placeholder="Поиск ..." type="text" class="search-input h2 h1-lg search__input" />
+      </div>
+
+      <span id="searchLoading" class="search__loading search__text-info hidden content-container font-italic">Загрузка...</span>
+      <span id="searchNoResults" class="search__no-results search__text-info hidden content-container text-uppercase">Извините, но ничего не найдено.</span>
+      <span id="searchError" class="search__error search__text-info hidden content-container text-uppercase">Произошла ошибка. Повторите попытку позже.</span>
+      <div id="searchResults" class="search__results content-container"></div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="searchNewsTemplate">
+
+  <% items.forEach(function (item, newsIndex) { %>
+
+  <article class="search-news">
+    <div class="search-news__content">
+      <h2 class="search-news__heading h2 h1-lg"><a href="<%-item.link%>" class="brand-link"><%= item.title %></a></h2>
+
+      <% if (item.tags && item.tags.length) { %>
+        <footer class="content-info search-news__content-info text-uppercase c-white">
+          <% item.tags.forEach(function (tag, tagIndex) { %>
+
+            <% if (tagIndex !== 0) { %>
+              <span class="content-info__separator">•</span>
+            <% } %>
+
+            <% if (tag.link) { %>
+              <a class="content-info__item brand-link" href="<%- tag.link %>"><%- tag.name %></a>
+            <% } else { %>
+              <span class="content-info__item"><%- tag.name %></a>
+            <% } %>
+
+          <% }) %>
+        </footer>
+      <% } %>
+    </div>
+
+    <% if (item.img) { %>
+      <a
+        href="#"
+        class="img-link search-news__img search-news__img-link search__result-img"
+        style="background-image: url('<%- item.img %>');">
+        <img class="out-of-page" src="<%- item.img %>">
+      </a>
+    <% } %>
+  </article>
+
+  <span class="hr search__separator"></span>
+  <% }) %>
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
 <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 <script src="https://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
 <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -949,6 +1019,150 @@ $(function() {
   $mainNav.on('hide.bs.collapse', function (e) {
     $('#menuBurger').removeClass('burger--active')
   })
+})
+
+// Search module
+$(function() {
+  var $window = $(window)
+  var $body = $('body')
+  var $siteWrapper = $('#siteWrapper')
+  var $header = $('#header')
+  var $mobileSearchBtn = $('#mobileSearchBtn')
+  var $searchBtn = $('#searchBtn')
+  var $search = null
+  var $searchInput = null
+  var $searchResults = null
+  var $searchLoading = null
+  var $searchError = null
+  var $searchNoResults = null
+  var $searchTemplate = $('#searchTemplate')
+  var $searchNewsTemplate = $('#searchNewsTemplate')
+
+  var isShown = false
+  var timerId = null
+  // Defines delay that should be taken between any two requests for search results.
+  // We do this to prevent making of a lot of requests to server.
+  var debounceDelay = 300
+  var SEARCH_ENDPOINT = 'static/search-results.json'
+
+  // Templates for search and search results (search news).
+  var searchTemplate = _.template($searchTemplate.html())
+  var searchNewsTemplate = _.template($searchNewsTemplate.html())
+
+  // CSS' classes constants.
+  var NOSCROLL_CLASS = 'noscroll'
+  var HEADER_SEARCH_ACTIVE_CLASS = 'header--search-active'
+  var SEARCH_BTN_ACTIVE_CLASS = 'search-btn--active'
+  var HIDDEN_CLASS = 'hidden'
+
+  var debouncedLoadAndProcessData = null
+
+  !function init () {
+    initButtonsEventHandlers()
+  }()
+
+  function initSearch () {
+    // Renders search template
+    render()
+
+    $searchInput = $('#searchInput')
+    $searchResults = $('#searchResults')
+    $searchLoading = $('#searchLoading')
+    $searchError = $('#searchError')
+    $searchNoResults = $('#searchNoResults')
+
+    initSearchInputEventHanlers()
+  }
+
+  function initButtonsEventHandlers () {
+    $searchBtn.click(searchBtnClickHandler)
+    $mobileSearchBtn.click(searchBtnClickHandler)
+  }
+
+  function initSearchInputEventHanlers () {
+    if ($searchInput === null) throw new Error('Search input is not rendered yet.')
+
+    debouncedLoadAndProcessData = _.debounce(loadAndProcessData, debounceDelay)
+
+    $searchInput.on('input', searchInputEventHandler)
+  }
+
+  function searchInputEventHandler (event) {
+    // Removed previous search results.
+    $searchResults.html('')
+
+    // Shows text of loading.
+    $searchLoading.removeClass(HIDDEN_CLASS)
+    // Hides texts for 'no results' and for 'error'.
+    $searchNoResults.addClass(HIDDEN_CLASS)
+    $searchError.addClass(HIDDEN_CLASS)
+
+    debouncedLoadAndProcessData(event.target.value)
+  }
+
+  function searchBtnClickHandler (event) {
+    // Renders search if it is not rendered yet.
+    // Creates search on demand.
+    if ($search === null) {
+      initSearch()
+    }
+
+    if (isShown) {
+      $siteWrapper.removeClass(NOSCROLL_CLASS)
+      $header.removeClass(HEADER_SEARCH_ACTIVE_CLASS)
+      $mobileSearchBtn.removeClass(SEARCH_BTN_ACTIVE_CLASS)
+      $searchBtn.removeClass(SEARCH_BTN_ACTIVE_CLASS)
+    } else {
+      scrollToTop()
+      $siteWrapper.addClass(NOSCROLL_CLASS)
+      $header.addClass(HEADER_SEARCH_ACTIVE_CLASS)
+      $mobileSearchBtn.addClass(SEARCH_BTN_ACTIVE_CLASS)
+      $searchBtn.addClass(SEARCH_BTN_ACTIVE_CLASS)
+    }
+
+    toggleSearchVisibility()
+  }
+
+  function loadAndProcessData (inputValue) {
+    $.get(SEARCH_ENDPOINT, { term: inputValue })
+      .done(function (data) {
+        if (!data.length) {
+          $searchNoResults.removeClass(HIDDEN_CLASS)
+        }
+
+        var html = searchNewsTemplate({ items: data })
+
+        $searchResults.html(html)
+      })
+      .fail(function (error) {
+        $searchError.removeClass(HIDDEN_CLASS)
+      })
+      .always(function () {
+        $searchLoading.addClass(HIDDEN_CLASS)
+      })
+  }
+
+  function render () {
+    $search = $($.parseHTML(searchTemplate()))
+
+    $siteWrapper.append($search)
+  }
+
+  function scrollToTop () {
+    window.scrollTo(0, 0)
+  }
+
+  function toggleSearchVisibility () {
+    if ($search === null) throw new Error('Search is not rendered yet.')
+
+    if (isShown) {
+      $search.addClass(HIDDEN_CLASS)
+      isShown = false
+    } else {
+      $search.removeClass(HIDDEN_CLASS)
+      isShown = true
+    }
+  }
 })
 </script>
 </body>
