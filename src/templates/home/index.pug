@@ -135,7 +135,7 @@ block content
   +subscription-form(class='mt-1px mt-md-4')
 
   .container.mt-1px.mt-md-4
-    .grid.--small-gaps.--lg-modules
+    .grid.grid--small-gaps.grid--lg-modules
       .grid__item.col-12.col-md-4.height-fix
         +module(modules3[0])(class='flex-auto')
       .grid__item.col-12.col-md-4.height-fix
@@ -155,3 +155,12 @@ block content
       each index in [4, 5, 6, 7]
         .grid__item
           +accent(accentList[index])
+
+  .container.mt-1px.mt-md-3
+    .grid.grid--small-gaps.grid--lg-modules
+      .grid__item.col-12.col-md-6.height-fix
+        +module(modules4[0])(class='flex-auto module--lg-large module--lg-full-img')
+      .grid__item.col-12.col-md-6.height-fix
+        +module(modules4[1])(class='flex-auto module--lg-large')
+      .grid__item.col-12.col-md-12
+        +module(modules4[2])(class='flex-auto module--lg-wide module--lg-full-img module--lg-theme-light')

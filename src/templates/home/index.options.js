@@ -141,6 +141,50 @@ module.exports = {
     }
   ],
 
+  modules4: [
+    {
+      title: '<span color="c-primary">Хороший вопрос:</span> Что на самом деле отличает гуманитарныенауки от естественных',
+      link: '#',
+      img: '/imgs/photos/11.png',
+      label: {
+        link: '#',
+        name: 'Наука'
+      },
+      contentInfo: [
+        { link: '#', name: 'Таня Коэн' },
+        { link: '#', name: '12 июля' }
+      ]
+    },
+
+    {
+      title: 'Что такое <em>сверхчувствительностьи</em> как с ней жить',
+      link: '#',
+      img: '/imgs/photos/12.png',
+      label: {
+        link: '#',
+        name: 'Книги'
+      },
+      contentInfo: [
+        { link: '#', name: 'Кэтлин Элкнис' },
+        { link: '#', name: '12 июля' }
+      ]
+    },
+
+    {
+      title: '20 доказательств того, что мы живем в иммитации реальности',
+      link: '#',
+      img: '/imgs/photos/13.png',
+      label: {
+        link: '#',
+        name: 'Будущее'
+      },
+      contentInfo: [
+        { link: '#', name: 'Миша Цыган' },
+        { link: '#', name: '11 июля' }
+      ]
+    }
+  ],
+
   shortNewsList: [
     {
       title: 'Дмитрий Ольшанский стал бренд-амбассадором «Пятерочки» и «Дикси» и побрил ноги до ляжек',
