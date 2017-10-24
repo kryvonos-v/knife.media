@@ -185,6 +185,80 @@ module.exports = {
     }
   ],
 
+  modules5: [
+    {
+      title: '<em class="c-primary">IQ-тест</em><br>Всего в двух вопросах',
+      link: '#',
+      img: '/imgs/photos/14.png',
+      label: {
+        link: '#',
+        name: 'Тест'
+      },
+      contentInfo: [
+        { link: '#', name: 'Наталья Белоусова' },
+        { link: '#', name: '10 июля' }
+      ]
+    },
+
+    {
+      title: '<span style="c-primary">Бородатые счастливчики:</span><br>Как мужчин дискриминируют на работе',
+      link: '#',
+      img: '/imgs/photos/15.png',
+      label: {
+        link: '#',
+        name: 'Истории'
+      },
+      contentInfo: [
+        { link: '#', name: 'Сергей Лебедев' },
+        { link: '#', name: '9 июля' }
+      ]
+    },
+
+    {
+      title: 'Почему совы должныподчиняться жаворонкам',
+      link: '#',
+      img: '/imgs/photos/16.png',
+      label: {
+        link: '#',
+        name: 'Наука'
+      },
+      contentInfo: [
+        { link: '#', name: 'Таня Коэн' },
+        { link: '#', name: '7 июля' }
+      ]
+    }
+  ],
+
+  modules6: [
+    {
+      title: 'Как объехать всю Скандинавиюза 250 евро',
+      link: '#',
+      img: '/imgs/photos/17.png',
+      label: {
+        link: '#',
+        name: 'Путешествия'
+      },
+      contentInfo: [
+        { link: '#', name: 'Карина Абдусаламова' },
+        { link: '#', name: '6 июля' }
+      ]
+    },
+
+    {
+      title: 'Мой нейробиолог Далай Лама: Как медитация покорила ученых',
+      link: '#',
+      img: '/imgs/photos/18.png',
+      label: {
+        link: '#',
+        name: 'Наука'
+      },
+      contentInfo: [
+        { link: '#', name: 'Кэтлин Элкнис' },
+        { link: '#', name: '5 июля' }
+      ]
+    }
+  ],
+
   shortNewsList: [
     {
       title: 'Дмитрий Ольшанский стал бренд-амбассадором «Пятерочки» и «Дикси» и побрил ноги до ляжек',
@@ -292,6 +366,38 @@ module.exports = {
     }
   ],
 
+  specialNewsList2: [
+    {
+      title: 'Что такое полиаморияи подходит ли она вам',
+      link: '#',
+      img: '/imgs/stickers/smile.png',
+      contentInfo: [
+        { name: 'Елена Серафимович', link: '#' },
+        { name: '9 июля', link: '#' }
+      ]
+    },
+
+    {
+      title: 'Как бесплатное онлайн-порноизменило мужскую мастурбацию',
+      link: '#',
+      img: '/imgs/stickers/apple.png',
+      contentInfo: [
+        { name: 'Яна Тэллон-Хикс', link: '#' },
+        { name: '8 июля', link: '#' }
+      ]
+    },
+
+    {
+      title: 'Как смотреть порно на работеи не спалиться',
+      link: '#',
+      img: '/imgs/stickers/penis.png',
+      contentInfo: [
+        { name: 'Борис Ван Зантен', link: '#' },
+        { name: '6 июля', link: '#' }
+      ]
+    }
+  ],
+
   accentList: [
     { link: '#', title: 'Что Гарри Поттер сделал с литературой' },
     { link: '#', title: 'Как накопить кучу денег' },
@@ -301,5 +407,31 @@ module.exports = {
     { link: '#', title: 'Откуда взялся культ завтрака' },
     { link: '#', title: 'Почему мы теряем детские воспоминания?' },
     { link: '#', title: 'Как не стать жертвой терракта' }
+  ],
+
+  stories: [
+    {
+      title: 'Зеленоградские ученые клонировали 14 Медведевых',
+      link: '#',
+      img: '/imgs/stories/1.png'
+    },
+
+    {
+      title: 'Сергей Минаев назначен главой Литфонда России',
+      link: '#',
+      img: '/imgs/stories/2.png'
+    },
+
+    {
+      title: 'Фестиваль гусей в Воркуте закончился массовой оргией',
+      link: '#',
+      img: '/imgs/stories/3.png'
+    },
+
+    {
+      title: 'В центре Москвы арестована девочка, декламировавшая Полозкову',
+      link: '#',
+      img: '/imgs/stories/4.png'
+    }
   ]
 }

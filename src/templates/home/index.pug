@@ -20,15 +20,16 @@ mixin content-info(items = [])
           span.content-info__item= name
 
 
-mixin label(link, name)
-  if (link)
-    a.label(href=link)&attributes(attributes)= name
-  else
-    span.label&attributes(attributes)= name
+mixin label({ link, name = '' } = {})
+  if name
+    if link
+      a.label(href=link)&attributes(attributes)= name
+    else
+      span.label&attributes(attributes)= name
 
 mixin module({ title, link, img, label = {}, contentInfo = [] } = {})
   article.module&attributes(attributes)
-    +label(label.link, label.name).module__label
+    +label(label).module__label
 
     a.module__img-link(href=link)
       .module__img(style=`background-image: url('${img}');`)
@@ -111,7 +112,7 @@ block content
 
     .content-container.px-sm-0.row
       .col-12.col-xl-6.align-self-md-end.mt-5.pr-xl-4.c-white
-        - const contentInfo = [{ name: 'Роман Навескин', link: '#' }, { name: '17 июля', link: '#' }]
+        - contentInfo = [{ name: 'Роман Навескин', link: '#' }, { name: '17 июля', link: '#' }]
         +content-info(contentInfo)(class='content-info--large c-white mb-3')
 
         .h1
@@ -164,3 +165,49 @@ block content
         +module(modules4[1])(class='flex-auto module--lg-large')
       .grid__item.col-12.col-md-12
         +module(modules4[2])(class='flex-auto module--lg-wide module--lg-full-img module--lg-theme-light')
+
+  .container.mt-1px.mt-md-4
+    .position-relative
+      .hr
+      a.label.position-absolute(href='#') день рождения стивена хокинга
+
+    .content-container.px-sm-0.row
+      .col-12.col-xl-6.align-self-md-end.mt-5.pr-xl-4.c-white
+        - contentInfo = [{ name: 'Наталья Белоусова', link: '#' }, { name: '11 июля', link: '#' }]
+        +content-info(contentInfo)(class='content-info--large c-white mb-3')
+
+        .h1
+          a.brand-link(href='#') 8 вещей, которыеделают нас непривлекательными в глазах других
+
+      .col-12.col-xl-6
+        each item, index in specialNewsList2
+          if index
+            .hr.mt-4(style='margin-left: 95px;')
+          +special-news(item)(class='mt-4 c-white')
+
+  .container.mt-5
+    .grid.grid--small-gaps.grid--lg-modules
+      .grid__item.col-12.col-md-4.height-fix
+        +module(modules5[0])(class='flex-auto')
+      .grid__item.col-12.col-md-4.height-fix
+        +module(modules5[1])(class='flex-auto')
+      .grid__item.col-12.col-md-4.height-fix
+        +module(modules5[2])(class='flex-auto module--lg-full-img module--lg-theme-light')
+
+  .container
+    .grid.grid--small-gaps.grid--lg-modules
+      .grid__item.col-12.col-md-6.height-fix
+        +module(modules6[0])(class='flex-auto module--lg-large module--lg-full-img module--lg-theme-light')
+      .grid__item.col-12.col-md-6.height-fix
+        +module(modules6[1])(class='flex-auto module--lg-large')
+
+  .container.mt-md-4
+    .position-relative.mb-5
+      .hr
+      span.label.position-absolute Сториз
+
+    //- d-block is hack for ie 10
+    #stories.grid.grid--force-small-gaps.grid--lg-force-modules.d-block.stories
+      each item in stories
+        .grid__item
+          +module(item)(class='module--story stories__story')
