@@ -73,6 +73,9 @@ mixin subscription-form
         .col-12.col-md-4.col-xl
           button.subscription__btn Подписаться
 
+mixin accent({ link, title } = {})
+  a.accent.brand-link(href=link)&attributes(attributes)= title
+
 block title
   title= pageTitle
 
@@ -139,3 +142,16 @@ block content
         +module(modules3[1])(class='flex-auto module--lg-full-img module--lg-theme-light')
       .grid__item.col-12.col-md-4.height-fix
         +module(modules3[2])(class='flex-auto')
+
+  .container.mt-1px.mt-md-3
+    .grid.grid--small-gaps.grid--lg-accent.accent-list
+      each index in [0, 1, 2, 3]
+        .grid__item
+          +accent(accentList[index])(class='accent--large')
+
+      //- Separate large and regular 'accent'.
+      .grid__item.p-0.w-100.m-0
+
+      each index in [4, 5, 6, 7]
+        .grid__item
+          +accent(accentList[index])
