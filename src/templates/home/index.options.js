@@ -94,8 +94,51 @@ module.exports = {
         { link: '#', name: 'Борис Барбизон' },
         { link: '#', name: '14 июля' }
       ]
+    }
+  ],
+
+  modules3: [
+    {
+      title: '<em class="c-primary">Тест для женщин:</em><br>Каков ваш сексуальный темперамент',
+      link: '#',
+      img: '/imgs/photos/8.png',
+      label: {
+        link: '#',
+        name: 'Тест'
+      },
+      contentInfo: [
+        { link: '#', name: 'Наталья Белоусова' },
+        { link: '#', name: '13 июля' }
+      ]
     },
 
+    {
+      title: 'Как избавится от месячныхи начать жить',
+      link: '#',
+      img: '/imgs/photos/9.png',
+      label: {
+        link: '#',
+        name: 'Наука'
+      },
+      contentInfo: [
+        { link: '#', name: 'Таня Коэн' },
+        { link: '#', name: '13 июля' }
+      ]
+    },
+
+    {
+      title: 'Сколько зарабатывает и сколько работает судмедэксперт в России',
+      link: '#',
+      img: '/imgs/photos/10.png',
+      label: {
+        link: '#',
+        name: 'Личный опыт'
+      },
+      contentInfo: [
+        { link: '#', name: 'Наталья Белоусова' },
+        { link: '#', name: '13 июля' }
+      ]
+    }
   ],
 
   shortNewsList: [
