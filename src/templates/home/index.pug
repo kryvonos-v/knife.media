@@ -48,7 +48,7 @@ mixin short-news({ title, link, contentInfo = []} = {})
       a.brand-link(href=link)!= title
 
 mixin special-news({ title, link, img = '', contentInfo = [] } = {})
-  article.special-news.media
+  article.special-news.media&attributes(attributes)
     a.img-link.align-self-center.mr-3(href=link)
       img.special-news__img(src=img alt='')
 
@@ -99,60 +99,8 @@ block content
         .h1
           a.brand-link(href='#') Стивен Хокинг — о восстановлении экспериментальной физики в России
 
-      <div class="col-12 col-xl-6">
-        <article class="special-news media c-white mt-4">
-          <a href="#" class="img-link align-self-center mr-3">
-            <img class="special-news__img" src="src/assets/imgs/stickers/diamond.png" alt="">
-          </a>
-
-          <div class="media-body">
-            <footer class="content-info content-info--large c-white">
-              <a class="brand-link content-info__item">Иван Шипнигов</a>
-              <span class="content-info__separator">•</span>
-              <a class="content-info__item brand-link" href="#">19 июля</a>
-            </footer>
-
-            <h2 class="h2 mt-3">
-              <a class="brand-link" href="#">Ольга Славникова — о Хокинге, уральском мифе и своих новых романах</a>
-            </h2>
-            <div class="hr mt-4"></div>
-          </div>
-        </article>
-
-        <article class="special-news media c-white mt-4">
-          <a href="#" class="img-link align-self-center mr-3">
-            <img class="special-news__img" src="src/assets/imgs/stickers/face.png" alt="">
-          </a>
-
-          <div class="media-body">
-            <footer class="content-info content-info--large c-white">
-              <a class="brand-link content-info__item">Иван Шипнигов</a>
-              <span class="content-info__separator">•</span>
-              <a class="content-info__item brand-link" href="#">18 июля</a>
-            </footer>
-
-            <h2 class="h2 mt-3">
-              <a class="brand-link" href="#">Денис Драгунский — о том, как бы вел себя Хокинг в русском фейсбуке</a>
-            </h2>
-            <div class="hr mt-4"></div>
-          </div>
-        </article>
-
-        <article class="special-news media c-white mt-4">
-          <a href="#" class="img-link align-self-center mr-3">
-            <img class="special-news__img" src="src/assets/imgs/stickers/explosion.png" alt="">
-          </a>
-
-          <div class="media-body">
-            <footer class="content-info content-info--large c-white">
-              <a class="brand-link content-info__item">Иван Шипнигов</a>
-              <span class="content-info__separator">•</span>
-              <a class="content-info__item brand-link" href="#">16 июля</a>
-            </footer>
-
-            <h2 class="h2 mt-3">
-              <a class="brand-link" href="#">Илья Найшуллер — о прогрессивной роли порнографии, плоскогубцах и носе Хокинга</a>
-            </h2>
-          </div>
-        </article>
-      </div>
+      .col-12.col-xl-6
+        each item, index in specialNewsList
+          if index
+            .hr.mt-4(style='margin-left: 95px;')
+          +special-news(item)(class='mt-4 c-white')

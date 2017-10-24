@@ -126,5 +126,38 @@ module.exports = {
       ]
     }
 
+  ],
+
+  specialNewsList: [
+    {
+      title: 'Ольга Славникова — о Хокинге, уральском мифе и своих новых романах',
+      link: '#',
+      img: '/imgs/stickers/diamond.png',
+      contentInfo: [
+        { name: 'Иван Шипнигов', link: '#' },
+        { name: '19 июля', link: '#' }
+      ]
+    },
+
+    {
+      title: 'Ольга Славникова — о Хокинге, уральском мифе и своих новых романах',
+      link: '#',
+      img: '/imgs/stickers/face.png',
+      contentInfo: [
+        { name: 'Иван Шипнигов', link: '#' },
+        { name: '18 июля', link: '#' }
+      ]
+    },
+
+    {
+      title: 'Илья Найшуллер — о прогрессивной роли порнографии, плоскогубцах и носе Хокинга',
+      link: '#',
+      img: '/imgs/stickers/explosion.png',
+      contentInfo: [
+        { name: 'Иван Шипнигов', link: '#' },
+        { name: '16 июля', link: '#' }
+      ]
+    },
+
   ]
 }
