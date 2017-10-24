@@ -42,8 +42,8 @@ $module-story-2-content-padding-x: 15px;
     }
   }
 
-  &--large {
-    @include media-breakpoint-up(md) {
+  &--lg-large {
+    @include media-breakpoint-up(lg) {
       max-width: none;
       min-height: 450px;
     }
@@ -122,8 +122,8 @@ $module-story-2-content-padding-x: 15px;
       padding-top: 150%;
     }
 
-    @at-root .moduel--large & {
-      @include media-breakpoint-up(md) {
+    @at-root .moduel--lg-large & {
+      @include media-breakpoint-up(lg) {
         padding-top: 70%;
       }
     }
@@ -166,6 +166,12 @@ $module-story-2-content-padding-x: 15px;
     padding-left: 15px;
     padding-right: 15px;
     width: 100%;
+
+    @at-root .module--lg-theme-light & {
+      @include media-breakpoint-up(lg) {
+        color: #fff;
+      }
+    }
 
     @at-root .module--story & {
       justify-content: flex-end;
@@ -230,8 +236,8 @@ $module-story-2-content-padding-x: 15px;
       font-weight: 900;
     }
 
-    @at-root .module--large & {
-      @include media-breakpoint-up(md) {
+    @at-root .module--lg-large & {
+      @include media-breakpoint-up(lg) {
         font-size: 30px;
         line-height: 1.1;
       }
@@ -247,6 +253,12 @@ $module-story-2-content-padding-x: 15px;
 
   &__content-info {
     margin-top: auto;
+
+    @at-root .module--lg-theme-light & {
+      @include media-breakpoint-up(lg) {
+        color: #fff;
+      }
+    }
 
     @include media-breakpoint-up(md) {
       font-size: 13px;

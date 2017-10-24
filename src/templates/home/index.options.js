@@ -53,6 +53,51 @@ module.exports = {
     }
   ],
 
+  modules2: [
+    {
+      title: '<span color="c-primary">Тренд</span>: Кто выбирает <em>работпуски</em> — длинные путешествия без отрыва от карьеры',
+      link: '#',
+      img: '/imgs/photos/5.jpg',
+      label: {
+        link: '#',
+        name: 'Книги'
+      },
+      contentInfo: [
+        { link: '#', name: 'Агата Коровина' },
+        { link: '#', name: '25 июля' }
+      ]
+    },
+
+    {
+      title: 'Девять признаков того, что выникогда не разбогатеете',
+      link: '#',
+      img: '/imgs/photos/6.jpg',
+      label: {
+        link: '#',
+        name: 'Гид'
+      },
+      contentInfo: [
+        { link: '#', name: 'Кэтлин Элкнис' },
+        { link: '#', name: '14 июля' }
+      ]
+    },
+
+    {
+      title: 'Пять книг для разговоров обо всем на свете',
+      link: '#',
+      img: '/imgs/photos/7.png',
+      label: {
+        link: '#',
+        name: 'Будущее'
+      },
+      contentInfo: [
+        { link: '#', name: 'Борис Барбизон' },
+        { link: '#', name: '14 июля' }
+      ]
+    },
+
+  ],
+
   shortNewsList: [
     {
       title: 'Дмитрий Ольшанский стал бренд-амбассадором «Пятерочки» и «Дикси» и побрил ноги до ляжек',

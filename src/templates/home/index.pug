@@ -36,7 +36,7 @@ mixin module({ title, link, img, label = {}, contentInfo = [] } = {})
 
     .module__content
       h2.module__heading
-        a.module__link(href=link)= title
+        a.module__link(href=link)!= title
 
       +content-info(contentInfo)(class='content-info--large module__content-info')
 
@@ -104,3 +104,12 @@ block content
           if index
             .hr.mt-4(style='margin-left: 95px;')
           +special-news(item)(class='mt-4 c-white')
+
+  .container.mt-5
+    .grid.grid--small-gaps.grid--lg-modules
+      .grid__item.col-12.col-md-6.height-fix
+        +module(modules2[0])(class='flex-auto module--lg-large')
+      .grid__item.col-12.col-md-6.height-fix
+        +module(modules2[1])(class='flex-auto module--lg-large module--lg-full-img module--lg-theme-light')
+      .grid__item.col-12.col-md-12
+        +module(modules2[2])(class='module--lg-wide module--lg-full-img')
