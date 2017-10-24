@@ -2,39 +2,41 @@
   "name": "knife.media",
   "version": "0.0.1",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.js --port 3001 --hot --inline",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "bundle": "./node_modules/.bin/webpack --config webpack.config.js"
+    "dev": "webpack-dev-server -d -w",
+    "prod": "rm -rf ./dist/* && NODE_ENV=production webpack -p"
   },
-  "author": "Volodymyr Kryvonos",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/kryvonos-redvike/knife.media"
   },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^6.0.3",
-    "babel-core": "^5.8.25",
-    "babel-loader": "^5.3.2",
-    "css-loader": "^0.21.0",
-    "es6-promise": "^3.0.2",
-    "file-loader": "^0.11.2",
+    "autoprefixer": "^7.1.5",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.7",
+    "cssnano": "^3.10.0",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "file-loader": "^1.1.5",
     "html-webpack-plugin": "^2.30.1",
-    "node-sass": "^3.3.3",
-    "postcss-loader": "^0.7.0",
-    "sass-loader": "^3.0.0",
-    "style-loader": "^0.13.0",
-    "stylelint-selector-bem-pattern": "^1.0.0",
-    "stylelint-webpack-plugin": "^0.2.0",
-    "typi": "^3.1.0",
-    "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.1"
+    "image-webpack-loader": "^3.4.2",
+    "node-sass": "^4.5.3",
+    "popper.js": "^1.12.6",
+    "postcss-loader": "^2.0.8",
+    "postcss-scss": "^1.0.2",
+    "pug": "^2.0.0-rc.4",
+    "pug-loader": "^2.3.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "stylelint": "^6.9.0",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.2"
   },
-  "dependencies": {
-    "bootstrap": "^4.0.0-beta",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "smartmenus": "^1.0.1"
-  }
+  "browserslist": [
+    "last 5 versions"
+  ]
 }

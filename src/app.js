@@ -1,7 +1,9 @@
 'use strict'
 
-require('./assets/styles/main.scss')
-require('./vendor/modernizr')
+import './templates/index.pug'
+import './assets/styles/main.scss'
+import './vendor/modernizr'
+import utils from '@/utils.js'
 
 const isSupportedBrowser = Modernizr.flexwrap && (Modernizr.flexbox || Modernizr.flexboxtweener)
 

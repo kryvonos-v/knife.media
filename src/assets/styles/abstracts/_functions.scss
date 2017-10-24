@@ -28,7 +28,7 @@
 /// @return {Url}
 /// @require $base-url
 @function font($path, $base: $base-url) {
-  @return asset($base, 'fonts/', $path);
+  @return asset('../', 'fonts/', $path);
 }
 
 /// Test if `$value` is a valid direction.

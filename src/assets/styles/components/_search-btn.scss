@@ -1,6 +1,10 @@
 .search-btn {
   display: inline-block;
+  border: 0;
+  padding: 0;
   vertical-align: middle;
+  appearance: none;
+  background: none;
 
   &__search-icon {
     display: inline-block;
