@@ -58,6 +58,21 @@ mixin special-news({ title, link, img = '', contentInfo = [] } = {})
       h2.h2.mt-3
         a.brand-link(href=link) Ольга Славникова — о Хокинге, уральском мифе и своих новых романах
 
+mixin subscription-form
+  section.subscription&attributes(attributes)
+    .subscription__inner.container
+      .row
+        .col-12.col-xl-auto.text-center
+          h2.subscription__heading
+          | Подпишитесь на нашу рассылку
+          img.subscription__arrow(src='/imgs/icons/arrow-down.svg')
+
+        .col-12.col-md-8.col-xl
+          input.input-text.subscription__input(type='text' placeholder='Оставьте вашу электронную почту')
+
+        .col-12.col-md-4.col-xl
+          button.subscription__btn Подписаться
+
 block title
   title= pageTitle
 
@@ -113,3 +128,5 @@ block content
         +module(modules2[1])(class='flex-auto module--lg-large module--lg-full-img module--lg-theme-light')
       .grid__item.col-12.col-md-12
         +module(modules2[2])(class='module--lg-wide module--lg-full-img')
+
+  +subscription-form(class='mt-1px mt-md-4')
