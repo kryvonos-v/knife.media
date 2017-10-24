@@ -1,42 +1,20 @@
-<footer class="footer mt-3">
-  <div class="footer__inner container">
-    <div class="row">
-      <div class="col-12 col-lg footer__brand">
-        <a href="/" class="footer__logo">НОЖ</a>
-        <p class="footer__subheading">Интеллектуальный журнал<br>о культуре и обществе</p>
-      </div>
+include ../mixins/socials.pug
 
-      <div class="col-12 col-lg footer__nav">
-        <ul class="nav footer__menu flex-column font-weight-bold">
-          <li class="nav-item"><a class="footer__nav-link" href="#">О нас</a></li>
-          <li class="nav-item"><a class="footer__nav-link" href="#">Реклама</a></li>
-          <li class="nav-item"><a class="footer__nav-link" href="#">Вакансии</a></li>
-          <li class="nav-item"><a class="footer__nav-link" href="#">Стать частью проекта</a></li>
-        </ul>
+footer.footer.mt-3
+  .footer__inner.container
+    .row
+      .col-12.col-lg.footer__brand
+        a.footer__logo(href='/') НОЖ
+        p.footer__subheading Интеллектуальный журнал<br>о культуре и обществе
 
-        <ul class="socials socials--theme-light footer__socials mt-4">
-          <li class="socials__item">
-            <a href="#" class="socials__link brand-link"><i class="fa fa-facebook socials__fb" aria-hidden="true"></i></a>
-          </li>
-          <li class="socials__item">
-            <a href="#" class="socials__link brand-link"><i class="fa fa-vk socials__vk" aria-hidden="true"></i></a>
-          </li>
-          <li class="socials__item">
-            <a href="#" class="socials__link brand-link"><i class="fa fa-telegram socials__tg" aria-hidden="true"></i></a>
-          </li>
-          <li class="socials__item">
-            <a href="#" class="socials__link brand-link"><i class="fa fa-twitter socials__tw" aria-hidden="true"></i></a>
-          </li>
-          <li class="socials__item">
-            <a href="#" class="socials__link brand-link"><i class="fa fa-search socials__search" aria-hidden="true"></i></a>
-          </li>
-        </ul>
-      </div>
+      .col-12.col-lg.footer__nav
+        ul.nav.footer__menu.flex-column.font-weight-bold
+          each item in footerNav
+            li.nav-item
+              a.footer__nav-link(href=item.href)= item.name
 
-      <div class="col-12 col-lg-5 footer__text">
-        <p>Использование всех текстовых материалов без изменений в некоммерческих целях разрешается со ссылкой на «Нож». Все аудиовизуальные произведения являются собственностью своих авторов и правообладателей и используются только в образовательных и информационных целях. Если вы являетесь собственником того или иного произведения и не согласны с его размещением на нашем сайте, пожалуйста, напишите на <a class="footer__link" href="mailto:hi@knife.media">hi@knife.media</a></p>
-        <p>Сайт может содержать контент, не предназначенный для лиц младше 18 лет</p>
-      </div>
-    </div>
-  </div>
-</footer>
+        +socials(socials)(class='socials--theme-light footer__socials mt-4')
+
+      .col-12.col-lg-5.footer__text
+        p Использование всех текстовых материалов без изменений в некоммерческих целях разрешается со ссылкой на «Нож». Все аудиовизуальные произведения являются собственностью своих авторов и правообладателей и используются только в образовательных и информационных целях. Если вы являетесь собственником того или иного произведения и не согласны с его размещением на нашем сайте, пожалуйста, напишите на <a class="footer__link" href="mailto:hi@knife.media">hi@knife.media</a>
+        p Сайт может содержать контент, не предназначенный для лиц младше 18 лет

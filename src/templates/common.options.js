@@ -28,5 +28,12 @@ module.exports = {
     { href: '#', socialClass: 'fa fa-facebook socials__vk' },
     { href: '#', socialClass: 'fa fa-facebook socials__tg' },
     { href: '#', socialClass: 'fa fa-facebook socials__tw' }
+  ],
+
+  footerNav: [
+    { href: '#', name: 'О нас' },
+    { href: '#', name: 'Реклама' },
+    { href: '#', name: 'Вакансии' },
+    { href: '#', name: 'Стать частью проекта' }
   ]
 }

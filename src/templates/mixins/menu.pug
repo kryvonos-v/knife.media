@@ -1,0 +1,20 @@
+mixin menu-item(href, name)
+  li.menu__item
+    a.menu__link(href=href)= name
+    block
+
+mixin menu(items)
+  ul.menu&attributes(attributes)
+    each item in items
+      +menu-item(item.href, item.name)
+        if item.submenu
+          +submenu(item.submenu)
+
+mixin submenu(items)
+  ul.submenu
+    for item in items
+      +submenu-item(item.href, item.name)
+
+mixin submenu-item(href, name)
+  li.submenu__item
+    a.submenu__link(href=href)= name
