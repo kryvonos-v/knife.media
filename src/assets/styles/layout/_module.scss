@@ -32,8 +32,8 @@ $module-story-2-content-padding-x: 15px;
     background: linear-gradient(-320deg, #e75ca0 0%,#9679f3 100%);
   }
 
-  &--wide {
-    @include media-breakpoint-up(md) {
+  &--lg-wide {
+    @include media-breakpoint-up(lg) {
       display: inline-flex;
       flex-direction: row;
       width: 100%;
@@ -47,10 +47,6 @@ $module-story-2-content-padding-x: 15px;
       max-width: none;
       min-height: 450px;
     }
-  }
-
-  &--full-img {
-    @include media-breakpoint-up(md) {}
   }
 
   &__label {
@@ -101,7 +97,7 @@ $module-story-2-content-padding-x: 15px;
     background-size: cover;
     background-position: center;
 
-    @at-root .module--wide & {
+    @at-root .module--lg-wide & {
       padding: 0;
       height: 100%;
     }
@@ -139,18 +135,20 @@ $module-story-2-content-padding-x: 15px;
     position: relative;
     width: 100%;
 
-    @at-root .module--full-img:hover & {
-      filter: brightness($module-img-hover-filter-brightness);
+    @at-root .module--lg-full-img:hover & {
+      @include media-breakpoint-up(lg) {
+        filter: brightness($module-img-hover-filter-brightness);
+      }
     }
 
-    @at-root .module--full-img & {
-      @include media-breakpoint-up(md) {
+    @at-root .module--lg-full-img & {
+      @include media-breakpoint-up(lg) {
         position: static;
       }
     }
 
-    @at-root .module--wide & {
-      @include media-breakpoint-up(md) {
+    @at-root .module--lg-wide & {
+      @include media-breakpoint-up(lg) {
         display: block;
         padding: 0;
         width: 50%;
@@ -184,8 +182,8 @@ $module-story-2-content-padding-x: 15px;
       padding-right: $module-padding-x-md;
     }
 
-    @at-root .module--wide & {
-      @include media-breakpoint-up(md) {
+    @at-root .module--lg-wide & {
+      @include media-breakpoint-up(lg) {
         order: -1;
         margin-top: auto;
         margin-left: 0;
@@ -203,6 +201,15 @@ $module-story-2-content-padding-x: 15px;
     line-height: 1.3;
     font-size: 19px;
     word-break: break-word;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 1.3rem;
+      font-size: 21px;
+    }
+
+    @media (min-width: 1350px) {
+      font-size: 24px;
+    }
 
     @at-root .module--simple & {
       margin-top: 0.85em;
@@ -223,15 +230,6 @@ $module-story-2-content-padding-x: 15px;
       font-weight: 900;
     }
 
-    @include media-breakpoint-up(md) {
-      margin-bottom: 1.3rem;
-      font-size: 19px;
-    }
-
-    @media (min-width: 1350px) {
-      font-size: 24px;
-    }
-
     @at-root .module--large & {
       @include media-breakpoint-up(md) {
         font-size: 30px;
@@ -239,8 +237,8 @@ $module-story-2-content-padding-x: 15px;
       }
     }
 
-    @at-root .module--wide & {
-      @include media-breakpoint-up(md) {
+    @at-root .module--lg-wide & {
+      @include media-breakpoint-up(lg) {
         font-size: 30px;
         line-height: 1.1;
       }

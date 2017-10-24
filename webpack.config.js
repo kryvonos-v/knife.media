@@ -111,10 +111,8 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Super Hello',
       filename: 'index.html',
-      template: './src/templates/indexTemplate.js',
-      options: generalOptions,
+      template: './src/templates/home',
       hash: true
     }),
 

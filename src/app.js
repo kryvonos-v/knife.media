@@ -1,6 +1,5 @@
 'use strict'
 
-import './templates/index.pug'
 import './assets/styles/main.scss'
 import './vendor/modernizr'
 import utils from '@/utils.js'
