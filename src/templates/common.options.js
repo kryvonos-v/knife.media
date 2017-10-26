@@ -6,7 +6,7 @@ module.exports = {
     { name: 'Мнения', href: '#' },
     { name: 'Stories', href: '#' },
     {
-      name: 'Больше',
+      name: 'Больше >',
       href: '#',
       submenu: [
         { name: 'Кино', href: '#' },

@@ -1,7 +1,7 @@
 import $ from 'jQuery'
 import EventBus from '@/utils/EventBus'
 
-export default function () {
+export default function (callback) {
   window.onYouTubeIframeAPIReady = () => EventBus.emit('youtube.api.ready')
 
   // This code loads the IFrame Player API code asynchronously.
@@ -10,4 +10,6 @@ export default function () {
 
   const firstScriptTag = document.getElementsByTagName('script')[0]
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
+
+  callback(null)
 }

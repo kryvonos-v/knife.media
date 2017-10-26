@@ -27,7 +27,6 @@ header#header.header
       include close-icon.pug
 
     nav#mainNav.header__nav.collapse.navbar-collapse
+      - const socialsOptions = { linkClass: 'header__socials-link', searchBtnClass: 'header__search-btn' };
       +menu(mainMenu)(id="mainMenu" class='sm header__menu')
-
-    - const socialsOptions = { linkClass: 'header__socials-link', searchBtnClass: 'header__search-btn' };
-    +socials(socials, socialsOptions)(class="header__socials")
+      +socials(socials, socialsOptions)(class="header__socials")
