@@ -36,8 +36,7 @@ module.exports = {
   },
 
   externals: {
-    jQuery: 'jQuery',
-    _: 'lodash'
+    jQuery: 'jQuery'
   },
 
   resolve: {

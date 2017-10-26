@@ -41,5 +41,8 @@
   },
   "browserslist": [
     "last 5 versions"
-  ]
+  ],
+  "dependencies": {
+    "lodash.debounce": "^4.0.8"
+  }
 }

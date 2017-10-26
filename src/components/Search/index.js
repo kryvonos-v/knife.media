@@ -1,7 +1,7 @@
 import $ from 'jQuery'
-import _ from 'lodash'
 import { scrollToTop } from '@/utils'
 import { endpoints } from '@/utils/config'
+import debounce from 'lodash.debounce'
 
 import searchTemplate from './index.pug'
 import searchNewsTemplate from './SearchNews/index.pug'
@@ -58,7 +58,7 @@ function initButtonsEventHandlers () {
 function initSearchInputEventHanlers () {
   if ($searchInput === null) throw new Error('Search input is not rendered yet.')
 
-  debouncedLoadAndProcessData = _.debounce(loadAndProcessData, debounceDelay)
+  debouncedLoadAndProcessData = debounce(loadAndProcessData, debounceDelay)
 
   $searchInput.on('input', searchInputEventHandler)
 }
