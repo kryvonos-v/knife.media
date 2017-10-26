@@ -207,7 +207,7 @@ block content
       span.label.position-absolute Сториз
 
     //- d-block is hack for ie 10
-    #stories.grid.grid--force-small-gaps.grid--lg-force-modules.d-block.stories
+    .jsStories.stories.grid.grid--force-small-gaps.grid--lg-force-modules.d-block
       each item in stories
         .grid__item
           +module(item)(class='module--story stories__story')
