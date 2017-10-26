@@ -25,9 +25,9 @@ module.exports = {
 
   socials: [
     { href: '#', socialClass: 'fa fa-facebook socials__fb' },
-    { href: '#', socialClass: 'fa fa-facebook socials__vk' },
-    { href: '#', socialClass: 'fa fa-facebook socials__tg' },
-    { href: '#', socialClass: 'fa fa-facebook socials__tw' }
+    { href: '#', socialClass: 'fa fa-vk socials__vk' },
+    { href: '#', socialClass: 'fa fa-telegram socials__tg' },
+    { href: '#', socialClass: 'fa fa-twitter socials__tw' }
   ],
 
   footerNav: [

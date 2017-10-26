@@ -1,0 +1,27 @@
+each item in searchNewsItems
+
+  article.search-news
+    .search-news__content
+      .h2.search-news__heading.h2.h1-lg
+        a.brand-link(href=item.link)= item.title
+
+      if item.tags && item.tags.length
+        footer.content-info.search-news__content-info.text-uppercase.c-white
+          each tag, tagIndex in item.tags
+
+            if tagIndex !== 0
+              span.content-info__separator
+
+            if tag.link
+              a.content-info__item.brand-link(href=tag.link)= tag.name
+            else
+              span.content-info__item= tag.name
+
+    if item.img
+      a.img-link.search-news__img.search-news__img-link.search__result-img(
+        href='#'
+        style=`background-image: url('${item.img}');`
+      )
+        img.out-of-page(src=item.img)
+
+  span.hr.search__separator

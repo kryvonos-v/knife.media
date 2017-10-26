@@ -1,0 +1,15 @@
+#search.search
+  .search__inner
+    .search__input-wrapper
+      input#searchInput.search-input.h2.h1-lg.search__input(
+        placeholder='Поиск ...'
+        type='text'
+      )
+
+    span#searchLoading.search__loading.search__text-info.font-italic
+      | Загрузка...
+    span#searchNoResults.search__no-results.search__text-info.text-uppercase
+      | Извините, но ничего не найдено.
+    span#searchError.search__error.search__text-info.text-uppercase
+      | Произошла ошибка. Повторите попытку позже.
+    #searchResults.search__results

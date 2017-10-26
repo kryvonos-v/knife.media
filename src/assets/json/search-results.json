@@ -1,6 +1,6 @@
 [{
 		"title": "20 типов людей, которые вы не хотите знать",
-		"img": "src/assets/imgs/photos/2.jpg",
+		"img": "/imgs/photos/2.jpg",
 		"link": "#",
 		"tags": [{
 				"name": "15:10"
@@ -24,7 +24,7 @@
 	},
 	{
 		"title": "Фейсбук купается в доходах от рекламы — прибыль выросла на 71 процент",
-		"img": "src/assets/imgs/photos/26.jpg",
+		"img": "/imgs/photos/26.jpg",
 		"link": "#",
 		"tags": [{
 				"name": "14:00"
@@ -48,7 +48,7 @@
 	},
 	{
 		"title": "Как душевные болезни помогалии мешали русскимписателям творить",
-		"img": "src/assets/imgs/photos/3.jpg",
+		"img": "/imgs/photos/3.jpg",
 		"link": "#",
 		"tags": [{
 				"name": "16:35"
@@ -121,7 +121,7 @@
 	},
 	{
 		"title": "Исследование: Женщины круче мужчин в краудфандинге",
-		"img": "src/assets/imgs/photos/27.jpg",
+		"img": "/imgs/photos/27.jpg",
 		"link": "#",
 		"tags": [{
 				"name": "15:10"
@@ -160,7 +160,7 @@
 	},
 	{
 		"title": "Lush выпустила бомбы для ванн по мотивам «Гарри Поттера»",
-		"img": "src/assets/imgs/photos/28.jpg",
+		"img": "/imgs/photos/28.jpg",
 		"link": "#",
 		"tags": [{
 				"name": "10:40"
@@ -180,7 +180,7 @@
 	},
 	{
 		"title": "Ученого Ричарда Докинза не пустили в радиоэфир из-за критики ислама",
-		"img": "src/assets/imgs/photos/29.jpg",
+		"img": "/imgs/photos/29.jpg",
 		"link": "#",
 		"tags": [{
 				"name": "19:10"

@@ -6,10 +6,16 @@ html(lang='ru')
     meta(http-equiv='X-UA-Compatible' content='ie=edge')
     block title
     block styles
+      link(
+        rel='stylesheet'
+        href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+      )
   body
-    block header
-      include includes/header.pug
-    block content
-    block footer
-      include includes/footer.pug
+    #siteWrapper.site-wrapper
+      block header
+        include includes/header.pug
+      block content
+      block footer
+        include includes/footer.pug
     block scripts
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js')
