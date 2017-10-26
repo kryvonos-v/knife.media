@@ -948,7 +948,7 @@
   <div class="media-news mt-3">
     <div class="media-news__inner container">
       <div class="media-news__media embed-responsive embed-responsive-4by3">
-        <div class="media-news__video embed-responsive-item" id="mediaNewsVideoPlayer"></div>
+        <div class="media-news__video embed-responsive-item jsMediaNewsMediaControl"></div>
         <div class="media-news__cover" style="background-image: url('src/assets/imgs/photos/cover-1.png')"></div>
 
         <button id="mediaNewsMediaControl" class="media-news__media-control youtube-btn" type="button">
@@ -1088,7 +1088,7 @@
 <script>
 // 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script')
-var $mediaNewsMediaControl = $('#mediaNewsMediaControl')
+var $mediaNewsMediaControl = $('.jsMediaNewsMediaControl')
 
 tag.src = "https://www.youtube.com/iframe_api"
 var firstScriptTag = document.getElementsByTagName('script')[0]
@@ -1121,7 +1121,9 @@ function stopVideo() {
 function onMediaControlClick (event) {
   if (!player) return
 
-  $mediaNewsMediaControl.closest('.media-news').addClass('media-news--in-action')
+  var $target = $(event.target)
+
+  $target.closest('.media-news').addClass('media-news--in-action')
   player.playVideo()
 }
 </script>
