@@ -2,7 +2,7 @@ import EventBus from '@/utils/EventBus'
 
 export default function (callback) {
   // We load youtube api only if it is necessary.
-  if (!document.querySelector('jsYoutubePlayer')) return callback(null)
+  if (!document.querySelector('.jsYoutubePlayer')) return callback(null)
 
   window.onYouTubeIframeAPIReady = () => EventBus.emit('youtube.api.ready')
 
