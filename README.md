@@ -1,5 +1,7 @@
 # knife.media
 
+I started switching markup to [pug](https://pugjs.org/api/getting-started.html) template engine, and you can still find 'old' html files in root folder. If you will create new html files or work with existing ones, please keep using pug for this purpose. All pug templates are located in `./src/templates/pages`.
+
 ## Environment setup
 
 ```sh
