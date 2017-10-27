@@ -1,0 +1,6 @@
+mixin label({ link, name = '' } = {})
+  if name
+    if link
+      a.label(href=link)&attributes(attributes)= name
+    else
+      span.label&attributes(attributes)= name

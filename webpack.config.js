@@ -113,13 +113,13 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './src/templates/home',
+      template: './src/templates/pages/home',
       hash: true
     }),
 
     new HtmlWebpackPlugin({
-      filename: 'stories.html',
-      template: './src/templates/stories',
+      filename: '404.html',
+      template: './src/templates/pages/404',
       hash: true
     }),
 

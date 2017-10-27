@@ -1,6 +1,8 @@
 module.exports = {
   pageTitle: 'Журнал «Нож» &#8212; Оружие интеллектуала',
 
+  // TODO: All these modules can be moved to file 'common.options'.
+  // TODO: You can also merge all separate arrays of modules1, modules2, modules3 into one.
   modules1: [
     {
       title: 'Кто и почему торгует на московских блошиных рынках',

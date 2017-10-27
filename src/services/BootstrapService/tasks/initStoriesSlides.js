@@ -6,18 +6,17 @@ export default function (callback) {
   const config = {
     appendArrows: null,
     infinite: true,
-    slidesToShow: 4,
-    centerMode: false,
-    slidesToScroll: 2,
+    slidesToShow: 3,
+    centerMode: true,
+    slidesToScroll: 3,
+    scrolling: false,
     variableWidth: true,
     responsive: [
       {
         breakpoint: breakpoints.lg,
         settings: {
-          centerMode: false,
-          slidesToScroll: 2,
-          slidesToShow: 3,
-          variableWidth: true,
+          centerMode: true,
+          slidesToShow: 3
         }
       },
       {

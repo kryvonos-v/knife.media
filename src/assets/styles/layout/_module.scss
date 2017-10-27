@@ -1,5 +1,13 @@
 $module-story-2-content-padding-x: 15px;
 
+@mixin module-wide {
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: none;
+  min-height: 300px;
+}
+
 .module {
   display: inline-block;
   position: relative;
@@ -32,18 +40,20 @@ $module-story-2-content-padding-x: 15px;
     background: linear-gradient(-320deg, #e75ca0 0%,#9679f3 100%);
   }
 
-  &--lg-wide {
-    @include media-breakpoint-up(lg) {
-      display: inline-flex;
-      flex-direction: row;
-      width: 100%;
-      max-width: none;
-      min-height: 300px;
+  &--md-wide {
+    @include media-breakpoint-up(md) {
+      @include module-wide;
     }
   }
 
-  &--lg-large {
-    @include media-breakpoint-up(lg) {
+  &--xl-wide {
+    @include media-breakpoint-up(xl) {
+      @include module-wide;
+    }
+  }
+
+  &--md-large {
+    @include media-breakpoint-up(md) {
       max-width: none;
       min-height: 450px;
     }
@@ -97,9 +107,11 @@ $module-story-2-content-padding-x: 15px;
     background-size: cover;
     background-position: center;
 
-    @at-root .module--lg-wide & {
-      padding: 0;
-      height: 100%;
+    @at-root .module--xl-wide & {
+      @include media-breakpoint-up(xl) {
+        padding: 0;
+        height: 100%;
+      }
     }
   }
 
@@ -122,11 +134,25 @@ $module-story-2-content-padding-x: 15px;
       padding-top: 150%;
     }
 
-    @at-root .moduel--lg-large & {
-      @include media-breakpoint-up(lg) {
+    @at-root .module--md-large & {
+      @include media-breakpoint-up(md) {
         padding-top: 70%;
       }
     }
+  }
+
+  @mixin module-full-img-hover-img-link {
+    // filter: brightness($module-img-hover-filter-brightness);
+  }
+
+  @mixin module-full-img-img-link {
+    position: static;
+  }
+
+  @mixin module-wide-img-link {
+    display: block;
+    padding: 0;
+    width: 50%;
   }
 
   &__img-link {
@@ -135,25 +161,51 @@ $module-story-2-content-padding-x: 15px;
     position: relative;
     width: 100%;
 
-    @at-root .module--lg-full-img:hover & {
-      @include media-breakpoint-up(lg) {
-        filter: brightness($module-img-hover-filter-brightness);
+    @at-root .module--md-full-img:hover & {
+      @include media-breakpoint-up(md) {
+        @include module-full-img-hover-img-link;
       }
     }
 
-    @at-root .module--lg-full-img & {
-      @include media-breakpoint-up(lg) {
-        position: static;
+    @at-root .module--xl-full-img:hover & {
+      @include media-breakpoint-up(xl) {
+        @include module-full-img-hover-img-link;
       }
     }
 
-    @at-root .module--lg-wide & {
-      @include media-breakpoint-up(lg) {
-        display: block;
-        padding: 0;
-        width: 50%;
+    @at-root .module--md-full-img & {
+      @include media-breakpoint-up(md) {
+        @include module-full-img-img-link;
       }
     }
+
+    @at-root .module--xl-full-img & {
+      @include media-breakpoint-up(xl) {
+        @include module-full-img-img-link;
+      }
+    }
+
+    @at-root .module--md-wide & {
+      @include media-breakpoint-up(md) {
+        @include module-wide-img-link;
+      }
+    }
+
+    @at-root .module--xl-wide & {
+      @include media-breakpoint-up(xl) {
+        @include module-wide-img-link;
+      }
+    }
+  }
+
+  @mixin module-wide-content {
+    order: -1;
+    margin-top: auto;
+    margin-left: 0;
+    margin-right: auto;
+    padding-top: $module-padding-y + 25px;
+    max-width: 55%;
+    min-height: 8.5em;
   }
 
   &__content {
@@ -167,8 +219,8 @@ $module-story-2-content-padding-x: 15px;
     padding-right: 15px;
     width: 100%;
 
-    @at-root .module--lg-theme-light & {
-      @include media-breakpoint-up(lg) {
+    @at-root .module--md-theme-light & {
+      @include media-breakpoint-up(md) {
         color: #fff;
       }
     }
@@ -188,17 +240,22 @@ $module-story-2-content-padding-x: 15px;
       padding-right: $module-padding-x-md;
     }
 
-    @at-root .module--lg-wide & {
-      @include media-breakpoint-up(lg) {
-        order: -1;
-        margin-top: auto;
-        margin-left: 0;
-        margin-right: auto;
-        padding-top: $module-padding-y + 25px;
-        max-width: 55%;
-        min-height: 8.5em;
+    @at-root .module--md-wide & {
+      @include media-breakpoint-up(md) {
+        @include module-wide-content;
       }
     }
+
+    @at-root .module--xl-wide & {
+      @include media-breakpoint-up(xl) {
+        @include module-wide-content;
+      }
+    }
+  }
+
+  @mixin module-wide-heading {
+    font-size: 30px;
+    line-height: 1.1;
   }
 
   &__heading {
@@ -236,17 +293,22 @@ $module-story-2-content-padding-x: 15px;
       font-weight: 900;
     }
 
-    @at-root .module--lg-large & {
-      @include media-breakpoint-up(lg) {
+    @at-root .module--md-large & {
+      @include media-breakpoint-up(md) {
         font-size: 30px;
         line-height: 1.1;
       }
     }
 
-    @at-root .module--lg-wide & {
-      @include media-breakpoint-up(lg) {
-        font-size: 30px;
-        line-height: 1.1;
+    @at-root .module--md-wide & {
+      @include media-breakpoint-up(md) {
+        @include module-wide-heading;
+      }
+    }
+
+    @at-root .module--xl-wide & {
+      @include media-breakpoint-up(xl) {
+        @include module-wide-heading;
       }
     }
   }
@@ -254,8 +316,8 @@ $module-story-2-content-padding-x: 15px;
   &__content-info {
     margin-top: auto;
 
-    @at-root .module--lg-theme-light & {
-      @include media-breakpoint-up(lg) {
+    @at-root .module--md-theme-light & {
+      @include media-breakpoint-up(md) {
         color: #fff;
       }
     }

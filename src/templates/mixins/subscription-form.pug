@@ -1,0 +1,14 @@
+mixin subscription-form
+  section.subscription&attributes(attributes)
+    .subscription__inner.container
+      .row
+        .col-12.col-xl-auto.text-center
+          h2.subscription__heading
+          | Подпишитесь на нашу рассылку
+          img.subscription__arrow(src='/imgs/icons/arrow-down.svg')
+
+        .col-12.col-md-8.col-xl
+          input.input-text.subscription__input(type='text' placeholder='Оставьте вашу электронную почту')
+
+        .col-12.col-md-4.col-xl
+          button.subscription__btn Подписаться

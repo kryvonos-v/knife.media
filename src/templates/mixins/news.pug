@@ -1,0 +1,25 @@
+mixin featured-news({ href = '', img = '' } = {})
+  .featured-news.content-container.px-sm-0
+    .container.featured-news__inner
+      h2.featured-news__heading
+        a.brand-link(href="#") Интервью с победителями международной олимпиады по химии
+
+      img.featured-news__icon.ml-3(src=img)
+
+mixin short-news({ title, link, contentInfo = []} = {})
+  article.short-news
+    +content-info(contentInfo)(class="content-info--small short-news__content-info text-uppercase")
+
+    h3.short-news__heading
+      a.brand-link(href=link)!= title
+
+mixin special-news({ title, link, img = '', contentInfo = [] } = {})
+  article.special-news.media&attributes(attributes)
+    a.img-link.align-self-center.mr-3(href=link)
+      img.special-news__img(src=img alt='')
+
+    .media-body
+      +content-info(contentInfo)(class='content-info--large c-white')
+
+      h2.h2.mt-3
+        a.brand-link(href=link) Ольга Славникова — о Хокинге, уральском мифе и своих новых романах

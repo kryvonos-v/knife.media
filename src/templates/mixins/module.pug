@@ -1,0 +1,13 @@
+mixin module({ title, link, img, label = {}, contentInfo = [] } = {})
+  article.module&attributes(attributes)
+    +label(label).module__label
+
+    a.module__img-link(href=link)
+      .module__img(style=`background-image: url('${img}');`)
+      img.module__img-height-fix(src=img)
+
+    .module__content
+      h2.module__heading
+        a.module__link(href=link)!= title
+
+      +content-info(contentInfo)(class='content-info--large module__content-info')

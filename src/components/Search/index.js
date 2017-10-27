@@ -48,6 +48,11 @@ function initSearch () {
   $searchError = $('#searchError')
   $searchNoResults = $('#searchNoResults')
 
+  // Hides texts for 'loading', 'no results' and for 'error'.
+  $searchLoading.addClass(HIDDEN_CLASS)
+  $searchNoResults.addClass(HIDDEN_CLASS)
+  $searchError.addClass(HIDDEN_CLASS)
+
   initSearchInputEventHanlers()
 }
 

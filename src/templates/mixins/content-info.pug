@@ -1,0 +1,10 @@
+mixin content-info(items = [])
+  if items.length
+    footer.content-info&attributes(attributes)
+      each item, index in items
+        if index
+          span.content-info__separator •
+        if (item.link)
+          a.content-info__item.brand-link(href=item.link)= item.name
+        else
+          span.content-info__item= name

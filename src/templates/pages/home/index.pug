@@ -1,81 +1,11 @@
-extends ../layout.pug
+extends ../../layout.pug
 
-mixin featured-news({ href = '', img = '' } = {})
-  .featured-news.content-container.px-sm-0
-    .container.featured-news__inner
-      h2.featured-news__heading
-        a.brand-link(href="#") Интервью с победителями международной олимпиады по химии
-
-      img.featured-news__icon.ml-3(src=img)
-
-mixin content-info(items = [])
-  if items.length
-    footer.content-info&attributes(attributes)
-      each item, index in items
-        if index
-          span.content-info__separator •
-        if (item.link)
-          a.content-info__item.brand-link(href=item.link)= item.name
-        else
-          span.content-info__item= name
-
-
-mixin label({ link, name = '' } = {})
-  if name
-    if link
-      a.label(href=link)&attributes(attributes)= name
-    else
-      span.label&attributes(attributes)= name
-
-mixin module({ title, link, img, label = {}, contentInfo = [] } = {})
-  article.module&attributes(attributes)
-    +label(label).module__label
-
-    a.module__img-link(href=link)
-      .module__img(style=`background-image: url('${img}');`)
-      img.module__img-height-fix(src=img)
-
-    .module__content
-      h2.module__heading
-        a.module__link(href=link)!= title
-
-      +content-info(contentInfo)(class='content-info--large module__content-info')
-
-mixin short-news({ title, link, contentInfo = []} = {})
-  article.short-news
-    +content-info(contentInfo)(class="content-info--small short-news__content-info text-uppercase")
-
-    h3.short-news__heading
-      a.brand-link(href=link)!= title
-
-mixin special-news({ title, link, img = '', contentInfo = [] } = {})
-  article.special-news.media&attributes(attributes)
-    a.img-link.align-self-center.mr-3(href=link)
-      img.special-news__img(src=img alt='')
-
-    .media-body
-      +content-info(contentInfo)(class='content-info--large c-white')
-
-      h2.h2.mt-3
-        a.brand-link(href=link) Ольга Славникова — о Хокинге, уральском мифе и своих новых романах
-
-mixin subscription-form
-  section.subscription&attributes(attributes)
-    .subscription__inner.container
-      .row
-        .col-12.col-xl-auto.text-center
-          h2.subscription__heading
-          | Подпишитесь на нашу рассылку
-          img.subscription__arrow(src='/imgs/icons/arrow-down.svg')
-
-        .col-12.col-md-8.col-xl
-          input.input-text.subscription__input(type='text' placeholder='Оставьте вашу электронную почту')
-
-        .col-12.col-md-4.col-xl
-          button.subscription__btn Подписаться
-
-mixin accent({ link, title } = {})
-  a.accent.brand-link(href=link)&attributes(attributes)= title
+include ../../mixins/accent
+include ../../mixins/content-info
+include ../../mixins/label
+include ../../mixins/module
+include ../../mixins/news
+include ../../mixins/subscription-form
 
 block title
   title= pageTitle
@@ -95,7 +25,7 @@ block content
       .grid__item.align-content-md-start.col-12.col-lg-9.height-fix
         .grid.grid--small-gaps.grid--lg-modules.flex-auto
           .grid__item.col-12.col-md-6.col-xl-12.height-fix
-            +module(modules1[0])(class='module--lg-wide module--lg-full-img flex-auto')
+            +module(modules1[0])(class='module--xl-wide module--xl-full-img flex-auto')
           each index in [1, 2, 3]
             .grid__item.col-12.col-md-6.col-xl-4.height-fix
               +module(modules1[index])(class='flex-auto')
@@ -133,11 +63,11 @@ block content
   .container.mt-5
     .grid.grid--small-gaps.grid--lg-modules
       .grid__item.col-12.col-md-6.height-fix
-        +module(modules2[0])(class='flex-auto module--lg-large')
+        +module(modules2[0])(class='flex-auto module--md-large')
       .grid__item.col-12.col-md-6.height-fix
-        +module(modules2[1])(class='flex-auto module--lg-large module--lg-full-img module--lg-theme-light')
+        +module(modules2[1])(class='flex-auto module--md-large module--md-full-img module--md-theme-light')
       .grid__item.col-12.col-md-12
-        +module(modules2[2])(class='module--lg-wide module--lg-full-img')
+        +module(modules2[2])(class='module--md-wide module--md-full-img')
 
   +subscription-form(class='mt-1px mt-md-4')
 
@@ -146,7 +76,7 @@ block content
       .grid__item.col-12.col-md-4.height-fix
         +module(modules3[0])(class='flex-auto')
       .grid__item.col-12.col-md-4.height-fix
-        +module(modules3[1])(class='flex-auto module--lg-full-img module--lg-theme-light')
+        +module(modules3[1])(class='flex-auto module--md-full-img module--md-theme-light')
       .grid__item.col-12.col-md-4.height-fix
         +module(modules3[2])(class='flex-auto')
 
@@ -166,11 +96,11 @@ block content
   .container.mt-1px.mt-md-3
     .grid.grid--small-gaps.grid--lg-modules
       .grid__item.col-12.col-md-6.height-fix
-        +module(modules4[0])(class='flex-auto module--lg-large module--lg-full-img')
+        +module(modules4[0])(class='flex-auto module--md-large module--md-full-img')
       .grid__item.col-12.col-md-6.height-fix
-        +module(modules4[1])(class='flex-auto module--lg-large')
+        +module(modules4[1])(class='flex-auto module--md-large')
       .grid__item.col-12.col-md-12
-        +module(modules4[2])(class='flex-auto module--lg-wide module--lg-full-img module--lg-theme-light')
+        +module(modules4[2])(class='flex-auto module--md-wide module--md-full-img module--md-theme-light')
 
   .container.mt-1px.mt-md-4
     .position-relative
@@ -198,7 +128,7 @@ block content
       .grid__item.col-12.col-md-4.height-fix
         +module(modules5[1])(class='flex-auto')
       .grid__item.col-12.col-md-4.height-fix
-        +module(modules5[2])(class='flex-auto module--lg-full-img module--lg-theme-light')
+        +module(modules5[2])(class='flex-auto module--md-full-img module--md-theme-light')
 
   .ticker.media-news__ticker.position-static
     .ticker__offset
@@ -208,9 +138,9 @@ block content
   .container
     .grid.grid--small-gaps.grid--lg-modules
       .grid__item.col-12.col-md-6.height-fix
-        +module(modules6[0])(class='flex-auto module--lg-large module--lg-full-img module--lg-theme-light')
+        +module(modules6[0])(class='flex-auto module--md-large module--md-full-img module--md-theme-light')
       .grid__item.col-12.col-md-6.height-fix
-        +module(modules6[1])(class='flex-auto module--lg-large')
+        +module(modules6[1])(class='flex-auto module--md-large')
 
   .container.mt-md-4
     .position-relative.mb-5
@@ -226,7 +156,7 @@ block content
   .jsMediaNews.media-news.mt-3
     .media-news__inner.container
       .media-news__media.embed-responsive.embed-responsive-4by3
-        .jsMediaNewsVideoPlayer.media-news__video.embed-responsive-item
+        .jsMediaNewsVideoPlayer.jsYoutubePlayer.media-news__video.embed-responsive-item
         .media-news__cover(style="background-image: url('/imgs/photos/cover-1.png')")
 
         button.jsMediaNewsMediaControl.media-news__media-control.youtube-btn(type='button')

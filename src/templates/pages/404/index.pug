@@ -1,0 +1,20 @@
+extends ../../layout.pug
+
+include ../../mixins/accent
+include ../../mixins/content-info
+include ../../mixins/label
+include ../../mixins/module
+include ../../mixins/news
+include ../../mixins/subscription-form
+
+block title
+  title= pageTitle
+
+append styles
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css')
+
+append scripts
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js')
+
+block content
+  //- All content goes here.
