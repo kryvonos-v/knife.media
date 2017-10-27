@@ -110,9 +110,16 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
+
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/templates/home',
+      hash: true
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: 'stories.html',
+      template: './src/templates/stories',
       hash: true
     }),
 

@@ -80,6 +80,12 @@ mixin accent({ link, title } = {})
 block title
   title= pageTitle
 
+append styles
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css')
+
+append scripts
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js')
+
 block content
   +featured-news({ href: '#', img: '/imgs/stickers/medal.png' })
 
@@ -193,6 +199,11 @@ block content
         +module(modules5[1])(class='flex-auto')
       .grid__item.col-12.col-md-4.height-fix
         +module(modules5[2])(class='flex-auto module--lg-full-img module--lg-theme-light')
+
+  .ticker.media-news__ticker.position-static
+    .ticker__offset
+    .ticker__items
+      a.ticker__item.gt.g-sunglow-to-mandy.media-news__heading(href='#') Бегущая строка
 
   .container
     .grid.grid--small-gaps.grid--lg-modules

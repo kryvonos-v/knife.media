@@ -2,6 +2,7 @@ import $ from 'jQuery'
 import { scrollToTop } from '@/utils'
 import { endpoints } from '@/utils/config'
 import debounce from 'lodash.debounce'
+import EventBus from '@/utils/EventBus'
 
 import searchTemplate from './index.pug'
 import searchNewsTemplate from './SearchNews/index.pug'
@@ -11,7 +12,7 @@ const $body = $('body')
 const $siteWrapper = $('#siteWrapper')
 const $header = $('#header')
 const $mobileSearchBtn = $('#mobileSearchBtn')
-const $searchBtn = $('.search-btn')
+const $searchBtn = $('.jsSearchBtn')
 let $search = null
 let $searchInput = null
 let $searchResults = null
@@ -52,7 +53,6 @@ function initSearch () {
 
 function initButtonsEventHandlers () {
   $searchBtn.click(searchBtnClickHandler)
-  $mobileSearchBtn.click(searchBtnClickHandler)
 }
 
 function initSearchInputEventHanlers () {
@@ -130,9 +130,11 @@ function toggleSearchVisibility () {
   if (isShown) {
     $search.addClass(HIDDEN_CLASS)
     isShown = false
+    EventBus.emit('search.hidden')
   } else {
     $search.removeClass(HIDDEN_CLASS)
     isShown = true
+    EventBus.emit('search.shown')
   }
 }
 

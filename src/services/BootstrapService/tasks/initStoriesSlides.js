@@ -6,17 +6,18 @@ export default function (callback) {
   const config = {
     appendArrows: null,
     infinite: true,
-    slidesToShow: 3,
-    centerMode: true,
-    slidesToScroll: 3,
-    scrolling: false,
+    slidesToShow: 4,
+    centerMode: false,
+    slidesToScroll: 2,
     variableWidth: true,
     responsive: [
       {
         breakpoint: breakpoints.lg,
         settings: {
-          centerMode: true,
-          slidesToShow: 3
+          centerMode: false,
+          slidesToScroll: 2,
+          slidesToShow: 3,
+          variableWidth: true,
         }
       },
       {
@@ -30,6 +31,9 @@ export default function (callback) {
   }
 
   !function init () {
+    if (!$stories.length) return
+    if (!$stories.slick) throw new Error('Include slickjs library (js, css).')
+
     $stories.on('init', slickInitEventHandler)
     $stories.on('afterChange', slickAfterEventEventHandler)
     $stories.on('beforeChange', slickBeforeChangeEventHandler)
@@ -40,6 +44,8 @@ export default function (callback) {
     $stories.on('lazyLoaded', slickEventHandler)
 
     $stories.slick(config)
+
+    window.$stories = $stories
   }()
 
   function slickEventHandler (event, slick, direction) {

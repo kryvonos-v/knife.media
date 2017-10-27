@@ -1,0 +1,185 @@
+extends ../layout.pug
+
+mixin featured-news({ href = '', img = '' } = {})
+  .featured-news.content-container.px-sm-0
+    .container.featured-news__inner
+      h2.featured-news__heading
+        a.brand-link(href="#") Интервью с победителями международной олимпиады по химии
+
+      img.featured-news__icon.ml-3(src=img)
+
+mixin content-info(items = [])
+  if items.length
+    footer.content-info&attributes(attributes)
+      each item, index in items
+        if index
+          span.content-info__separator •
+        if (item.link)
+          a.content-info__item.brand-link(href=item.link)= item.name
+        else
+          span.content-info__item= name
+
+
+mixin label({ link, name = '' } = {})
+  if name
+    if link
+      a.label(href=link)&attributes(attributes)= name
+    else
+      span.label&attributes(attributes)= name
+
+mixin module({ title, link, img, label = {}, contentInfo = [] } = {})
+  article.module&attributes(attributes)
+    +label(label).module__label
+
+    a.module__img-link(href=link)
+      .module__img(style=`background-image: url('${img}');`)
+      img.module__img-height-fix(src=img)
+
+    .module__content
+      h2.module__heading
+        a.module__link(href=link)!= title
+
+      +content-info(contentInfo)(class='content-info--large module__content-info')
+
+mixin short-news({ title, link, contentInfo = []} = {})
+  article.short-news
+    +content-info(contentInfo)(class="content-info--small short-news__content-info text-uppercase")
+
+    h3.short-news__heading
+      a.brand-link(href=link)!= title
+
+mixin special-news({ title, link, img = '', contentInfo = [] } = {})
+  article.special-news.media&attributes(attributes)
+    a.img-link.align-self-center.mr-3(href=link)
+      img.special-news__img(src=img alt='')
+
+    .media-body
+      +content-info(contentInfo)(class='content-info--large c-white')
+
+      h2.h2.mt-3
+        a.brand-link(href=link) Ольга Славникова — о Хокинге, уральском мифе и своих новых романах
+
+mixin subscription-form
+  section.subscription&attributes(attributes)
+    .subscription__inner.container
+      .row
+        .col-12.col-xl-auto.text-center
+          h2.subscription__heading
+          | Подпишитесь на нашу рассылку
+          img.subscription__arrow(src='/imgs/icons/arrow-down.svg')
+
+        .col-12.col-md-8.col-xl
+          input.input-text.subscription__input(type='text' placeholder='Оставьте вашу электронную почту')
+
+        .col-12.col-md-4.col-xl
+          button.subscription__btn Подписаться
+
+mixin accent({ link, title } = {})
+  a.accent.brand-link(href=link)&attributes(attributes)= title
+
+block title
+  title= pageTitle
+
+append styles
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css')
+  style.
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      width: 290px;
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+append scripts
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js')
+  script.
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      /*loopedSlides: 1,*/
+      /*slidesOffsetBefore: 100,*/
+      /*slidesOffsetAfter: 40,*/
+      spaceBetween: 15,
+      slidesPerGroup: 2,
+      loop: true,
+      loopFillGroupWithBlank: false,
+      centeredSlides: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    swiper.on('reachBeginning', () => console.log('reachBeginning'))
+    swiper.on('reachEnd', () => console.log('reachEnd'))
+    swiper.on('fromEdge', () => console.log('fromEdge'))
+
+block content
+
+  //- <!-- Slider main container -->
+  .swiper-container.container.content-container
+    //- <!-- Additional required wrapper -->
+    .swiper-wrapper
+      //- <!-- Slides -->
+      .swiper-slide Slide 1
+      .swiper-slide Slide 2
+      .swiper-slide Slide 3
+      .swiper-slide Slide 4
+      .swiper-slide Slide 5
+      .swiper-slide Slide 6
+      .swiper-slide Slide 7
+      .swiper-slide Slide 8
+      .swiper-slide Slide 9
+      .swiper-slide Slide 10
+    //- <!-- If we need pagination -->
+    .swiper-pagination
+
+    //- <!-- If we need navigation buttons -->
+    .swiper-button-prev
+    .swiper-button-next
+
+    //- <!-- If we need scrollbar -->
+    //- .swiper-scrollbar
+
+  //- .container.mt-md-4
+  //-   .position-relative.mb-5
+  //-     .hr
+  //-     span.label.position-absolute Сториз
+  //-
+  //-   //- d-block is hack for ie 10
+  //-   .jsStories.stories.grid.grid--force-small-gaps.grid--lg-force-modules.d-block
+  //-     each item in stories
+  //-       .grid__item
+  //-         +module(item)(class='module--story stories__story')

@@ -18,7 +18,6 @@
   }
 
   &__inner {
-    @include content-container;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -31,6 +30,8 @@
   }
 
   &__input-wrapper {
+    @include content-container;
+
     @include media-breakpoint-down(sm) {
       padding-top: 15px;
       padding-bottom: 15px;

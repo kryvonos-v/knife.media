@@ -13,6 +13,6 @@ mixin socials(items, { linkClass = '', searchBtnClass = '' } = {})
         +socials-item(item.href, item.socialClass, { linkClass })
 
       +socials-item
-        button.socials__link.brand-link.search-btn(href='#' class=searchBtnClass)
+        button.socials__link.brand-link.search-btn.jsSearchBtn(href='#' class=searchBtnClass)
           i.fa.fa-search.search-btn__search-icon(aria-hidden='true')
           i.fa.fa-times.search-btn__close-icon(aria-hidden='true')
