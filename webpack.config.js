@@ -49,10 +49,10 @@ module.exports = {
   devServer: {
     publicPath: '/',
     contentBase: [path.join(__dirname, 'dist'), path.join(__dirname, 'src/assets')],
-    open: false,
+    open: true,
     compress: true,
     hot: true,
-    port: 9004
+    port: 9000
   },
 
   stats: {
