@@ -7,6 +7,10 @@
 @include generate-colors();
 @include generate-gradients();
 
+.c-white {
+  color: #fff !important;
+}
+
 /**
  * Allows to make gradient text color.
  */
